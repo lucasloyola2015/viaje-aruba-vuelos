@@ -250,7 +250,8 @@ def build():
         "top5": [{k: v for k, v in x.items()} for x in top],
     }
     (DATA / "top5.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
-    (ROOT / "index.html").write_text(render_html(cfg, top, best, history, last_run, runs, out, fx_note, fx, registry, slog), encoding="utf-8")
+    (ROOT / "docs").mkdir(exist_ok=True)
+    (ROOT / "docs" / "index.html").write_text(render_html(cfg, top, best, history, last_run, runs, out, fx_note, fx, registry, slog), encoding="utf-8")
     (ROOT / "README.md").write_text(render_md(cfg, top, best, last_run, out, fx_note, registry), encoding="utf-8")
     print(f"OK: {len(valid)} observaciones, {len(top)} en el top, {len(runs)} corridas")
 
@@ -494,7 +495,7 @@ def render_md(cfg, top, best, last_run, out, fx_note, registry):
                      f"{usd(s['cost_real_usd'])} | {usd(s['score'])} |")
     if not top:
         lines.append("| – | – | Sin datos todavía | – | – | – | – | – |")
-    lines += ["", render_sources_md(registry), "", "El detalle completo (desglose, gráfico, supuestos) está en `index.html`: descargalo y abrilo en el navegador.", ""]
+    lines += ["", render_sources_md(registry), "", "El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).", ""]
     return "\n".join(lines)
 
 

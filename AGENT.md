@@ -44,14 +44,14 @@ Encontrar la mejor combinación de **origen + fecha de ida + noches (7–9)** pa
    `price_total_usd` es el precio final de los 4 pasajeros mostrado por el buscador (con impuestos). `bags_included_checked` = cantidad TOTAL de valijas despachadas incluidas para la familia (null si no se sabe: `build_report.py` asume 0 y suma el costo de las 4 necesarias). **No calcules impuestos argentinos a mano.** Duración y escalas son **por tramo**.
 7b. **Fuentes (obligatorio en cada corrida, ver sección «Fuentes»)**: sumá al menos 1 fuente nueva al registro y evaluá al menos 1 fuente. Presupuesto: ≤ 4 cargas de página por evaluación.
 8. **Log de la corrida**: una línea en `data/runs.jsonl`: `{"run_id","kind":"main","started_at","finished_at","sources":{"google_flights":"ok|blocked|empty", "<otra_id>":"..."},"urls_tried":N,"obs_added":N,"new_sources_added":["id"],"sources_evaluated":["id"],"alerts":[],"notes":""}`.
-9. **Reporte**: `python -X utf8 build_report.py` (genera `index.html`, `README.md`, `data/top5.json`). Revisá que corra sin errores. Si una observación es inválida el script la ignora y avisa por stderr: corregila.
+9. **Reporte**: `python -X utf8 build_report.py` (genera `docs/index.html`, `README.md`, `data/top5.json`). Revisá que corra sin errores. Si una observación es inválida el script la ignora y avisa por stderr: corregila.
 10. **Alertas**: compará el mejor puntaje de `data/top5.json` contra la corrida anterior. Si bajó ≥ `alerts.price_drop_pct_alert` %, o apareció un directo, agregá la alerta a `runs.jsonl` y, si la herramienta `PushNotification` está disponible, avisá al usuario con una línea (origen, fechas, precio).
 11. **Publicar**: `git add -A && git commit -m "corrida {run_id}: top1 {origen} {ida}→{vuelta} US$ {costo}" && git push`. Si falla el push, reintentá una vez con `git pull --rebase`. Nunca force-push.
 12. **Cerrar** con un resumen de 3 líneas: qué fuentes funcionaron, mejor opción actual, qué quedó pendiente.
 
 ## Fuentes: descubrir, evaluar y registrar
 
-Objetivo: no quedarse con las 3 primeras páginas que salen en el buscador. En **cada corrida** hay que **agregar al menos 1 fuente nueva** al registro y **evaluar al menos 1**, y el HTML (`index.html`) muestra a quien lo mira qué páginas se consultaron y cuáles se pudo abrir. Estado en `data/sources.json` (registro) y `data/source_log.jsonl` (un renglón por cada página consultada).
+Objetivo: no quedarse con las 3 primeras páginas que salen en el buscador. En **cada corrida** hay que **agregar al menos 1 fuente nueva** al registro y **evaluar al menos 1**, y el HTML (`docs/index.html`) muestra a quien lo mira qué páginas se consultaron y cuáles se pudo abrir. Estado en `data/sources.json` (registro) y `data/source_log.jsonl` (un renglón por cada página consultada).
 
 ### Registro de cada acceso (`data/source_log.jsonl`)
 Un JSON por línea, por **cada** URL abierta o intentada (éxito o falla):
