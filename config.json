@@ -42,7 +42,7 @@
       "EZE_long_stay_E4": {
         "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
         "tolls_round_trip_ars": { "value": 18000, "verified": false, "note": "General Lagos 1.850/sentido verificado (10/10/2026); resto estimado" },
-        "fuel_price_ars_per_l": { "value": 2105, "verified": true, "note": "Súper YPF Rosario, 3/8/2026; actualizar" },
+        "fuel_price_ars_per_l": { "value": 2105, "verified": true, "note": "Súper YPF Rosario, 3/8/2026 (Cadena 3). 6/11/2026: sin dato más nuevo publicado para Rosario (Jujuy 3/11: 2.279); probablemente desactualizado" },
         "km_one_way": { "value": 330, "verified": false },
         "l_per_100km": { "value": 9, "verified": false },
         "parking_ars_first_7_days": { "value": 169000, "verified": true, "note": "AA2000 E4 enero 2026; actualizar" },
@@ -55,7 +55,7 @@
         "fuel_price_ars_per_l": { "value": 2105, "verified": true },
         "km_one_way": { "value": 310, "verified": false },
         "l_per_100km": { "value": 9, "verified": false },
-        "garage_ars_per_day": { "value": 25000, "verified": false, "note": "SIN DATO: 5/11/2026 no se encontraron tarifas publicadas de cocheras CABA por día; Park to Fly (Ezeiza, techado) sin precio público. Re-cotizar" },
+        "garage_ars_per_day": { "value": 25000, "verified": false, "note": "SIN DATO: 5/11/2026 no se encontraron tarifas publicadas de cocheras CABA por día; Park to Fly (Ezeiza, techado) sin precio público. 6/11/2026: se reintentó (Sir Chandler jun-2026 sobre Park to Fly: solo WhatsApp, sin precio; Costa Salguero $163.000/5 días, nota sin fecha). Re-cotizar" },
         "uber_ars_per_trip": { "value": 35000, "verified": true, "note": "Taxi Ezeiza tarifa fija CABA–EZE $35.000 (sirchandler.com.ar, abr 2026; verificado 5/11/2026). Uber promedio ~$22.600 según uber.com/r/airports/eze, sin valijas para 4" },
         "uber_trips": 2
       }

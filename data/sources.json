@@ -19,8 +19,8 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": null,
-   "notes": "Fuente primaria. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home o da error: reintentar una vez, no forzar.",
+   "last_checked": "2026-11-06T08:35:00-03:00",
+   "notes": "Fuente primaria. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
   {
@@ -28,21 +28,22 @@
    "name": "Kayak",
    "domain": "www.kayak.com",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.kayak.com/",
    "access": {
-    "agent": "partial",
+    "agent": "robots_disallow",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-06T08:36:00-03:00",
+    "details": {"motivo": "robots.txt (User-agent: *) prohíbe /flights/, la ruta de resultados. No se abrió ninguna búsqueda.", "google_ref_usd": 7190}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": null,
-   "notes": "Cargó sin CAPTCHA en la investigación; no se verificó que lea 2+2 ni si el precio es por persona. Evaluar primero."
+   "last_checked": "2026-11-06T08:36:00-03:00",
+   "notes": "Abrir a mano: https://www.kayak.com/flights/ROS-AUA/2027-01-10/2027-01-18/2adults/children-5-3?currency=USD — robots.txt prohíbe /flights/ (verificado 2026-11-06T08). Momondo AR redirige acá.",
+   "robots_disallow": true
   },
   {
    "id": "skyscanner",
@@ -402,6 +403,48 @@
    "discovered_by": "seed-2026-11-05",
    "last_checked": null,
    "notes": "Requiere cuenta/API key propia del usuario; el agente no crea cuentas. Tier gratis ~250 búsquedas/mes (terceros): no alcanza para 60+ corridas."
+  },
+  {
+   "id": "ratepunk",
+   "name": "Ratepunk (estadísticas de ruta)",
+   "domain": "www.ratepunk.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.ratepunk.com/flights-from-to/bue/aua/cheap-flights-from-buenos-aires-to-aruba",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-06T08",
+   "last_checked": null,
+   "notes": "Páginas de ruta con medianas por mes (enero BUE–AUA ~US$ 725 por persona según WebSearch). Probablemente solo sirva como referencia, no como cotización 2+2."
+  },
+  {
+   "id": "trabber",
+   "name": "Trabber",
+   "domain": "www.trabber.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.trabber.es/en/flights-buenos-aires-aruba-bue-aua/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-06T08",
+   "last_checked": null,
+   "notes": "Metabuscador español con páginas de ruta BUE–AUA y buscador. Evaluar con la consulta de referencia (revisar robots.txt primero)."
   }
  ]
 }

@@ -1,9 +1,161 @@
 {
- "generated_at": "2026-11-06T03:25:23-03:00",
- "fx": "1.580 ARS/USD · Dólar MEP cierre 5/11/2026 (Ámbito 1.579.50; Sur24 1.584.62; El Cronista 1.577.20) · 2026-11-05T22:19:00-03:00",
- "n_obs": 11,
- "n_runs": 3,
+ "generated_at": "2026-11-06T08:38:27-03:00",
+ "fx": "1.588 ARS/USD · Dólar MEP venta $1.588 (dolarhoy.com. actualizado 06/11/26 08:21. previo a la apertura; blue venta $1.555) · 2026-11-06T08:30:00-03:00",
+ "n_obs": 42,
+ "n_runs": 4,
  "top5": [
+  {
+   "run_id": "2026-11-06T08",
+   "captured_at": "2026-11-06T08:31:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "EZE",
+   "depart": "2027-01-19",
+   "return": "2027-01-27",
+   "price_total_usd": 6196,
+   "price_original": 6196,
+   "currency_original": "USD",
+   "airlines": "American",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20to%20AUA%20from%20EZE%20on%202027-01-19%20through%202027-01-27%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Vía Miami: REQUIERE VISA DE EE.UU. para los 4 (tránsito). Vuelta no consultada.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 980,
+    "shortest_layover_min": 229,
+    "longest_layover_min": 229,
+    "dep_time": "23:59",
+    "via": "MIA"
+   },
+   "inbound": {},
+   "_s": {
+    "score": 7169.242863140218,
+    "cost_real_usd": 6683.076196473552,
+    "nights": 8,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6196.0,
+     "Valijas faltantes (~4)": 280,
+     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 207.07619647355165,
+     "Penalización comodidad (ruta con chicos)": 150,
+     "Penalización escalas/duración/conexiones/horarios": 336.16666666666663
+    },
+    "ground": {
+     "key": "EZE_long_stay_E4",
+     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
+     "ars": 328837.0,
+     "usd": 207.07619647355165,
+     "parts_ars": {
+      "peajes": 18000,
+      "nafta": 125037.0,
+      "estacionamiento E4": 185800,
+      "traslados": 0
+     },
+     "unverified": [
+      "tolls_round_trip_ars",
+      "km_one_way",
+      "l_per_100km",
+      "parking_ars_per_extra_day"
+     ]
+    }
+   },
+   "_others": []
+  },
+  {
+   "run_id": "2026-11-06T08",
+   "captured_at": "2026-11-06T08:25:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "ROS",
+   "depart": "2027-01-01",
+   "return": "2027-01-09",
+   "price_total_usd": 6791,
+   "price_original": 6791,
+   "currency_original": "USD",
+   "airlines": "LATAM",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-01%20through%202027-01-09%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "LATAM desde Rosario vía Lima (operado por LATAM Perú). Vuelta no consultada. Google sugiere 3–10 ene por US$ 4.661 (probablemente Arajet vía PUJ, no verificado).",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
+   },
+   "inbound": {},
+   "_s": {
+    "score": 7311.0,
+    "cost_real_usd": 7071.0,
+    "nights": 8,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6791.0,
+     "Valijas faltantes (~4)": 280,
+     "Penalización escalas/duración/conexiones/horarios": 240.0
+    },
+    "ground": null
+   },
+   "_others": []
+  },
+  {
+   "run_id": "2026-11-06T08",
+   "captured_at": "2026-11-06T08:32:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "ROS",
+   "depart": "2027-01-19",
+   "return": "2027-01-27",
+   "price_total_usd": 6554,
+   "price_original": 6554,
+   "currency_original": "USD",
+   "airlines": "Aerolíneas Argentinas",
+   "airport_change": true,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-19%20through%202027-01-27%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Ida ROS→AEP, traslado a EZE (5h15), parada en CUR 1h15 (presumiblemente mismo avión, no verificado). Vuelta no consultada. Google sugiere 17–24 ene por US$ 4.503 (probablemente Arajet, no verificado).",
+   "outbound": {
+    "stops": 2,
+    "duration_min": 925,
+    "shortest_layover_min": 315,
+    "longest_layover_min": 315,
+    "dep_time": "19:15",
+    "via": "AEP→EZE + CUR (presumiblemente mismo avión)"
+   },
+   "inbound": {},
+   "_s": {
+    "score": 7724.833333333333,
+    "cost_real_usd": 6834.0,
+    "nights": 8,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6554.0,
+     "Valijas faltantes (~4)": 280,
+     "Penalización escalas/duración/conexiones/horarios": 690.8333333333333,
+     "Cambio de aeropuerto": 200
+    },
+    "ground": null
+   },
+   "_others": []
+  },
   {
    "run_id": "2026-11-05T22",
    "captured_at": "2026-11-05T22:13:00-03:00",
@@ -31,8 +183,8 @@
    },
    "inbound": {},
    "_s": {
-    "score": 7922.1246835443035,
-    "cost_real_usd": 7532.1246835443035,
+    "score": 7921.076196473552,
+    "cost_real_usd": 7531.076196473552,
     "nights": 8,
     "excluded": [],
     "notes": [
@@ -42,7 +194,7 @@
     "breakdown": {
      "Pasajes (4 personas, precio final)": 7044.0,
      "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 208.1246835443038,
+     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 207.07619647355165,
      "Penalización comodidad (ruta con chicos)": 150,
      "Penalización escalas/duración/conexiones/horarios": 240.0
     },
@@ -50,7 +202,7 @@
      "key": "EZE_long_stay_E4",
      "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
      "ars": 328837.0,
-     "usd": 208.1246835443038,
+     "usd": 207.07619647355165,
      "parts_ars": {
       "peajes": 18000,
       "nafta": 125037.0,
@@ -68,103 +220,34 @@
    "_others": []
   },
   {
-   "run_id": "2026-11-05T22",
-   "captured_at": "2026-11-05T22:15:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "EZE",
-   "depart": "2027-01-04",
-   "return": "2027-01-12",
-   "price_total_usd": 8141,
-   "price_original": 8141,
-   "currency_original": "USD",
-   "airlines": "Aerolíneas Argentinas",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-04%20through%202027-01-12%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "DIRECTO ida y vuelta (sale 00:50 del lun 4 = noche del dom 3). Pestaña 'más bajos' desde US$ 4.522.",
-   "outbound": {
-    "stops": 0,
-    "duration_min": 445,
-    "shortest_layover_min": null,
-    "longest_layover_min": null,
-    "dep_time": "00:50",
-    "via": ""
-   },
-   "inbound": {
-    "stops": 0,
-    "duration_min": 435,
-    "shortest_layover_min": null,
-    "longest_layover_min": null,
-    "dep_time": "08:45",
-    "via": ""
-   },
-   "_s": {
-    "score": 8839.124683544303,
-    "cost_real_usd": 8629.124683544303,
-    "nights": 8,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 8141.0,
-     "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 208.1246835443038,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 60.0
-    },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 208.1246835443038,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 185800,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-05T22",
-   "captured_at": "2026-11-05T22:18:00-03:00",
+   "run_id": "2026-11-06T08",
+   "captured_at": "2026-11-06T08:29:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "ROS",
-   "depart": "2027-01-22",
-   "return": "2027-01-30",
-   "price_total_usd": 7776,
-   "price_original": 7776,
+   "depart": "2027-01-13",
+   "return": "2027-01-21",
+   "price_total_usd": 7113,
+   "price_original": 7113,
    "currency_original": "USD",
    "airlines": "Aerolíneas Argentinas",
    "airport_change": true,
    "bags_included_checked": null,
    "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-22%20through%202027-01-30%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Vuelta no disponible: Google devolvió error al seleccionar la ida. Pestaña 'más bajos' desde US$ 5.258.",
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-13%20through%202027-01-21%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Ida ROS→AEP 16:30 y traslado a EZE (7h25 en Bs As), llega AUA jue 14 07:15. Vuelta no consultada.",
    "outbound": {
-    "stops": 2,
-    "duration_min": 925,
-    "shortest_layover_min": 315,
-    "longest_layover_min": 315,
-    "dep_time": "19:15",
-    "via": "AEP→EZE + CUR (presumiblemente mismo avión, no verificado)"
+    "stops": 1,
+    "duration_min": 945,
+    "shortest_layover_min": 445,
+    "longest_layover_min": 445,
+    "dep_time": "16:30",
+    "via": "AEP→EZE"
    },
    "inbound": {},
    "_s": {
-    "score": 8946.833333333334,
-    "cost_real_usd": 8056.0,
+    "score": 8124.666666666667,
+    "cost_real_usd": 7393.0,
     "nights": 8,
     "excluded": [],
     "notes": [
@@ -172,111 +255,9 @@
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 7776.0,
+     "Pasajes (4 personas, precio final)": 7113.0,
      "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 690.8333333333333,
-     "Cambio de aeropuerto": 200
-    },
-    "ground": null
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-05T22",
-   "captured_at": "2026-11-05T22:12:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "ROS",
-   "depart": "2027-01-10",
-   "return": "2027-01-18",
-   "price_total_usd": 7190,
-   "price_original": 7190,
-   "currency_original": "USD",
-   "airlines": "Aerolíneas Argentinas",
-   "airport_change": true,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-10%20through%202027-01-18%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Vuelta llega EZE 18/1 y sigue AEP→ROS al otro día (14h40 en Bs As, cambio de aeropuerto). La parada en Curazao (CUR) del vuelo AR AUA–CUR–EZE es con el mismo avión (AR1376, verificado 10→18 ene); no se cuenta como conexión. Google: precios 'altos'; pestaña 'más bajos' desde US$ 5.826.",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 650,
-    "shortest_layover_min": 150,
-    "longest_layover_min": 150,
-    "dep_time": "21:25",
-    "via": "EZE"
-   },
-   "inbound": {
-    "stops": 2,
-    "duration_min": 1475,
-    "shortest_layover_min": 880,
-    "longest_layover_min": 880,
-    "dep_time": "08:45",
-    "via": "CUR (mismo avión) + EZE→AEP"
-   },
-   "_s": {
-    "score": 9433.333333333334,
-    "cost_real_usd": 7470.0,
-    "nights": 8,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 7190.0,
-     "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 1763.3333333333333,
-     "Cambio de aeropuerto": 200
-    },
-    "ground": null
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-05T22",
-   "captured_at": "2026-11-05T22:17:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "ROS",
-   "depart": "2027-01-16",
-   "return": "2027-01-24",
-   "price_total_usd": 7418,
-   "price_original": 7418,
-   "currency_original": "USD",
-   "airlines": "Aerolíneas Argentinas",
-   "airport_change": true,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-16%20through%202027-01-24%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Vuelta: 16h20 en Bs As con cambio EZE→AEP, llega ROS lun 25 10:20. Pestaña 'más bajos' desde US$ 6.724.",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 780,
-    "shortest_layover_min": 280,
-    "longest_layover_min": 280,
-    "dep_time": "19:15",
-    "via": "EZE"
-   },
-   "inbound": {
-    "stops": 1,
-    "duration_min": 1475,
-    "shortest_layover_min": 980,
-    "longest_layover_min": 980,
-    "dep_time": "08:45",
-    "via": "EZE→AEP"
-   },
-   "_s": {
-    "score": 9553.0,
-    "cost_real_usd": 7698.0,
-    "nights": 8,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 7418.0,
-     "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 1655.0,
+     "Penalización escalas/duración/conexiones/horarios": 531.6666666666667,
      "Cambio de aeropuerto": 200
     },
     "ground": null

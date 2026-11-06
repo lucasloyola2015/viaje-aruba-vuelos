@@ -1,23 +1,23 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-06 03:25 · 3 corridas · 11 precios · TC 1.580 ARS/USD · Dólar MEP cierre 5/11/2026 (Ámbito 1.579.50; Sur24 1.584.62; El Cronista 1.577.20) · 2026-11-05T22:19:00-03:00_
+_Actualizado 2026-11-06 08:38 · 4 corridas · 42 precios · TC 1.588 ARS/USD · Dólar MEP venta $1.588 (dolarhoy.com. actualizado 06/11/26 08:21. previo a la apertura; blue venta $1.555) · 2026-11-06T08:30:00-03:00_
 
-**Recomendación:** Conviene ir en auto a Buenos Aires: ahorra ≈ US$ 1.025 de puntaje frente a salir de Rosario (ya incluye cochera, peajes, nafta, traslados y penalización por manejar).
+**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ 142 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
 | # | Origen | Salida → Vuelta | Noches | Aerolíneas | Escalas ida/vuelta | Costo real est. | Puntaje |
 |---|---|---|---|---|---|---|---|
-| 1 | EZE | dom 10 ene → lun 18 ene | 8 | LATAM | 1/? | US$ 7.532 | US$ 7.922 |
-| 2 | EZE | lun 4 ene → mar 12 ene | 8 | Aerolíneas Argentinas | 0/0 | US$ 8.629 | US$ 8.839 |
-| 3 | ROS | vie 22 ene → sáb 30 ene | 8 | Aerolíneas Argentinas | 2/? | US$ 8.056 | US$ 8.947 |
-| 4 | ROS | dom 10 ene → lun 18 ene | 8 | Aerolíneas Argentinas | 1/2 | US$ 7.470 | US$ 9.433 |
-| 5 | ROS | sáb 16 ene → dom 24 ene | 8 | Aerolíneas Argentinas | 1/1 | US$ 7.698 | US$ 9.553 |
+| 1 | EZE | mar 19 ene → mié 27 ene | 8 | American | 1/? | US$ 6.683 | US$ 7.169 |
+| 2 | ROS | vie 1 ene → sáb 9 ene | 8 | LATAM | 1/? | US$ 7.071 | US$ 7.311 |
+| 3 | ROS | mar 19 ene → mié 27 ene | 8 | Aerolíneas Argentinas | 2/? | US$ 6.834 | US$ 7.725 |
+| 4 | EZE | dom 10 ene → lun 18 ene | 8 | LATAM | 1/? | US$ 7.531 | US$ 7.921 |
+| 5 | ROS | mié 13 ene → jue 21 ene | 8 | Aerolíneas Argentinas | 1/? | US$ 7.393 | US$ 8.125 |
 
 ## Fuentes
 
 | Fuente | Agente | Tu Chrome | Utilidad | Estado |
 |---|---|---|---|---|
 | Google Flights | ok | sin probar | sin evaluar | activa |
-| Kayak | parcial | sin probar | sin evaluar | en prueba |
+| Kayak | robots.txt | sin probar | no evaluable | solo manual |
 | Skyscanner | CAPTCHA | robots.txt | no evaluable | solo manual |
 | Despegar Argentina | 403 | sin probar | sin evaluar | solo manual |
 | Momondo AR | vacía | sin probar | sin evaluar | descartada |
@@ -35,5 +35,7 @@ _Actualizado 2026-11-06 03:25 · 3 corridas · 11 precios · TC 1.580 ARS/USD ·
 | Promos Aéreas | sin probar | sin probar | sin evaluar | en prueba |
 | ITA Matrix | sin probar | sin probar | sin evaluar | en prueba |
 | SerpApi (Google Flights) | sin probar | sin probar | sin evaluar | solo manual |
+| Ratepunk (estadísticas de ruta) | sin probar | sin probar | sin evaluar | en prueba |
+| Trabber | sin probar | sin probar | sin evaluar | en prueba |
 
 El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).
