@@ -14,8 +14,17 @@ Encontrar la mejor combinación de **origen + fecha de ida + noches (7–9)** pa
 4. **No instalar ni ejecutar software de terceros** (pip/npm/skills/MCP de GitHub). Solo el navegador de la sesión, WebSearch, WebFetch y `build_report.py` (propio, solo biblioteca estándar).
 5. No salgas de este directorio salvo para leer la web. Nunca `git push --force`. Nunca borres historial en `data/`.
 
+## Cómo ejecutar comandos sin quedarte esperando permisos (corrés SIN nadie mirando)
+Si un comando pide aprobación, la corrida queda colgada horas hasta que alguien haga clic. Para que nunca pase:
+1. **No uses `cd`**: el directorio de trabajo YA es el repo. Un `cd … && git …` fuerza un pedido de permiso aunque todo lo demás esté permitido.
+2. **Un comando simple por llamada** a Bash. Sin `&&`, `;`, pipes complejos, `$(…)`, redirecciones raras ni scripts inline largos.
+3. **Para leer archivos usá las herramientas Read/Grep/Glob**, no `cat`/`tail`/`ls`. Para escribir/editar `data/*`, Read + Write/Edit. Para cálculos, un archivo `.py` propio dentro del repo (p. ej. `build_report.py`) corrido con `python -X utf8 archivo.py`, no `python -c "…"`.
+4. Comandos permitidos (todo lo demás puede pedir permiso): `date`, `git pull --rebase`, `git add -A`, `git commit -m "…"`, `git push`, `git status`, `git log`, `git diff`, `python -X utf8 build_report.py`.
+5. **Si una herramienta o comando te pide aprobación, es rechazado o no responde en ~2 minutos**: no insistas ni busques rodeos. Anotalo en `notes` de `runs.jsonl` (qué intentaste), seguí con lo que sí podés hacer, y cerrá la corrida (reporte + commit + push) aunque sea parcial. Una corrida parcial publicada vale más que una colgada.
+6. Si un `git push` falla por rechazo remoto: `git pull --rebase` y reintentá una sola vez; si vuelve a fallar, dejalo anotado y terminá.
+
 ## Pasos de cada corrida
-1. **Contexto**: `cd` al directorio del repo, `git pull --rebase`. Leé `config.json`, las últimas 3 líneas de `data/runs.jsonl` y `data/observations.jsonl` si existe. Fecha/hora actual con `date`.
+1. **Contexto**: `git pull --rebase` (sin `cd`). Leé con Read `config.json`, las últimas 3 líneas de `data/runs.jsonl` y `data/observations.jsonl` si existe. Fecha/hora actual con `date`.
 2. **Fin del monitoreo**: si hoy > `monitoring.end`, hacé una última corrida de solo reporte (paso 8–9), escribí en `runs.jsonl` `"final": true`, y deshabilitá la tarea programada `aruba-vuelos-monitor` con `update_scheduled_task` (`enabled: false`). Si la herramienta no está disponible, dejá una nota en el README.
 3. **Tipo de cambio**: WebSearch del dólar MEP/blue de hoy en Argentina → `data/fx.json` `{"ars_per_usd": N, "source": "...", "captured_at": "ISO"}`.
 4. **Costos terrestres** (primera corrida y luego 1 vez por día en la primera corrida del día): actualizá en `config.json` los valores `ground.*` que encuentres con fuente (nafta súper YPF Rosario, tarifa estacionamiento larga estadía E4 Ezeiza de Aeropuertos Argentina, peajes General Lagos/AUSOL, y **cotizá 2–3 cocheras reales en CABA/Ezeiza por día** y un Uber/taxi cochera→EZE). Cada valor actualizado: `verified: true` + `note` con fuente y fecha. Lo que no puedas verificar queda `verified: false`; no inventes.
@@ -46,7 +55,7 @@ Encontrar la mejor combinación de **origen + fecha de ida + noches (7–9)** pa
 8. **Log de la corrida**: una línea en `data/runs.jsonl`: `{"run_id","kind":"main","started_at","finished_at","sources":{"google_flights":"ok|blocked|empty", "<otra_id>":"..."},"urls_tried":N,"obs_added":N,"new_sources_added":["id"],"sources_evaluated":["id"],"alerts":[],"notes":""}`.
 9. **Reporte**: `python -X utf8 build_report.py` (genera `docs/index.html`, `README.md`, `data/top5.json`). Revisá que corra sin errores. Si una observación es inválida el script la ignora y avisa por stderr: corregila.
 10. **Alertas**: compará el mejor puntaje de `data/top5.json` contra la corrida anterior. Si bajó ≥ `alerts.price_drop_pct_alert` %, o apareció un directo, agregá la alerta a `runs.jsonl` y, si la herramienta `PushNotification` está disponible, avisá al usuario con una línea (origen, fechas, precio).
-11. **Publicar**: `git add -A && git commit -m "corrida {run_id}: top1 {origen} {ida}→{vuelta} US$ {costo}" && git push`. Si falla el push, reintentá una vez con `git pull --rebase`. Nunca force-push.
+11. **Publicar** (tres llamadas separadas a Bash, sin encadenar): `git add -A`, luego `git commit -m "corrida {run_id}: top1 {origen} {ida}→{vuelta} US$ {costo}"`, luego `git push`. Si falla el push, reintentá una vez con `git pull --rebase`. Nunca force-push.
 12. **Cerrar** con un resumen de 3 líneas: qué fuentes funcionaron, mejor opción actual, qué quedó pendiente.
 
 ## Fuentes: descubrir, evaluar y registrar
