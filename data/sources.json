@@ -19,8 +19,8 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-06T08:35:00-03:00",
-   "notes": "Fuente primaria. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
+   "last_checked": "2026-11-06T13:46:00-03:00",
+   "notes": "Fuente primaria. OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
   {
@@ -430,8 +430,29 @@
    "name": "Trabber",
    "domain": "www.trabber.com",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.trabber.es/en/flights-buenos-aires-aruba-bue-aua/",
+   "access": {
+    "agent": "partial",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-06T13:47:00-03:00",
+    "details": {"acceso": "la página de ruta abre sin CAPTCHA", "pasajeros": "el formulario admite niños con edades (ages_1..9)", "motivo": "No se ejecutó la búsqueda: el formulario arranca en /en/search-start y robots.txt prohíbe /*start=; por prudencia (respect_robots_txt) no se corre. Página de ruta solo trae estadísticas genéricas (promedio 702 €/persona, sin fechas).", "google_ref_usd": 7190, "page_loads": 2}
+   },
+   "discovered_by": "2026-11-06T08",
+   "last_checked": "2026-11-06T13:47:00-03:00",
+   "notes": "Abrir a mano y buscar ROS/BUE→AUA 10→18 ene, 2 adultos + 2 niños (5 y 3). robots.txt (trabber.com) prohíbe /*start=, y la búsqueda arranca en /search-start: el agente no la corre."
+  },
+  {
+   "id": "almundo",
+   "name": "Almundo",
+   "domain": "almundo.com.ar",
+   "type": "OTA",
+   "status": "candidate",
+   "url": "https://almundo.com.ar/vuelos/vuelos-a-oranjestad/BUE-AUA",
    "access": {
     "agent": "untested",
     "chrome": "untested"
@@ -442,9 +463,30 @@
     "evaluated_at": null,
     "details": {}
    },
-   "discovered_by": "2026-11-06T08",
+   "discovered_by": "2026-11-06T13",
    "last_checked": null,
-   "notes": "Metabuscador español con páginas de ruta BUE–AUA y buscador. Evaluar con la consulta de referencia (revisar robots.txt primero)."
+   "notes": "OTA argentina; página de ruta BUE–AUA muestra 'desde' ARS 1.091.699 para ene 2027 (WebSearch, sin detalle de aerolínea). Revisar robots.txt antes de buscar."
+  },
+  {
+   "id": "kupi",
+   "name": "Kupi",
+   "domain": "kupi.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://kupi.com/en/flights/from-buenos-aires/to-oranjestad",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-06T13",
+   "last_checked": null,
+   "notes": "Metabuscador con calendario de precios por ruta (WebSearch). Probablemente referencia, no cotización 2+2."
   }
  ]
 }
