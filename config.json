@@ -1,0 +1,73 @@
+{
+  "_comment": "Parámetros editables del agente. Lo marcado verified=false es estimación y debe re-chequearse.",
+  "trip": {
+    "passengers": { "adults": 2, "children": 2, "children_ages": [5, 3] },
+    "origins": ["ROS", "EZE"],
+    "destination": "AUA",
+    "depart_window": ["2027-01-01", "2027-01-23"],
+    "return_must_be_on_or_before": "2027-01-31",
+    "nights_allowed": [7, 8, 9],
+    "nights_preferred": 8,
+    "currency": "USD"
+  },
+  "monitoring": {
+    "start": "2026-11-05",
+    "end": "2026-11-20",
+    "runs_per_day": 4,
+    "max_google_flights_urls_per_run": 14,
+    "pause_seconds_between_queries": [20, 60]
+  },
+  "scoring": {
+    "stops_penalty_usd_per_leg": { "0": 0, "1": 120, "2": 450 },
+    "exclude_if_stops_gte": 3,
+    "leg_duration_free_hours": 12,
+    "leg_duration_penalty_usd_per_hour_over": 20,
+    "layover_exclude_if_shorter_than_min": 90,
+    "layover_short_penalty_usd_90_to_119": 150,
+    "layover_long_free_hours": 3.5,
+    "layover_long_penalty_usd_per_hour_3_5_to_6": 30,
+    "layover_very_long_penalty_usd_per_hour_over_6": 100,
+    "departure_00_to_05_penalty_usd_per_leg": 60,
+    "nights_deviation_penalty_usd_per_night": 40,
+    "return_after_jan31_penalty_usd_per_day": 100,
+    "airport_change_penalty_usd": 200,
+    "missing_checked_bag_usd_each": 70,
+    "bags_needed": 4,
+    "drive_comfort_penalty_usd": 150,
+    "drive_comfort_note": "4 h de ruta ida y 4 h vuelta con chicos de 3 y 5 años"
+  },
+  "ground": {
+    "_comment": "Costo de ir en auto de Rosario a Buenos Aires (EZE) y volver. Valores en ARS. Se convierte a USD con data/fx.json.",
+    "scenarios": {
+      "EZE_long_stay_E4": {
+        "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
+        "tolls_round_trip_ars": { "value": 18000, "verified": false, "note": "General Lagos 1.850/sentido verificado (10/10/2026); resto estimado" },
+        "fuel_price_ars_per_l": { "value": 2105, "verified": true, "note": "Súper YPF Rosario, 3/8/2026; actualizar" },
+        "km_one_way": { "value": 330, "verified": false },
+        "l_per_100km": { "value": 9, "verified": false },
+        "parking_ars_first_7_days": { "value": 169000, "verified": true, "note": "AA2000 E4 enero 2026; actualizar" },
+        "parking_ars_per_extra_day": { "value": 8400, "verified": false },
+        "transfers_ars": { "value": 0, "verified": true, "note": "El shuttle de E4 es gratis" }
+      },
+      "CABA_garage_plus_uber": {
+        "label": "Auto a CABA + cochera en Buenos Aires + Uber ida y vuelta a Ezeiza",
+        "tolls_round_trip_ars": { "value": 18000, "verified": false },
+        "fuel_price_ars_per_l": { "value": 2105, "verified": true },
+        "km_one_way": { "value": 310, "verified": false },
+        "l_per_100km": { "value": 9, "verified": false },
+        "garage_ars_per_day": { "value": 25000, "verified": false, "note": "SIN DATO: el agente debe cotizar cocheras reales en CABA y actualizar" },
+        "uber_ars_per_trip": { "value": 45000, "verified": false, "note": "Uber/taxi cochera-EZE para 4 con valijas, 25.000-50.000; x2 trayectos" },
+        "uber_trips": 2
+      }
+    },
+    "days_car_parked_formula": "nights + 1"
+  },
+  "fx": {
+    "fallback_ars_per_usd": 1500,
+    "fallback_note": "PLACEHOLDER no verificado. El agente lo reemplaza en cada corrida via data/fx.json"
+  },
+  "alerts": {
+    "price_drop_pct_alert": 10,
+    "recommend_buy_before_day_15_if_score_below_usd": null
+  }
+}
