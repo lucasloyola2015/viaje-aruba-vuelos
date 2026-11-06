@@ -69,5 +69,25 @@
   "alerts": {
     "price_drop_pct_alert": 10,
     "recommend_buy_before_day_15_if_score_below_usd": null
+  },
+  "sources": {
+    "_comment": "Estrategia de fuentes: ver AGENT.md sección 'Fuentes' y AGENT_CHROME.md",
+    "min_new_sources_added_per_run": 1,
+    "min_sources_evaluated_per_run": 1,
+    "max_page_loads_per_evaluation": 4,
+    "reference_query": { "origin": "ROS", "depart": "2027-01-10", "return": "2027-01-18" },
+    "score_max": 14,
+    "verdict_thresholds": { "useful_gte": 10, "partial_gte": 6 },
+    "price_consistency_pct": { "full_points_lte": 15, "half_points_lte": 30 },
+    "reevaluate_active_every_n_runs": 5,
+    "cross_check_top_n_on_secondary_sources": 3,
+    "respect_robots_txt": true,
+    "chrome_run": {
+      "cron": "13 3 * * *",
+      "max_queries": 12,
+      "pause_seconds_between_queries": [30, 90],
+      "never_solve_captchas": true,
+      "never_use_logged_in_sessions": true
+    }
   }
 }

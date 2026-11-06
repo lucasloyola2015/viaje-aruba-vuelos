@@ -1,0 +1,406 @@
+{
+ "_comment": "Registro de fuentes. Estados: active | partial | needs_chrome | candidate | manual_only | discarded. Lo mantiene el agente (ver AGENT.md).",
+ "sources": [
+  {
+   "id": "google_flights",
+   "name": "Google Flights",
+   "domain": "www.google.com",
+   "type": "metabuscador",
+   "status": "active",
+   "url": "https://www.google.com/travel/flights",
+   "access": {
+    "agent": "ok",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Fuente primaria. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home o da error: reintentar una vez, no forzar.",
+   "reference": true
+  },
+  {
+   "id": "kayak",
+   "name": "Kayak",
+   "domain": "www.kayak.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.kayak.com/",
+   "access": {
+    "agent": "partial",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Cargó sin CAPTCHA en la investigación; no se verificó que lea 2+2 ni si el precio es por persona. Evaluar primero."
+  },
+  {
+   "id": "skyscanner",
+   "name": "Skyscanner",
+   "domain": "www.skyscanner.com.ar",
+   "type": "metabuscador",
+   "status": "needs_chrome",
+   "url": "https://www.skyscanner.com.ar/",
+   "access": {
+    "agent": "captcha",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "CAPTCHA (PerimeterX) para el agente. Probar en el Chrome del usuario a las 3 AM; si también pide CAPTCHA, pasa a manual_only (nunca se resuelve)."
+  },
+  {
+   "id": "despegar",
+   "name": "Despegar Argentina",
+   "domain": "www.despegar.com.ar",
+   "type": "OTA",
+   "status": "manual_only",
+   "url": "https://www.despegar.com.ar/",
+   "access": {
+    "agent": "http_403",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "403 para el agente y robots.txt prohíbe /shop/flights/results/. Solo para chequeo manual del usuario.",
+   "robots_disallow": true
+  },
+  {
+   "id": "momondo",
+   "name": "Momondo AR",
+   "domain": "www.momondo.com.ar",
+   "type": "metabuscador",
+   "status": "discarded",
+   "url": "https://www.momondo.com.ar/",
+   "access": {
+    "agent": "empty",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Cerrado: redirige a Kayak (lcshutdown=mm-ar)."
+  },
+  {
+   "id": "kiwi_tequila",
+   "name": "Kiwi.com / Tequila API",
+   "domain": "tequila.kiwi.com",
+   "type": "api",
+   "status": "discarded",
+   "url": "https://tequila.kiwi.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Tequila es solo B2B desde 2024 (fuentes de terceros)."
+  },
+  {
+   "id": "amadeus_self_service",
+   "name": "Amadeus Self-Service API",
+   "domain": "developers.amadeus.com",
+   "type": "api",
+   "status": "discarded",
+   "url": "https://developers.amadeus.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Dado de baja en jul-2026 (fuentes secundarias); además exige crear cuenta."
+  },
+  {
+   "id": "copa_calendar",
+   "name": "Copa Airlines (páginas de ruta)",
+   "domain": "www.copaair.com",
+   "type": "aerolinea",
+   "status": "partial",
+   "url": "https://www.copaair.com/es-ar/vuelos-desde-rosario-a-oranjestad",
+   "access": {
+    "agent": "partial",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Páginas de ruta con precios 'desde' en caché; mostraban 'sin resultados' para enero 2027 aunque Google sí tenía Copa. No sirve como cotización."
+  },
+  {
+   "id": "aerolineas",
+   "name": "Aerolíneas Argentinas",
+   "domain": "www.aerolineas.com.ar",
+   "type": "aerolinea",
+   "status": "candidate",
+   "url": "https://www.aerolineas.com.ar/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Verificar existencia/horarios del directo EZE–AUA en enero y tarifa de niños."
+  },
+  {
+   "id": "latam",
+   "name": "LATAM",
+   "domain": "www.latamairlines.com",
+   "type": "aerolinea",
+   "status": "candidate",
+   "url": "https://www.latamairlines.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": ""
+  },
+  {
+   "id": "avianca",
+   "name": "Avianca",
+   "domain": "www.avianca.com",
+   "type": "aerolinea",
+   "status": "candidate",
+   "url": "https://www.avianca.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": ""
+  },
+  {
+   "id": "turismocity",
+   "name": "Turismocity",
+   "domain": "www.turismocity.com.ar",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.turismocity.com.ar/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Metabuscador muy usado en Argentina."
+  },
+  {
+   "id": "expedia",
+   "name": "Expedia",
+   "domain": "www.expedia.com.ar",
+   "type": "OTA",
+   "status": "candidate",
+   "url": "https://www.expedia.com.ar/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": ""
+  },
+  {
+   "id": "tripcom",
+   "name": "Trip.com",
+   "domain": "www.trip.com",
+   "type": "OTA",
+   "status": "candidate",
+   "url": "https://www.trip.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": ""
+  },
+  {
+   "id": "jetcost",
+   "name": "Jetcost",
+   "domain": "www.jetcost.com.ar",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.jetcost.com.ar/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": ""
+  },
+  {
+   "id": "skiplagged",
+   "name": "Skiplagged",
+   "domain": "skiplagged.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://skiplagged.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Ojo: promueve 'hidden city'; no usar esas tarifas para una familia (riesgo)."
+  },
+  {
+   "id": "promociones_aereas",
+   "name": "Promos Aéreas",
+   "domain": "promociones-aereas.com.ar",
+   "type": "alertas_ofertas",
+   "status": "candidate",
+   "url": "https://promociones-aereas.com.ar/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Blog de ofertas; útil como señal de promos, no como cotización."
+  },
+  {
+   "id": "ita_matrix",
+   "name": "ITA Matrix",
+   "domain": "matrix.itasoftware.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://matrix.itasoftware.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "SPA sin API; probar en navegador real."
+  },
+  {
+   "id": "serpapi",
+   "name": "SerpApi (Google Flights)",
+   "domain": "serpapi.com",
+   "type": "api",
+   "status": "manual_only",
+   "url": "https://serpapi.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "seed-2026-11-05",
+   "last_checked": null,
+   "notes": "Requiere cuenta/API key propia del usuario; el agente no crea cuentas. Tier gratis ~250 búsquedas/mes (terceros): no alcanza para 60+ corridas."
+  }
+ ]
+}

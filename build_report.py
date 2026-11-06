@@ -176,7 +176,7 @@ def score_obs(o, cfg, fx):
 
 def itin_key(o):
     ob, ib = o.get("outbound", {}), o.get("inbound", {})
-    return (o["origin"], o["depart"], o["return"], o.get("airlines", ""), ob.get("via", ""),
+    return (o["origin"], o["depart"], o["return"], o.get("source", ""), o.get("airlines", ""), ob.get("via", ""),
             ob.get("dep_time", ""), ib.get("dep_time", ""))
 
 
@@ -188,6 +188,13 @@ def build():
                .replace(",", "."))
     obs = load_jsonl(DATA / "observations.jsonl")
     runs = load_jsonl(DATA / "runs.jsonl")
+    registry = (load_json(DATA / "sources.json", {}) or {}).get("sources", [])
+    slog = load_jsonl(DATA / "source_log.jsonl")
+    reg_by_id = {s["id"]: s for s in registry}
+
+    def rank_ok(o):
+        # rankean fuentes activas o útiles solo-con-Chrome (o desconocidas); el resto solo sirve de contraste
+        return reg_by_id.get(o.get("source"), {"status": "active"}).get("status") in ("active", "needs_chrome")
 
     valid = []
     for o in obs:
@@ -205,7 +212,12 @@ def build():
     for o in latest.values():
         s = score_obs(o, cfg, fx)
         scored.append({**o, **{"_s": s}})
-    ok = sorted([x for x in scored if not x["_s"]["excluded"]], key=lambda x: x["_s"]["score"])
+    ok_all = sorted([x for x in scored if not x["_s"]["excluded"]], key=lambda x: x["_s"]["score"])
+    ok = [x for x in ok_all if rank_ok(x)]
+    for x in ok:  # contraste: mismo origen y fechas en otras fuentes
+        x["_others"] = [(y.get("source"), float(y["price_total_usd"])) for y in scored
+                        if y is not x and (y["origin"], y["depart"], y["return"]) == (x["origin"], x["depart"], x["return"])
+                        and y.get("source") != x.get("source")]
     top, seen, per_depart = [], set(), {}
     for x in ok:
         k = (x["origin"], x["depart"], x["return"])
@@ -238,8 +250,8 @@ def build():
         "top5": [{k: v for k, v in x.items()} for x in top],
     }
     (DATA / "top5.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
-    (ROOT / "index.html").write_text(render_html(cfg, top, best, history, last_run, runs, out, fx_note, fx), encoding="utf-8")
-    (ROOT / "README.md").write_text(render_md(cfg, top, best, last_run, out, fx_note), encoding="utf-8")
+    (ROOT / "index.html").write_text(render_html(cfg, top, best, history, last_run, runs, out, fx_note, fx, registry, slog), encoding="utf-8")
+    (ROOT / "README.md").write_text(render_md(cfg, top, best, last_run, out, fx_note, registry), encoding="utf-8")
     print(f"OK: {len(valid)} observaciones, {len(top)} en el top, {len(runs)} corridas")
 
 
@@ -287,7 +299,109 @@ def svg_history(history):
             f"<text x='{pad}' y='14' font-size='11'>máx {usd(hi)}</text><text x='{pad}' y='{h - 6}' font-size='11'>mín {usd(lo)}</text></svg>")
 
 
-def render_html(cfg, top, best, history, last_run, runs, out, fx_note, fx):
+ACC = {"ok": ("✅", "ok"), "partial": ("⚠️", "parcial"), "untested": ("⏳", "sin probar"), "captcha": ("🤖", "CAPTCHA"),
+       "http_403": ("⛔", "403"), "blocked": ("⛔", "bloqueada"), "empty": ("⚠️", "vacía"), "robots_disallow": ("⛔", "robots.txt"),
+       "login_wall": ("🔒", "pide login"), "js_only": ("⚠️", "solo JS"), "timeout": ("⚠️", "timeout"), "error": ("⚠️", "error"),
+       "http_404": ("⚠️", "404"), "not_applicable": ("–", "n/a")}
+STATUS = {"active": "activa", "partial": "solo contraste", "needs_chrome": "solo con tu Chrome (3 AM)",
+          "candidate": "en prueba", "manual_only": "solo manual", "discarded": "descartada"}
+VERDICT = {"util": "útil", "parcial": "parcial", "inutil": "inútil", "sin_evaluar": "sin evaluar", "no_evaluable": "no evaluable"}
+
+
+def acc_badge(v):
+    ico, txt = ACC.get(v or "untested", ("⏳", str(v)))
+    return f"{ico} {escape(txt)}"
+
+
+def https_link(url, label):
+    url = str(url or "")
+    if url.startswith("https://"):
+        return f"<a href='{escape(url, quote=True)}' rel='noopener noreferrer'>{escape(label)}</a>"
+    return escape(label)
+
+
+def source_stats(slog):
+    st = {}
+    for e in slog:
+        d = st.setdefault(e.get("source_id"), {"n": 0, "ok": 0})
+        d["n"] += 1
+        d["ok"] += 1 if e.get("result") == "ok" else 0
+    return st
+
+
+def render_sources_html(registry, slog, runs):
+    if not registry:
+        return ""
+    st = source_stats(slog)
+    counts = {}
+    for s in registry:
+        counts[s.get("status")] = counts.get(s.get("status"), 0) + 1
+    chips = " · ".join(f"{STATUS.get(k, k)}: <b>{v}</b>" for k, v in counts.items())
+    order = {"active": 0, "needs_chrome": 1, "partial": 2, "candidate": 3, "manual_only": 4, "discarded": 5}
+    rows = ""
+    for s in sorted(registry, key=lambda s: (order.get(s.get("status"), 9), s.get("name", ""))):
+        u = s.get("usefulness", {}) or {}
+        sc = u.get("score")
+        util = (f"{sc}/14 · " if sc is not None else "") + VERDICT.get(u.get("verdict", "sin_evaluar"), "sin evaluar")
+        stt = st.get(s["id"])
+        rate = f"{stt['ok']}/{stt['n']}" if stt else "–"
+        a = s.get("access", {})
+        rows += (f"<tr><td>{https_link(s.get('url'), s.get('name', s['id']))}<br><span class='muted'>{escape(str(s.get('type', '')))}</span></td>"
+                 f"<td>{acc_badge(a.get('agent'))}</td><td>{acc_badge(a.get('chrome'))}</td>"
+                 f"<td>{escape(util)}</td><td class='n'>{rate}</td><td>{escape(STATUS.get(s.get('status'), str(s.get('status'))))}</td>"
+                 f"<td class='muted'>{escape(str(s.get('last_checked') or '–')[:16])}</td>"
+                 f"<td class='muted'>{escape(str(s.get('notes', ''))[:220])}</td></tr>")
+    new_cards = ""
+    last_ids = [r.get("run_id") for r in runs[-3:] if r.get("run_id")]
+    for s in [s for s in registry if s.get("discovered_by") in last_ids]:
+        u = s.get("usefulness", {}) or {}
+        score = (" " + str(u["score"]) + "/14") if u.get("score") is not None else ""
+        new_cards += (f"<li><b>{https_link(s.get('url'), s.get('name', s['id']))}</b> (hallada en {escape(str(s.get('discovered_by')))}): "
+                      f"{escape(VERDICT.get(u.get('verdict', 'sin_evaluar'), ''))}{score} — {escape(str(s.get('notes', ''))[:200])}</li>")
+    new_block = f"<h3>Fuentes nuevas de las últimas corridas</h3><ul>{new_cards}</ul>" if new_cards else ""
+    recent = ""
+    by_run = {}
+    for e in slog:
+        by_run.setdefault(e.get("run_id", "?"), []).append(e)
+    main_runs = [r for r in runs if r.get("kind", "main") != "chrome"]
+    chrome_runs = [r for r in runs if r.get("kind") == "chrome"]
+    for title, lst in (("Última corrida del agente", main_runs[-1:]), ("Última corrida con tu Chrome (3 AM)", chrome_runs[-1:])):
+        for r in lst:
+            items = ""
+            for e in by_run.get(r.get("run_id"), []):
+                items += (f"<tr><td>{https_link(e.get('url'), str(e.get('url', ''))[:90])}</td>"
+                          f"<td>{escape(str(e.get('via', '')))}</td><td>{escape(str(e.get('purpose', '')))}</td>"
+                          f"<td>{acc_badge(e.get('result'))}</td><td class='muted'>{escape(str(e.get('note', ''))[:140])}</td></tr>")
+            if items:
+                recent += (f"<h3>{title} <span class='muted'>({escape(str(r.get('run_id')))})</span></h3>"
+                           f"<table><tr><td><b>Página</b></td><td><b>Vía</b></td><td><b>Para</b></td><td><b>Resultado</b></td><td><b>Nota</b></td></tr>{items}</table>")
+    manual = ""
+    for s in registry:
+        if s.get("status") == "manual_only" or s.get("access", {}).get("chrome") == "captcha":
+            manual += f"<li>{https_link(s.get('url'), s.get('name', s['id']))} — {escape(str(s.get('notes', ''))[:160])}</li>"
+    manual_block = f"<h3>Para abrir vos a mano</h3><ul>{manual}</ul>" if manual else ""
+    return (f"<h2>Fuentes de información</h2><p class='muted'>{chips}. “Éxito” = consultas que devolvieron datos / consultas totales. "
+            f"Utilidad = puntaje de la evaluación estándar (máx 14).</p>"
+            f"<div style='overflow-x:auto'><table><tr><td><b>Fuente</b></td><td><b>Agente</b></td><td><b>Tu Chrome</b></td><td><b>Utilidad</b></td>"
+            f"<td><b>Éxito</b></td><td><b>Estado</b></td><td><b>Último chequeo</b></td><td><b>Notas</b></td></tr>{rows}</table></div>"
+            f"{new_block}{recent}{manual_block}")
+
+
+def render_sources_md(registry):
+    if not registry:
+        return ""
+    lines = ["## Fuentes", "", "| Fuente | Agente | Tu Chrome | Utilidad | Estado |", "|---|---|---|---|---|"]
+    for s in registry:
+        u = s.get("usefulness", {}) or {}
+        sc = f"{u['score']}/14 " if u.get("score") is not None else ""
+        a = s.get("access", {})
+        lines.append(f"| {s.get('name', s['id'])} | {ACC.get(a.get('agent'), ('', a.get('agent')))[1]} | "
+                     f"{ACC.get(a.get('chrome'), ('', a.get('chrome')))[1]} | {sc}{VERDICT.get(u.get('verdict', 'sin_evaluar'), '')} | "
+                     f"{STATUS.get(s.get('status'), s.get('status'))} |")
+    return "\n".join(lines)
+
+
+def render_html(cfg, top, best, history, last_run, runs, out, fx_note, fx, registry, slog):
     stale = ""
     if last_run:
         try:
@@ -311,6 +425,8 @@ def render_html(cfg, top, best, history, last_run, runs, out, fx_note, fx):
             g = (f"<details><summary>Desglose del auto ({escape(s['ground']['label'])})</summary><ul>{gp}</ul>"
                  f"<p class='muted'>Supuestos sin verificar: {escape(un)}</p></details>")
         notes = "".join(f"<li>{escape(n)}</li>" for n in s["notes"])
+        if x.get("_others"):
+            notes += "<li>Contraste: " + ", ".join(f"{escape(str(n))} {usd(p)}" for n, p in x["_others"]) + "</li>"
         link = f"<a href='{escape(x['url'], quote=True)}' rel='noopener noreferrer'>Abrir búsqueda</a>" if str(x.get("url", "")).startswith("https://") else ""
         cards.append(f"""
 <article class='card'>
@@ -355,6 +471,7 @@ svg{{width:100%;height:auto;color:var(--ac)}} circle{{fill:var(--ac)}} details{{
 <h2>Las 5 mejores opciones</h2>
 {body}
 <h2>Precio mínimo observado por corrida</h2>{svg_history(history)}
+{render_sources_html(registry, slog, runs)}
 <h2>Supuestos del costo en auto a Buenos Aires</h2>
 <table><tr><td><b>Escenario</b></td><td><b>Parámetro</b></td><td><b>Valor</b></td><td><b>Estado</b></td><td><b>Nota</b></td></tr>{ground_rows}</table>
 <h2>Antes de comprar</h2>
@@ -364,7 +481,7 @@ svg{{width:100%;height:auto;color:var(--ac)}} circle{{fill:var(--ac)}} details{{
 </main></body></html>"""
 
 
-def render_md(cfg, top, best, last_run, out, fx_note):
+def render_md(cfg, top, best, last_run, out, fx_note, registry):
     lines = ["# Aruba enero 2027 — mejores vuelos", "",
              f"_Actualizado {out['generated_at'][:16].replace('T', ' ')} · {out['n_runs']} corridas · {out['n_obs']} precios · TC {fx_note}_", "",
              f"**Recomendación:** {recommendation(best, cfg)}", "",
@@ -377,7 +494,7 @@ def render_md(cfg, top, best, last_run, out, fx_note):
                      f"{usd(s['cost_real_usd'])} | {usd(s['score'])} |")
     if not top:
         lines.append("| – | – | Sin datos todavía | – | – | – | – | – |")
-    lines += ["", "El detalle completo (desglose, gráfico, supuestos) está en `index.html`: descargalo y abrilo en el navegador.", ""]
+    lines += ["", render_sources_md(registry), "", "El detalle completo (desglose, gráfico, supuestos) está en `index.html`: descargalo y abrilo en el navegador.", ""]
     return "\n".join(lines)
 
 

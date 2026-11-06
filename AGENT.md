@@ -30,7 +30,8 @@ Encontrar la mejor combinación de **origen + fecha de ida + noches (7–9)** pa
    - **Validá que la página diga 4 pasajeros** y que el precio sea total de los 4 en USD. Si no, no registres ese dato.
    - Extraé de cada consulta hasta 3 itinerarios: el más barato, el mejor con menos escalas y el directo si existe. Anotá también las fechas más baratas que Google sugiere (van en `notes`).
    - Pausa aleatoria de 20–60 s entre consultas. Una por vez.
-   - **Fuente secundaria (si Google falla)**: Kayak con navegador real (`https://www.kayak.com/flights/{ORIGEN}-AUA/{IDA}/{VUELTA}/2adults/children-5-3?currency=USD`); Kayak puede mostrar precio por persona: verificalo y convertí a total de 4 (`price_total_usd`). Si todo falla, WebSearch de tarifas publicadas con `live: false`. Nunca Skyscanner (CAPTCHA) ni Despegar (403, prohibido por robots).
+   - **Fuentes secundarias**: las que en `data/sources.json` tengan `status` `active` o `partial` (ver sección «Fuentes»). Si Google falla, usá la siguiente activa. Si una fuente muestra precio por persona, convertí a total de 4 y verificalo. Si todo falla, WebSearch de tarifas publicadas con `live: false`. Las fuentes `needs_chrome` / `manual_only` NO se tocan en esta corrida (las ve la corrida de las 3 AM con el Chrome del usuario o el usuario a mano).
+   - **Registrá CADA página que abras o intentes abrir** (también las fallidas) en `data/source_log.jsonl` (ver sección «Fuentes»).
 7. **Guardar observaciones**: una línea JSON por itinerario en `data/observations.jsonl` (append). Esquema:
    ```json
    {"run_id":"2026-11-06T12","captured_at":"ISO con offset","source":"google_flights","live":true,
@@ -41,11 +42,54 @@ Encontrar la mejor combinación de **origen + fecha de ida + noches (7–9)** pa
     "inbound":{"stops":1,"duration_min":700,"shortest_layover_min":180,"longest_layover_min":180,"dep_time":"09:00","via":"PTY"}}
    ```
    `price_total_usd` es el precio final de los 4 pasajeros mostrado por el buscador (con impuestos). `bags_included_checked` = cantidad TOTAL de valijas despachadas incluidas para la familia (null si no se sabe: `build_report.py` asume 0 y suma el costo de las 4 necesarias). **No calcules impuestos argentinos a mano.** Duración y escalas son **por tramo**.
-8. **Log de la corrida**: una línea en `data/runs.jsonl`: `{"run_id","started_at","finished_at","sources":{"google_flights":"ok|blocked|empty","kayak":"ok|blocked|not_used"},"urls_tried":N,"obs_added":N,"alerts":[],"notes":""}`.
+7b. **Fuentes (obligatorio en cada corrida, ver sección «Fuentes»)**: sumá al menos 1 fuente nueva al registro y evaluá al menos 1 fuente. Presupuesto: ≤ 4 cargas de página por evaluación.
+8. **Log de la corrida**: una línea en `data/runs.jsonl`: `{"run_id","kind":"main","started_at","finished_at","sources":{"google_flights":"ok|blocked|empty", "<otra_id>":"..."},"urls_tried":N,"obs_added":N,"new_sources_added":["id"],"sources_evaluated":["id"],"alerts":[],"notes":""}`.
 9. **Reporte**: `python -X utf8 build_report.py` (genera `index.html`, `README.md`, `data/top5.json`). Revisá que corra sin errores. Si una observación es inválida el script la ignora y avisa por stderr: corregila.
 10. **Alertas**: compará el mejor puntaje de `data/top5.json` contra la corrida anterior. Si bajó ≥ `alerts.price_drop_pct_alert` %, o apareció un directo, agregá la alerta a `runs.jsonl` y, si la herramienta `PushNotification` está disponible, avisá al usuario con una línea (origen, fechas, precio).
 11. **Publicar**: `git add -A && git commit -m "corrida {run_id}: top1 {origen} {ida}→{vuelta} US$ {costo}" && git push`. Si falla el push, reintentá una vez con `git pull --rebase`. Nunca force-push.
 12. **Cerrar** con un resumen de 3 líneas: qué fuentes funcionaron, mejor opción actual, qué quedó pendiente.
+
+## Fuentes: descubrir, evaluar y registrar
+
+Objetivo: no quedarse con las 3 primeras páginas que salen en el buscador. En **cada corrida** hay que **agregar al menos 1 fuente nueva** al registro y **evaluar al menos 1**, y el HTML (`index.html`) muestra a quien lo mira qué páginas se consultaron y cuáles se pudo abrir. Estado en `data/sources.json` (registro) y `data/source_log.jsonl` (un renglón por cada página consultada).
+
+### Registro de cada acceso (`data/source_log.jsonl`)
+Un JSON por línea, por **cada** URL abierta o intentada (éxito o falla):
+`{"run_id":"…","ts":"ISO","source_id":"google_flights","via":"agent_browser|webfetch|websearch|user_chrome","url":"https://…","purpose":"price_query|discovery|evaluation|recheck|cross_check","result":"ok|empty|blocked|captcha|http_403|http_404|timeout|robots_disallow|login_wall|js_only|error","obs_added":N,"note":"corto"}`
+`ok` = devolvió datos utilizables. Una página que carga pero no muestra precios es `empty` o `js_only`, no `ok`.
+
+### Registro de fuentes (`data/sources.json`)
+Cada fuente: `id`, `name`, `domain`, `type` (metabuscador|OTA|aerolinea|api|alertas_ofertas|foro), `url`, `status`, `access:{agent,chrome}`, `usefulness:{score,verdict,evaluated_at,details}`, `discovered_by` (run_id), `last_checked`, `notes`.
+- `status`: `candidate` (en prueba) → `active` (se usa para cotizar/validar) | `partial` (solo contraste, no rankea) | `needs_chrome` (útil pero solo abre con el Chrome del usuario; la usa la corrida de las 3 AM) | `manual_only` (la tiene que abrir el usuario) | `discarded`.
+- `access.agent` / `access.chrome`: `ok|partial|untested|captcha|http_403|blocked|empty|robots_disallow|login_wall|js_only|timeout|error`.
+- Las observaciones de fuentes con `status` `candidate`, `partial` o `discarded` **no entran al ranking**: solo aparecen como «contraste» en la tarjeta. Por eso una fuente nueva nunca puede ensuciar el top 5 antes de evaluarse.
+- Actualizá `access`, `last_checked`, `notes` de cada fuente que toques. No borres fuentes: descartalas con motivo.
+
+### 1) Descubrir (agregar ≥ 1 fuente nueva por corrida)
+- Hacé 2–3 `WebSearch` con formulaciones **distintas** cada vez (español e inglés; ej.: «comparador vuelos Rosario Aruba», «cheap flights Buenos Aires Aruba January», «vuelos baratos Caribe desde Argentina enero 2027 ofertas», «Aruba flights from Argentina price calendar», «aerolíneas que vuelan a Aruba desde Argentina», «alertas de precios vuelos Argentina»). Cambiá las palabras en cada corrida para no repetir resultados.
+- **No te quedes con las 3 primeras.** Leé hasta la posición ~15 y la segunda página (cambiá la consulta, agregá términos como «comparador», «calendario de precios», «foro», «blog de ofertas»). Buscá variedad de tipos: metabuscadores, OTAs, sitios oficiales de aerolíneas, comparadores de precios por calendario, blogs/alertas de ofertas, comunidades de viajeros.
+- Para cada dominio **que no esté ya** en `sources.json`, agregalo como `candidate` (con `discovered_by` = tu run_id). Desduplicá por dominio. Si tras 3 búsquedas distintas no aparece ningún dominio nuevo, anotá `discovery_exhausted` en `runs.jsonl` y compensá evaluando de nuevo la fuente con evaluación más vieja.
+- Descartá de entrada, con `discarded` y motivo, sitios que requieren crear cuenta, pedir tarjeta/pasaporte, o que son de dudosa reputación (pagos raros, pop-ups, redirecciones). No te registres en nada.
+
+### 2) Evaluar (≥ 1 por corrida; máx. 4 cargas de página por fuente)
+Elegí la fuente a evaluar: primero las `candidate` más antiguas (o la recién descubierta más prometedora). Ejecutá la **consulta de referencia** de `config.json` (`sources.reference_query`: ROS→AUA 10→18 ene 2027, 2 adultos + 2 niños) y comparala con el último precio de Google Flights para esa misma consulta (si no hay uno de las últimas 24 h, consultalo antes).
+Puntaje (0–2 cada criterio, máx. 14):
+1. **Acceso**: 2 = abre sin CAPTCHA/403/login con el agente; 1 = abre con fallas intermitentes; 0 = bloqueada.
+2. **Pasajeros**: 2 = admite 2 adultos + 2 niños con edades y lo muestra en la página; 1 = admite solo «niños» sin edades; 0 = no se puede.
+3. **Precio total final**: 2 = muestra total de los 4 (o por persona claramente rotulado) con impuestos; 1 = sin impuestos o ambiguo; 0 = sin precio.
+4. **Escalas y duración por tramo**: 2 = completo; 1 = parcial; 0 = no.
+5. **Fechas flexibles / calendario**: 2 = calendario o fechas cercanas más baratas; 1 = limitado; 0 = fecha única.
+6. **Coherencia con Google**: 2 = diferencia ≤ `price_consistency_pct.full_points_lte` %; 1 = ≤ `half_points_lte` %; 0 = mayor o sin comparable.
+7. **Estabilidad**: 2 = dos cargas seguidas coinciden y no cambian de formato; 1 = una con fallas; 0 = inconsistente. (Con una sola carga posible, puntuá 1 y anotalo.)
+Veredicto: `util` (≥ `useful_gte`), `parcial` (≥ `partial_gte`), `inutil` (menos). Si no se puede probar (login, CAPTCHA) → `no_evaluable` y `needs_chrome` o `manual_only` según corresponda; **no inventes puntajes**.
+Efecto en `status`: `util` → `active`; `parcial` → `partial`; `inutil` → `discarded`; acceso bloqueado pero potencialmente útil → `needs_chrome`. Guardá `usefulness.details` con los 7 puntajes y los precios comparados. Cada `reevaluate_active_every_n_runs` corridas, reevaluá una fuente `active`/`partial` para detectar que dejó de servir.
+Respetá robots.txt (`respect_robots_txt`): si el path de resultados está prohibido, `robots_disallow` y `manual_only`.
+
+### 3) Usar las fuentes activas
+Además de Google, validá el top `cross_check_top_n_on_secondary_sources` en 1–2 fuentes `active` distintas (rotá) y guardá esas cotizaciones como observaciones con su `source`. Diferencias grandes con Google se anotan en `notes`.
+
+## Corrida de las 3 AM (exclusiva, con el Chrome del usuario)
+Otra tarea programada (`aruba-vuelos-chrome-3am`) usa el Chrome real del usuario para las fuentes que el agente no puede abrir (`needs_chrome`, o con `access.agent` en `captcha|http_403|blocked|empty|js_only`). Manual propio: `AGENT_CHROME.md`. Esa corrida no hace el barrido de Google ni descubre fuentes.
 
 ## Qué NO hace este agente
 Comprar, reservar, pagar, crear cuentas, cargar pasaportes o tarjetas. La compra la hace siempre una persona, verificando en la web de la aerolínea: precio final, equipaje y tarifa de niños.

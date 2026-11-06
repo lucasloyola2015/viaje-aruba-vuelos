@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T22:20:04-03:00",
+ "generated_at": "2026-11-05T22:24:26-03:00",
  "fx": "1.580 ARS/USD · Dólar MEP cierre 5/11/2026 (Ámbito 1.579.50; Sur24 1.584.62; El Cronista 1.577.20) · 2026-11-05T22:19:00-03:00",
  "n_obs": 11,
  "n_runs": 1,
@@ -64,7 +64,8 @@
       "parking_ars_per_extra_day"
      ]
     }
-   }
+   },
+   "_others": []
   },
   {
    "run_id": "2026-11-05T22",
@@ -132,7 +133,8 @@
       "parking_ars_per_extra_day"
      ]
     }
-   }
+   },
+   "_others": []
   },
   {
    "run_id": "2026-11-05T22",
@@ -176,7 +178,8 @@
      "Cambio de aeropuerto": 200
     },
     "ground": null
-   }
+   },
+   "_others": []
   },
   {
    "run_id": "2026-11-05T22",
@@ -226,7 +229,8 @@
      "Cambio de aeropuerto": 200
     },
     "ground": null
-   }
+   },
+   "_others": []
   },
   {
    "run_id": "2026-11-05T22",
@@ -276,7 +280,8 @@
      "Cambio de aeropuerto": 200
     },
     "ground": null
-   }
+   },
+   "_others": []
   }
  ]
 }
