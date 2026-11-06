@@ -49,21 +49,22 @@
    "name": "Skyscanner",
    "domain": "www.skyscanner.com.ar",
    "type": "metabuscador",
-   "status": "needs_chrome",
+   "status": "manual_only",
    "url": "https://www.skyscanner.com.ar/",
    "access": {
     "agent": "captcha",
-    "chrome": "untested"
+    "chrome": "robots_disallow"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
+    "verdict": "no_evaluable",
     "evaluated_at": null,
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": null,
-   "notes": "CAPTCHA (PerimeterX) para el agente. Probar en el Chrome del usuario a las 3 AM; si también pide CAPTCHA, pasa a manual_only (nunca se resuelve)."
+   "last_checked": "2026-11-05T22:36:00-03:00",
+   "notes": "Abrir a mano: https://www.skyscanner.com.ar/transporte/vuelos/ros/aua/270110/270118/?adultsv2=2&childrenv2=5%7C3 — robots.txt prohíbe /transporte/* (resultados de vuelos); además CAPTCHA PerimeterX para el agente. Verificado con Chrome chrome-2026-11-05T22.",
+   "robots_disallow": true
   },
   {
    "id": "despegar",
