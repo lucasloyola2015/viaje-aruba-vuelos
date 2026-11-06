@@ -1,6 +1,6 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-05 22:34 · 2 corridas · 11 precios · TC 1.580 ARS/USD · Dólar MEP cierre 5/11/2026 (Ámbito 1.579.50; Sur24 1.584.62; El Cronista 1.577.20) · 2026-11-05T22:19:00-03:00_
+_Actualizado 2026-11-06 03:25 · 3 corridas · 11 precios · TC 1.580 ARS/USD · Dólar MEP cierre 5/11/2026 (Ámbito 1.579.50; Sur24 1.584.62; El Cronista 1.577.20) · 2026-11-05T22:19:00-03:00_
 
 **Recomendación:** Conviene ir en auto a Buenos Aires: ahorra ≈ US$ 1.025 de puntaje frente a salir de Rosario (ya incluye cochera, peajes, nafta, traslados y penalización por manejar).
 
