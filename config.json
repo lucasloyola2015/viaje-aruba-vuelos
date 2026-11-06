@@ -55,8 +55,8 @@
         "fuel_price_ars_per_l": { "value": 2105, "verified": true },
         "km_one_way": { "value": 310, "verified": false },
         "l_per_100km": { "value": 9, "verified": false },
-        "garage_ars_per_day": { "value": 25000, "verified": false, "note": "SIN DATO: el agente debe cotizar cocheras reales en CABA y actualizar" },
-        "uber_ars_per_trip": { "value": 45000, "verified": false, "note": "Uber/taxi cochera-EZE para 4 con valijas, 25.000-50.000; x2 trayectos" },
+        "garage_ars_per_day": { "value": 25000, "verified": false, "note": "SIN DATO: 5/11/2026 no se encontraron tarifas publicadas de cocheras CABA por día; Park to Fly (Ezeiza, techado) sin precio público. Re-cotizar" },
+        "uber_ars_per_trip": { "value": 35000, "verified": true, "note": "Taxi Ezeiza tarifa fija CABA–EZE $35.000 (sirchandler.com.ar, abr 2026; verificado 5/11/2026). Uber promedio ~$22.600 según uber.com/r/airports/eze, sin valijas para 4" },
         "uber_trips": 2
       }
     },
