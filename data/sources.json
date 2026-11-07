@@ -241,21 +241,21 @@
    "name": "Turismocity",
    "domain": "www.turismocity.com.ar",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.turismocity.com.ar/",
    "access": {
-    "agent": "untested",
+    "agent": "robots_disallow",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-07T12:49:00-03:00",
+    "details": {"motivo": "robots.txt prohíbe /vuelos/resultados* a todos los agentes y Disallow: / a ClaudeBot/Anthropic-AI. No se abrió la búsqueda (1 carga: robots.txt)."}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": null,
-   "notes": "Metabuscador muy usado en Argentina."
+   "last_checked": "2026-11-07T12:49:00-03:00",
+   "notes": "Metabuscador muy usado en Argentina. robots.txt bloquea explícitamente a agentes de IA → manual_only (lo abre el usuario a mano)."
   },
   {
    "id": "expedia",
@@ -529,6 +529,48 @@
    "discovered_by": "2026-11-06T13",
    "last_checked": null,
    "notes": "Metabuscador con calendario de precios por ruta (WebSearch). Probablemente referencia, no cotización 2+2."
+  },
+  {
+   "id": "cybermonday_ar",
+   "name": "CyberMonday Argentina (CACE)",
+   "domain": "www.cybermonday.com.ar",
+   "type": "alertas_ofertas",
+   "status": "candidate",
+   "url": "https://www.cybermonday.com.ar/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-07T12",
+   "last_checked": null,
+   "notes": "Evento de ofertas online de noviembre. Nota de prensa (prensamercosur.org, 03/11/2026) menciona rebajas de Avianca, Copa y Gol de hasta 50%. Útil para detectar promos temporales como la Copa ROS 6→13 a 5.557 que desapareció el 07/11 al mediodía. No cotiza 2+2: solo alerta."
+  },
+  {
+   "id": "kayak_ar",
+   "name": "KAYAK Argentina",
+   "domain": "www.kayak.com.ar",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.kayak.com.ar/vuelos/Argentina-AR0/Caribe-0CB",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-07T12",
+   "last_checked": null,
+   "notes": "Dominio argentino de KAYAK (precios en ARS, páginas de ruta). Misma empresa que 'kayak' (www.kayak.com, manual_only): revisar robots.txt antes de usar; probablemente igual restricción."
   }
  ]
 }
