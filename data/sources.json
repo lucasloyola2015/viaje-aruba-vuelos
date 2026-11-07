@@ -19,8 +19,8 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-06T13:46:00-03:00",
-   "notes": "Fuente primaria. OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
+   "last_checked": "2026-11-07T09:13:00-03:00",
+   "notes": "Fuente primaria. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
   {
@@ -451,8 +451,29 @@
    "name": "Almundo",
    "domain": "almundo.com.ar",
    "type": "OTA",
+   "status": "partial",
+   "url": "https://almundo.com.ar/flights/results?from=ROS,AUA&to=AUA,ROS&date=2027-01-10,2027-01-18&adults=2&children=2&currencyCode=USD",
+   "access": {
+    "agent": "ok",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": 9,
+    "verdict": "parcial",
+    "evaluated_at": "2026-11-07T09:17:00-03:00",
+    "details": {"acceso": 2, "pasajeros": 1, "precio_total": 2, "escalas_duracion": 1, "fechas_flexibles": 1, "coherencia_google": 1, "estabilidad": 1, "almundo_usd": 5824, "almundo_1_escala_usd": 7905, "google_ref_usd": 7190, "google_ref_captured_at": "2026-11-05T22", "comentarios": "Acceso OK sin login/CAPTCHA; robots.txt solo prohíbe /flights/ a Googlebot. URL admite adults=2&children=2 pero no edades (pasajeros=1); 'Precio total pasajeros' con impuestos en USD, control con 1 adulto (1.540) coherente. Muestra cantidad de escalas y duración total por tramo pero no ciudad/duración de la escala ni aerolínea por fila en el texto (1). Página de ruta con 'desde' por mes, resultados sin calendario (1). Diferencia con Google -19% (1; la referencia de Google tiene >24 h y es otro itinerario: AR 1 escala). Una sola carga con 2+2 (1). page_loads: 4 (robots, ruta, 2 búsquedas)."}
+   },
+   "discovered_by": "2026-11-06T13",
+   "last_checked": "2026-11-07T09:17:00-03:00",
+   "notes": "Evaluada 2026-11-07T09: parcial (9/14) → solo contraste. URL de resultados: /flights/results?from=ROS,AUA&to=AUA,ROS&date=YYYY-MM-DD,YYYY-MM-DD&adults=2&children=2&currencyCode=USD. Niños sin edades. Útil para cross-check de precio total."
+  },
+  {
+   "id": "kiwi",
+   "name": "Kiwi.com (sitio de consumidor)",
+   "domain": "www.kiwi.com",
+   "type": "metabuscador",
    "status": "candidate",
-   "url": "https://almundo.com.ar/vuelos/vuelos-a-oranjestad/BUE-AUA",
+   "url": "https://www.kiwi.com/en/cheap-flights/buenos-aires-buenos-aires-argentina/aruba-aruba",
    "access": {
     "agent": "untested",
     "chrome": "untested"
@@ -463,9 +484,30 @@
     "evaluated_at": null,
     "details": {}
    },
-   "discovered_by": "2026-11-06T13",
+   "discovered_by": "2026-11-07T09",
    "last_checked": null,
-   "notes": "OTA argentina; página de ruta BUE–AUA muestra 'desde' ARS 1.091.699 para ene 2027 (WebSearch, sin detalle de aerolínea). Revisar robots.txt antes de buscar."
+   "notes": "Distinto de la API Tequila (descartada). Página de ruta BUE–AUA con 'desde'. Ojo: Kiwi arma tickets separados con conexión propia ('virtual interlining'): esos itinerarios se descartan. Revisar robots.txt antes de buscar."
+  },
+  {
+   "id": "edreams",
+   "name": "eDreams",
+   "domain": "www.edreams.net",
+   "type": "OTA",
+   "status": "candidate",
+   "url": "https://www.edreams.net/us/flights/buenos-aires-aruba/BUE/AUA/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-07T09",
+   "last_checked": null,
+   "notes": "OTA europea con página de ruta BUE–AUA (WebSearch). Revisar robots.txt antes de buscar."
   },
   {
    "id": "kupi",

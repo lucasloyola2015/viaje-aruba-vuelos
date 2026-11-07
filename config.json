@@ -55,7 +55,7 @@
         "fuel_price_ars_per_l": { "value": 2105, "verified": true },
         "km_one_way": { "value": 310, "verified": false },
         "l_per_100km": { "value": 9, "verified": false },
-        "garage_ars_per_day": { "value": 25000, "verified": false, "note": "SIN DATO: 5/11/2026 no se encontraron tarifas publicadas de cocheras CABA por día; Park to Fly (Ezeiza, techado) sin precio público. 6/11/2026: se reintentó (Sir Chandler jun-2026 sobre Park to Fly: solo WhatsApp, sin precio; Costa Salguero $163.000/5 días, nota sin fecha). Re-cotizar" },
+        "garage_ars_per_day": { "value": 18900, "verified": true, "note": "iProfesional 19/6/2026 (relevamiento garajes CABA): estadía 24 h auto convencional $14.500–18.900; se toma el máximo. Es un relevamiento, no cotización de una cochera puntual, y tiene ~5 meses (verificado 7/11/2026). Antes: 25.000 estimado. Park to Fly sin precio público" },
         "uber_ars_per_trip": { "value": 35000, "verified": true, "note": "Taxi Ezeiza tarifa fija CABA–EZE $35.000 (sirchandler.com.ar, abr 2026; verificado 5/11/2026). Uber promedio ~$22.600 según uber.com/r/airports/eze, sin valijas para 4" },
         "uber_trips": 2
       }

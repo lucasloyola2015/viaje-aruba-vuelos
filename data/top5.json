@@ -1,133 +1,26 @@
 {
- "generated_at": "2026-11-07T09:00:16-03:00",
+ "generated_at": "2026-11-07T09:13:02-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 69,
- "n_runs": 6,
+ "n_obs": 98,
+ "n_runs": 7,
  "top5": [
   {
-   "run_id": "2026-11-06T08",
-   "captured_at": "2026-11-06T08:25:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "ROS",
-   "depart": "2027-01-01",
-   "return": "2027-01-09",
-   "price_total_usd": 6791,
-   "price_original": 6791,
-   "currency_original": "USD",
-   "airlines": "LATAM",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-01%20through%202027-01-09%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "LATAM desde Rosario vía Lima (operado por LATAM Perú). Vuelta no consultada. Google sugiere 3–10 ene por US$ 4.661 (probablemente Arajet vía PUJ, no verificado).",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 685,
-    "shortest_layover_min": 165,
-    "longest_layover_min": 165,
-    "dep_time": "07:45",
-    "via": "LIM"
-   },
-   "inbound": {},
-   "_s": {
-    "score": 7311.0,
-    "cost_real_usd": 7071.0,
-    "nights": 8,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas",
-     "vuelta: escalas s/d"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6791.0,
-     "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 240.0
-    },
-    "ground": null
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-06T13",
-   "captured_at": "2026-11-06T13:41:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "EZE",
-   "depart": "2027-01-18",
-   "return": "2027-01-26",
-   "price_total_usd": 6196,
-   "price_original": 6196,
-   "currency_original": "USD",
-   "airlines": "American",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20to%20AUA%20from%20EZE%20on%202027-01-18%20through%202027-01-26%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Vía Miami (7h47 de escala): REQUIERE VISA DE EE.UU. para los 4. Confirmado en 2 cargas. Vuelta no consultada.",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 1214,
-    "shortest_layover_min": 467,
-    "longest_layover_min": 467,
-    "dep_time": "21:35",
-    "via": "MIA"
-   },
-   "inbound": {},
-   "_s": {
-    "score": 7490.8937964011575,
-    "cost_real_usd": 6682.8937964011575,
-    "nights": 8,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas",
-     "vuelta: escalas s/d"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6196.0,
-     "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 658.0
-    },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 206.89379640115766,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 185800,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-06T13",
-   "captured_at": "2026-11-06T13:46:00-03:00",
+   "run_id": "2026-11-07T09",
+   "captured_at": "2026-11-07T09:07:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "ROS",
    "depart": "2027-01-06",
-   "return": "2027-01-14",
-   "price_total_usd": 6806,
-   "price_original": 6806,
+   "return": "2027-01-13",
+   "price_total_usd": 5557,
+   "price_original": 5557,
    "currency_original": "USD",
    "airlines": "Copa",
    "airport_change": false,
    "bags_included_checked": null,
    "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20to%20AUA%20from%20ROS%20on%202027-01-06%20through%202027-01-14%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Copa vía Panamá ida y vuelta (vuelta consultada: jue 14 15:40 → vie 15 03:48 en ROS; hay otra vuelta 13:12 con conexión de 57 min, mismo precio). Desde Rosario sin pasar por Bs As.",
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-06%20through%202027-01-13%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "7 noches (mié–mié). Copa vía Panamá ida y vuelta, confirmado al elegir la ida: total 5.557 con vuelta mié 13 15:40 → jue 14 03:48 en ROS (escala 2h01 en PTY). Otra vuelta 13:12 con conexión de 57 min: 6.811. Desde Rosario sin pasar por Bs As.",
    "outbound": {
     "stops": 1,
     "duration_min": 628,
@@ -145,96 +38,97 @@
     "via": "PTY"
    },
    "_s": {
-    "score": 7536.0,
-    "cost_real_usd": 7086.0,
-    "nights": 8,
+    "score": 6327.0,
+    "cost_real_usd": 5837.0,
+    "nights": 7,
     "excluded": [],
     "notes": [
      "equipaje incluido s/d: se asume 0 valijas"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 6806.0,
+     "Pasajes (4 personas, precio final)": 5557.0,
      "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 450.0
+     "Penalización escalas/duración/conexiones/horarios": 450.0,
+     "Desvío de noches (7 vs 8)": 40
     },
     "ground": null
    },
    "_others": []
   },
   {
-   "run_id": "2026-11-06T08",
-   "captured_at": "2026-11-06T08:32:00-03:00",
+   "run_id": "2026-11-07T09",
+   "captured_at": "2026-11-07T09:12:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "ROS",
-   "depart": "2027-01-19",
-   "return": "2027-01-27",
-   "price_total_usd": 6554,
-   "price_original": 6554,
+   "depart": "2027-01-06",
+   "return": "2027-01-15",
+   "price_total_usd": 6188,
+   "price_original": 6188,
    "currency_original": "USD",
-   "airlines": "Aerolíneas Argentinas",
-   "airport_change": true,
+   "airlines": "LATAM",
+   "airport_change": false,
    "bags_included_checked": null,
    "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-19%20through%202027-01-27%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Ida ROS→AEP, traslado a EZE (5h15), parada en CUR 1h15 (presumiblemente mismo avión, no verificado). Vuelta no consultada. Google sugiere 17–24 ene por US$ 4.503 (probablemente Arajet, no verificado).",
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-06%20through%202027-01-15%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "9 noches. LATAM Perú vía Lima. Precio 'a partir de' de la ida: en 6→14 el total real resultó ~220 más alto. Google sugiere 6–17 ene por US$ 4.341 (fuera de rango). Vuelta no consultada.",
    "outbound": {
-    "stops": 2,
-    "duration_min": 925,
-    "shortest_layover_min": 315,
-    "longest_layover_min": 315,
-    "dep_time": "19:15",
-    "via": "AEP→EZE + CUR (presumiblemente mismo avión)"
+    "stops": 1,
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
    },
    "inbound": {},
    "_s": {
-    "score": 7724.833333333333,
-    "cost_real_usd": 6834.0,
-    "nights": 8,
+    "score": 6748.0,
+    "cost_real_usd": 6468.0,
+    "nights": 9,
     "excluded": [],
     "notes": [
      "equipaje incluido s/d: se asume 0 valijas",
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 6554.0,
+     "Pasajes (4 personas, precio final)": 6188.0,
      "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 690.8333333333333,
-     "Cambio de aeropuerto": 200
+     "Penalización escalas/duración/conexiones/horarios": 240.0,
+     "Desvío de noches (9 vs 8)": 40
     },
     "ground": null
    },
    "_others": []
   },
   {
-   "run_id": "2026-11-06T13",
-   "captured_at": "2026-11-06T13:37:00-03:00",
+   "run_id": "2026-11-07T09",
+   "captured_at": "2026-11-07T09:04:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "EZE",
-   "depart": "2027-01-19",
-   "return": "2027-01-27",
-   "price_total_usd": 6787,
-   "price_original": 6787,
+   "depart": "2027-01-18",
+   "return": "2027-01-26",
+   "price_total_usd": 6196,
+   "price_original": 6196,
    "currency_original": "USD",
    "airlines": "American",
    "airport_change": false,
    "bags_included_checked": null,
    "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20to%20AUA%20from%20EZE%20on%202027-01-19%20through%202027-01-27%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Vía Miami: REQUIERE VISA DE EE.UU. para los 4 (tránsito). Subió de 6.196 (08 h) a 6.787. Vuelta no consultada. Google sugiere 17–27 ene por US$ 4.812 (10 noches, fuera de rango).",
+   "url": "https://www.google.com/travel/flights?q=Flights%20to%20AUA%20from%20EZE%20on%202027-01-18%20through%202027-01-26%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Vía Miami (5h23): REQUIERE VISA DE EE.UU. para los 4. Estable en 6.196 (hoy sale 23:59, ayer figuraba 21:35). Vuelta no consultada.",
    "outbound": {
     "stops": 1,
-    "duration_min": 980,
-    "shortest_layover_min": 229,
-    "longest_layover_min": 229,
+    "duration_min": 1070,
+    "shortest_layover_min": 323,
+    "longest_layover_min": 323,
     "dep_time": "23:59",
     "via": "MIA"
    },
    "inbound": {},
    "_s": {
-    "score": 7760.0604630678245,
-    "cost_real_usd": 7273.8937964011575,
+    "score": 7246.0604630678245,
+    "cost_real_usd": 6682.8937964011575,
     "nights": 8,
     "excluded": [],
     "notes": [
@@ -242,11 +136,11 @@
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 6787.0,
+     "Pasajes (4 personas, precio final)": 6196.0,
      "Valijas faltantes (~4)": 280,
      "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
      "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 336.16666666666663
+     "Penalización escalas/duración/conexiones/horarios": 413.16666666666663
     },
     "ground": {
      "key": "EZE_long_stay_E4",
@@ -266,6 +160,95 @@
       "parking_ars_per_extra_day"
      ]
     }
+   },
+   "_others": []
+  },
+  {
+   "run_id": "2026-11-07T09",
+   "captured_at": "2026-11-07T09:13:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "ROS",
+   "depart": "2027-01-15",
+   "return": "2027-01-22",
+   "price_total_usd": 6862,
+   "price_original": 6862,
+   "currency_original": "USD",
+   "airlines": "LATAM",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-15%20through%202027-01-22%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "7 noches. LATAM Perú vía Lima. Vuelta no consultada.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
+   },
+   "inbound": {},
+   "_s": {
+    "score": 7422.0,
+    "cost_real_usd": 7142.0,
+    "nights": 7,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6862.0,
+     "Valijas faltantes (~4)": 280,
+     "Penalización escalas/duración/conexiones/horarios": 240.0,
+     "Desvío de noches (7 vs 8)": 40
+    },
+    "ground": null
+   },
+   "_others": []
+  },
+  {
+   "run_id": "2026-11-07T09",
+   "captured_at": "2026-11-07T09:01:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "ROS",
+   "depart": "2027-01-01",
+   "return": "2027-01-09",
+   "price_total_usd": 6912,
+   "price_original": 6912,
+   "currency_original": "USD",
+   "airlines": "LATAM",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-01%20through%202027-01-09%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "LATAM Perú vía Lima. Subió de 6.791 a 6.912. Vuelta no consultada en esta corrida (ayer: sáb 9 19:15 vía LIM). Google sugiere 3–10 ene por US$ 4.654 (probablemente Arajet vía PUJ, no verificado).",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
+   },
+   "inbound": {},
+   "_s": {
+    "score": 7432.0,
+    "cost_real_usd": 7192.0,
+    "nights": 8,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6912.0,
+     "Valijas faltantes (~4)": 280,
+     "Penalización escalas/duración/conexiones/horarios": 240.0
+    },
+    "ground": null
    },
    "_others": []
   }
