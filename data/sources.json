@@ -19,7 +19,7 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-07T09:13:00-03:00",
+   "last_checked": "2026-11-07T19:50:00-03:00",
    "notes": "Fuente primaria. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
@@ -409,21 +409,21 @@
    "name": "Ratepunk (estadísticas de ruta)",
    "domain": "www.ratepunk.com",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "discarded",
    "url": "https://www.ratepunk.com/flights-from-to/bue/aua/cheap-flights-from-buenos-aires-to-aruba",
    "access": {
-    "agent": "untested",
+    "agent": "ok",
     "chrome": "untested"
    },
    "usefulness": {
-    "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "score": 5,
+    "verdict": "inutil",
+    "evaluated_at": "2026-11-07T19:51:00-03:00",
+    "details": {"acceso": 2, "pasajeros": 0, "precio_total": 1, "escalas_duracion": 0, "fechas_flexibles": 1, "coherencia_google": 0, "estabilidad": 1, "google_ref_usd": 7190, "comentarios": "robots.txt Allow: /. La página de ruta abre sin bloqueo pero solo lista 'deals' por persona (US$ 548–562 ida y vuelta) en fechas fijas que no son de enero 2027 (nov-dic 2026, mar-abr 2027), datos del 4/11/2026; no hay búsqueda por fecha ni pasajeros (el resto de ofertas exige membresía, no se registra). Sin escalas/duración. Sin comparable con la consulta de referencia. Una sola carga. page_loads: 2."}
    },
    "discovered_by": "2026-11-06T08",
-   "last_checked": null,
-   "notes": "Páginas de ruta con medianas por mes (enero BUE–AUA ~US$ 725 por persona según WebSearch). Probablemente solo sirva como referencia, no como cotización 2+2."
+   "last_checked": "2026-11-07T19:51:00-03:00",
+   "notes": "DESCARTADA 2026-11-07T19: inútil (5/14), sin cotización 2+2 ni enero 2027; ofertas completas detrás de membresía. Antes: Páginas de ruta con medianas por mes (enero BUE–AUA ~US$ 725 por persona según WebSearch). Probablemente solo sirva como referencia, no como cotización 2+2."
   },
   {
    "id": "trabber",
@@ -571,6 +571,27 @@
    "discovered_by": "2026-11-07T12",
    "last_checked": null,
    "notes": "Dominio argentino de KAYAK (precios en ARS, páginas de ruta). Misma empresa que 'kayak' (www.kayak.com, manual_only): revisar robots.txt antes de usar; probablemente igual restricción."
+  },
+  {
+   "id": "monde_du_voyage",
+   "name": "Monde du Voyage",
+   "domain": "www.monde-du-voyage.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.monde-du-voyage.com/en/aruba/flight/departure-argentina/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-07T19",
+   "last_checked": null,
+   "notes": "Comparador francés con página 'Flights Argentina → Aruba: compare fares' (WebSearch 'Aruba flights from Argentina fare calendar'). Probablemente redirige a otros buscadores; revisar robots.txt y si admite 2+2."
   }
  ]
 }

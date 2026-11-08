@@ -1,54 +1,9 @@
 {
- "generated_at": "2026-11-07T12:31:48-03:00",
+ "generated_at": "2026-11-08T13:05:10-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 126,
- "n_runs": 8,
+ "n_obs": 153,
+ "n_runs": 9,
  "top5": [
-  {
-   "run_id": "2026-11-07T09",
-   "captured_at": "2026-11-07T09:12:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "ROS",
-   "depart": "2027-01-06",
-   "return": "2027-01-15",
-   "price_total_usd": 6188,
-   "price_original": 6188,
-   "currency_original": "USD",
-   "airlines": "LATAM",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-06%20through%202027-01-15%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "9 noches. LATAM Perú vía Lima. Precio 'a partir de' de la ida: en 6→14 el total real resultó ~220 más alto. Google sugiere 6–17 ene por US$ 4.341 (fuera de rango). Vuelta no consultada.",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 685,
-    "shortest_layover_min": 165,
-    "longest_layover_min": 165,
-    "dep_time": "07:45",
-    "via": "LIM"
-   },
-   "inbound": {},
-   "_s": {
-    "score": 6748.0,
-    "cost_real_usd": 6468.0,
-    "nights": 9,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas",
-     "vuelta: escalas s/d"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6188.0,
-     "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 240.0,
-     "Desvío de noches (9 vs 8)": 40
-    },
-    "ground": null
-   },
-   "_others": []
-  },
   {
    "run_id": "2026-11-07T09",
    "captured_at": "2026-11-07T09:03:00-03:00",
@@ -151,6 +106,57 @@
    "_others": []
   },
   {
+   "run_id": "2026-11-07T19",
+   "captured_at": "2026-11-07T19:44:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "ROS",
+   "depart": "2027-01-06",
+   "return": "2027-01-15",
+   "price_total_usd": 6411,
+   "price_original": 6411,
+   "currency_original": "USD",
+   "airlines": "LATAM",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-06%20through%202027-01-15%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "9 noches. LATAM Perú vía Lima ida y vuelta, CONFIRMADO al elegir la ida (la lista de las 09 h mostraba 6.188 'desde'). Vuelta vie 15 15:00 → sáb 16 06:30 con 6h05 en LIM.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
+   },
+   "inbound": {
+    "stops": 1,
+    "duration_min": 870,
+    "shortest_layover_min": 365,
+    "longest_layover_min": 365,
+    "dep_time": "15:00",
+    "via": "LIM"
+   },
+   "_s": {
+    "score": 7104.333333333333,
+    "cost_real_usd": 6691.0,
+    "nights": 9,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6411.0,
+     "Valijas faltantes (~4)": 280,
+     "Penalización escalas/duración/conexiones/horarios": 373.3333333333333,
+     "Desvío de noches (9 vs 8)": 40
+    },
+    "ground": null
+   },
+   "_others": []
+  },
+  {
    "run_id": "2026-11-07T09",
    "captured_at": "2026-11-07T09:04:00-03:00",
    "source": "google_flights",
@@ -214,45 +220,45 @@
    "_others": []
   },
   {
-   "run_id": "2026-11-07T09",
-   "captured_at": "2026-11-07T09:13:00-03:00",
+   "run_id": "2026-11-07T19",
+   "captured_at": "2026-11-07T19:48:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "ROS",
-   "depart": "2027-01-15",
-   "return": "2027-01-22",
-   "price_total_usd": 6862,
-   "price_original": 6862,
+   "depart": "2027-01-12",
+   "return": "2027-01-20",
+   "price_total_usd": 6148,
+   "price_original": 6148,
    "currency_original": "USD",
-   "airlines": "LATAM",
-   "airport_change": false,
+   "airlines": "Aerolíneas Argentinas",
+   "airport_change": true,
    "bags_included_checked": null,
    "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-15%20through%202027-01-22%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "7 noches. LATAM Perú vía Lima. Vuelta no consultada.",
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-12%20through%202027-01-20%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Primera consulta. 2 escalas con cambio de aeropuerto en Bs As (primera 5h15). Vuelta no consultada.",
    "outbound": {
-    "stops": 1,
-    "duration_min": 685,
-    "shortest_layover_min": 165,
-    "longest_layover_min": 165,
-    "dep_time": "07:45",
-    "via": "LIM"
+    "stops": 2,
+    "duration_min": 925,
+    "shortest_layover_min": null,
+    "longest_layover_min": null,
+    "dep_time": "19:15",
+    "via": ""
    },
    "inbound": {},
    "_s": {
-    "score": 7422.0,
-    "cost_real_usd": 7142.0,
-    "nights": 7,
+    "score": 7266.333333333333,
+    "cost_real_usd": 6428.0,
+    "nights": 8,
     "excluded": [],
     "notes": [
      "equipaje incluido s/d: se asume 0 valijas",
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 6862.0,
+     "Pasajes (4 personas, precio final)": 6148.0,
      "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 240.0,
-     "Desvío de noches (7 vs 8)": 40
+     "Penalización escalas/duración/conexiones/horarios": 638.3333333333333,
+     "Cambio de aeropuerto": 200
     },
     "ground": null
    },

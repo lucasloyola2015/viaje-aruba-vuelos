@@ -208,6 +208,13 @@ def build():
     latest = {}
     for o in sorted(valid, key=lambda x: x.get("captured_at", "")):
         latest[itin_key(o)] = o
+    # una observación sin vuelta queda superada si hay otra igual o más nueva, misma ida, con la vuelta leída
+    with_inb = {}
+    for k, o in latest.items():
+        if o.get("inbound"):
+            with_inb[k[:7]] = max(with_inb.get(k[:7], ""), o.get("captured_at", ""))
+    latest = {k: o for k, o in latest.items()
+              if o.get("inbound") or with_inb.get(k[:7], "") < o.get("captured_at", "")}
     scored = []
     for o in latest.values():
         s = score_obs(o, cfg, fx)
