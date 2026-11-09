@@ -1,9 +1,60 @@
 {
- "generated_at": "2026-11-09T09:14:04-03:00",
+ "generated_at": "2026-11-09T12:30:32-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 193,
- "n_runs": 13,
+ "n_obs": 211,
+ "n_runs": 14,
  "top5": [
+  {
+   "run_id": "2026-11-09T12",
+   "captured_at": "2026-11-09T12:25:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "ROS",
+   "depart": "2027-01-08",
+   "return": "2027-01-15",
+   "price_total_usd": 6176,
+   "price_original": 6176,
+   "currency_original": "USD",
+   "airlines": "LATAM",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-08%20through%202027-01-15%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "BAJÓ (6.399 → 6.176), total confirmado al elegir la ida. Vuelta vie 15 15:00 → sáb 06:30 con 6h05 en LIM. Vuelta 19:15 con 1h50 en LIM: 7.067.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
+   },
+   "inbound": {
+    "stops": 1,
+    "duration_min": 870,
+    "shortest_layover_min": 365,
+    "longest_layover_min": 365,
+    "dep_time": "15:00",
+    "via": "LIM"
+   },
+   "_s": {
+    "score": 6869.333333333333,
+    "cost_real_usd": 6456.0,
+    "nights": 7,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6176.0,
+     "Valijas faltantes (~4)": 280,
+     "Penalización escalas/duración/conexiones/horarios": 373.3333333333333,
+     "Desvío de noches (7 vs 8)": 40
+    },
+    "ground": null
+   },
+   "_others": []
+  },
   {
    "run_id": "2026-11-09T09",
    "captured_at": "2026-11-09T09:10:00-03:00",
@@ -44,57 +95,6 @@
      "Valijas faltantes (~4)": 280,
      "Penalización escalas/duración/conexiones/horarios": 638.3333333333333,
      "Cambio de aeropuerto": 200
-    },
-    "ground": null
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-09T09",
-   "captured_at": "2026-11-09T09:09:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "ROS",
-   "depart": "2027-01-08",
-   "return": "2027-01-15",
-   "price_total_usd": 6399,
-   "price_original": 6399,
-   "currency_original": "USD",
-   "airlines": "LATAM",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-08%20through%202027-01-15%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "ESTABLE (6.405 → 6.399). Total confirmado al elegir la ida (lista 'Mejores' decía 'desde' 6.856; el link 6.344). Vuelta vie 15 15:00 → sáb 06:30 con 6h05 en LIM.",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 685,
-    "shortest_layover_min": 165,
-    "longest_layover_min": 165,
-    "dep_time": "07:45",
-    "via": "LIM"
-   },
-   "inbound": {
-    "stops": 1,
-    "duration_min": 870,
-    "shortest_layover_min": 365,
-    "longest_layover_min": 365,
-    "dep_time": "15:00",
-    "via": "LIM"
-   },
-   "_s": {
-    "score": 7092.333333333333,
-    "cost_real_usd": 6679.0,
-    "nights": 7,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6399.0,
-     "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 373.3333333333333,
-     "Desvío de noches (7 vs 8)": 40
     },
     "ground": null
    },
@@ -147,69 +147,6 @@
    "_others": []
   },
   {
-   "run_id": "2026-11-09T09",
-   "captured_at": "2026-11-09T09:09:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "EZE",
-   "depart": "2027-01-18",
-   "return": "2027-01-26",
-   "price_total_usd": 6196,
-   "price_original": 6196,
-   "currency_original": "USD",
-   "airlines": "American",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-18%20through%202027-01-26%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "ESTABLE en 6.196. Vía Miami (5h23): REQUIERE VISA DE EE.UU. para los 4. Vuelta no consultada. (Google interpreta EZE como 'Ciudad Autónoma de Buenos Aires'.)",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 1070,
-    "shortest_layover_min": 323,
-    "longest_layover_min": 323,
-    "dep_time": "23:59",
-    "via": "MIA"
-   },
-   "inbound": {},
-   "_s": {
-    "score": 7246.0604630678245,
-    "cost_real_usd": 6682.8937964011575,
-    "nights": 8,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas",
-     "vuelta: escalas s/d"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6196.0,
-     "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 413.16666666666663
-    },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 206.89379640115766,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 185800,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
-   },
-   "_others": []
-  },
-  {
    "run_id": "2026-11-07T09",
    "captured_at": "2026-11-07T09:01:00-03:00",
    "source": "google_flights",
@@ -250,6 +187,75 @@
      "Penalización escalas/duración/conexiones/horarios": 240.0
     },
     "ground": null
+   },
+   "_others": []
+  },
+  {
+   "run_id": "2026-11-09T12",
+   "captured_at": "2026-11-09T12:27:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "EZE",
+   "depart": "2027-01-18",
+   "return": "2027-01-26",
+   "price_total_usd": 6196,
+   "price_original": 6196,
+   "currency_original": "USD",
+   "airlines": "American",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-18%20through%202027-01-26%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "ESTABLE 6.196, total confirmado al elegir la ida. VUELTA LEÍDA: mar 26 16:19 → mié 27 07:25 (14h06, 1h40 en MIA). Vía Miami: REQUIERE VISA DE EE.UU. para los 4. Directo AR lun 18 'desde' 9.398.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 1070,
+    "shortest_layover_min": 323,
+    "longest_layover_min": 323,
+    "dep_time": "23:59",
+    "via": "MIA"
+   },
+   "inbound": {
+    "stops": 1,
+    "duration_min": 846,
+    "shortest_layover_min": 100,
+    "longest_layover_min": 100,
+    "dep_time": "16:19",
+    "via": "MIA"
+   },
+   "_s": {
+    "score": 7438.0604630678245,
+    "cost_real_usd": 6682.8937964011575,
+    "nights": 8,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6196.0,
+     "Valijas faltantes (~4)": 280,
+     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
+     "Penalización comodidad (ruta con chicos)": 150,
+     "Penalización escalas/duración/conexiones/horarios": 605.1666666666666
+    },
+    "ground": {
+     "key": "EZE_long_stay_E4",
+     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
+     "ars": 328837.0,
+     "usd": 206.89379640115766,
+     "parts_ars": {
+      "peajes": 18000,
+      "nafta": 125037.0,
+      "estacionamiento E4": 185800,
+      "traslados": 0
+     },
+     "unverified": [
+      "tolls_round_trip_ars",
+      "km_one_way",
+      "l_per_100km",
+      "parking_ars_per_extra_day"
+     ]
+    }
    },
    "_others": []
   }

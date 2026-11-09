@@ -19,7 +19,7 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-08T13:40:00-03:00",
+   "last_checked": "2026-11-09T12:27:00-03:00",
    "notes": "Fuente primaria. OJO (2026-11-08T13): las pestañas 'Mejores' y 'Los más bajos' muestran 'desde' distintos para el MISMO vuelo (LATAM ROS 6→14: 8.054 vs 6.244) y ninguno era el total real (7.698): siempre confirmar eligiendo la ida. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
@@ -697,6 +697,49 @@
    "discovered_by": "2026-11-09T09",
    "last_checked": null,
    "notes": "OTA estadounidense con página de ruta BUE–AUA (WebSearch en inglés). Revisar robots.txt y si admite 2 adultos + 2 niños con edades."
+  },
+  {
+   "id": "zbordirect",
+   "name": "ZborDirect",
+   "domain": "zbordirect.com",
+   "type": "metabuscador",
+   "status": "manual_only",
+   "url": "https://zbordirect.com/en/low-cost/from-argentina/to-aruba/rosario-aruba",
+   "access": {
+    "agent": "robots_disallow",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-09T12:28:00-03:00",
+    "details": {"motivo": "robots.txt: 'User-agent: ClaudeBot / Disallow: /' y para todos prohíbe /search y /offers?. No se abrió ninguna página de ruta ni búsqueda. page_loads: 1 (robots.txt)."}
+   },
+   "discovered_by": "2026-11-09T12",
+   "last_checked": "2026-11-09T12:28:00-03:00",
+   "notes": "Comparador low-cost (Rumania) con página de ruta Rosario→Aruba (WebSearch 'Rosario to Oranjestad flights fare comparison site'). Bloquea explícitamente a agentes de IA → manual_only.",
+   "robots_disallow": true
+  },
+  {
+   "id": "farecompare",
+   "name": "FareCompare",
+   "domain": "www.farecompare.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.farecompare.com/es/vuelos/Buenos_Aires-BUE/caribbean/cityzone.html",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-09T12",
+   "last_checked": null,
+   "notes": "Comparador de tarifas con páginas Buenos Aires→Caribe (WebSearch 'buscador vuelos baratos Argentina Caribe...'). Datos de ruta aparentemente de 2024; revisar robots.txt y si cotiza 2+2."
   }
  ]
 }
