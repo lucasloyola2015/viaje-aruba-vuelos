@@ -1,16 +1,16 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-08 13:07 · 10 corridas · 153 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-09 09:07 · 11 corridas · 170 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
-**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -171 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
+**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -148 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
 | # | Origen | Salida → Vuelta | Noches | Aerolíneas | Escalas ida/vuelta | Costo real est. | Puntaje |
 |---|---|---|---|---|---|---|---|
-| 1 | ROS | mié 6 ene → jue 14 ene | 8 | LATAM | 1/1 | US$ 6.685 | US$ 7.075 |
-| 2 | ROS | vie 8 ene → vie 15 ene | 7 | LATAM | 1/1 | US$ 6.685 | US$ 7.098 |
-| 3 | ROS | mié 6 ene → vie 15 ene | 9 | LATAM | 1/1 | US$ 6.691 | US$ 7.104 |
-| 4 | EZE | lun 18 ene → mar 26 ene | 8 | American | 1/? | US$ 6.683 | US$ 7.246 |
-| 5 | ROS | mar 12 ene → mié 20 ene | 8 | Aerolíneas Argentinas | 2/? | US$ 6.428 | US$ 7.266 |
+| 1 | ROS | vie 8 ene → vie 15 ene | 7 | LATAM | 1/1 | US$ 6.685 | US$ 7.098 |
+| 2 | EZE | lun 18 ene → mar 26 ene | 8 | American | 1/? | US$ 6.683 | US$ 7.246 |
+| 3 | ROS | mar 12 ene → mié 20 ene | 8 | Aerolíneas Argentinas | 2/? | US$ 6.428 | US$ 7.266 |
+| 4 | ROS | vie 15 ene → vie 22 ene | 7 | LATAM | 1/? | US$ 7.142 | US$ 7.422 |
+| 5 | ROS | mar 19 ene → mar 26 ene | 7 | Aerolíneas Argentinas | 2/? | US$ 6.551 | US$ 7.429 |
 
 ## Fuentes
 
@@ -44,5 +44,8 @@ _Actualizado 2026-11-08 13:07 · 10 corridas · 153 precios · TC 1.589 ARS/USD 
 | CyberMonday Argentina (CACE) | sin probar | sin probar | sin evaluar | en prueba |
 | KAYAK Argentina | sin probar | sin probar | sin evaluar | en prueba |
 | Monde du Voyage | sin probar | sin probar | sin evaluar | en prueba |
+| Omio | ok | sin probar | 5/14 inútil | descartada |
+| Opodo | sin probar | sin probar | sin evaluar | en prueba |
+| Travelocity | sin probar | sin probar | sin evaluar | en prueba |
 
 El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).
