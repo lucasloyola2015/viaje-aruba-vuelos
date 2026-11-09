@@ -514,21 +514,21 @@
    "name": "Kupi",
    "domain": "kupi.com",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://kupi.com/en/flights/from-buenos-aires/to-oranjestad",
    "access": {
-    "agent": "untested",
+    "agent": "robots_disallow",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-09T09:12:00-03:00",
+    "details": {"acceso": 2, "pasajeros": 0, "precio_total": 1, "escalas_duracion": 0, "fechas_flexibles": 2, "coherencia_google": 0, "estabilidad": 1, "google_ref_usd": 8702, "comentarios": "Puntajes solo de la página de ruta (abre sin bloqueo): 'desde' por persona, 1 pasajero, calendario de precios por día/mes, horario del directo AR 1376 (23:15→07:15, ~8/semana). robots.txt prohíbe /search para todos, así que la búsqueda 2+2 de enero 2027 no se puede probar con el agente → no_evaluable, manual_only. page_loads: 2."}
    },
    "discovered_by": "2026-11-06T13",
-   "last_checked": null,
-   "notes": "Metabuscador con calendario de precios por ruta (WebSearch). Probablemente referencia, no cotización 2+2."
+   "last_checked": "2026-11-09T09:12:00-03:00",
+   "notes": "2026-11-09T09: manual_only por robots.txt (Disallow /search). La página de ruta sirve solo como referencia de horarios del directo AR y precio 'desde' por persona."
   },
   {
    "id": "cybermonday_ar",
@@ -655,6 +655,48 @@
    "discovered_by": "2026-11-08T13",
    "last_checked": null,
    "notes": "OTA del grupo Expedia con página de ruta EZE–AUA (WebSearch en inglés). Misma plataforma que 'expedia': revisar robots.txt."
+  },
+  {
+   "id": "going",
+   "name": "Going (ex Scott's Cheap Flights)",
+   "domain": "www.going.com",
+   "type": "alertas_ofertas",
+   "status": "candidate",
+   "url": "https://www.going.com/flights/to/aruba",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-09T09",
+   "last_checked": null,
+   "notes": "Servicio de alertas de ofertas (WebSearch 'Aruba airfare deals South America January 2027'). Orientado a salidas desde EE.UU.; las alertas requieren cuenta (no registrarse). Probablemente inútil para ROS/EZE."
+  },
+  {
+   "id": "cheapoair",
+   "name": "CheapOair",
+   "domain": "www.cheapoair.com",
+   "type": "OTA",
+   "status": "candidate",
+   "url": "https://www.cheapoair.com/flights/cheap-flights-from-buenos-aires-to-aruba-bue-aua",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-09T09",
+   "last_checked": null,
+   "notes": "OTA estadounidense con página de ruta BUE–AUA (WebSearch en inglés). Revisar robots.txt y si admite 2 adultos + 2 niños con edades."
   }
  ]
 }
