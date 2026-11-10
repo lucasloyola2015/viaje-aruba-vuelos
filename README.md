@@ -1,16 +1,16 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-10 06:35 · 18 corridas · 277 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-10 12:35 · 19 corridas · 293 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
-**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -348 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
+**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ 6 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
 | # | Origen | Salida → Vuelta | Noches | Aerolíneas | Escalas ida/vuelta | Costo real est. | Puntaje |
 |---|---|---|---|---|---|---|---|
-| 1 | ROS | vie 8 ene → vie 15 ene | 7 | LATAM | 1/1 | US$ 6.456 | US$ 6.869 |
-| 2 | EZE | lun 11 ene → lun 18 ene | 7 | Copa | 1/? | US$ 6.728 | US$ 7.218 |
+| 1 | EZE | lun 11 ene → lun 18 ene | 7 | Copa | 1/? | US$ 6.728 | US$ 7.218 |
+| 2 | ROS | dom 10 ene → mar 19 ene | 9 | LATAM | 1/1 | US$ 6.794 | US$ 7.224 |
 | 3 | EZE | lun 18 ene → mar 26 ene | 8 | American | 1/1 | US$ 6.683 | US$ 7.438 |
-| 4 | ROS | vie 1 ene → sáb 9 ene | 8 | LATAM | 1/1 | US$ 7.071 | US$ 7.461 |
-| 5 | EZE | dom 17 ene → lun 25 ene | 8 | Copa | 1/1 | US$ 6.750 | US$ 7.496 |
+| 4 | EZE | dom 17 ene → lun 25 ene | 8 | Copa | 1/1 | US$ 6.749 | US$ 7.495 |
+| 5 | ROS | jue 14 ene → jue 21 ene | 7 | Aerolíneas Argentinas | 1/? | US$ 7.195 | US$ 7.530 |
 
 ## Fuentes
 
@@ -38,7 +38,7 @@ _Actualizado 2026-11-10 06:35 · 18 corridas · 277 precios · TC 1.589 ARS/USD 
 | Ratepunk (estadísticas de ruta) | ok | sin probar | 5/14 inútil | descartada |
 | Trabber | parcial | sin probar | no evaluable | solo manual |
 | Almundo | ok | sin probar | 9/14 parcial | solo contraste |
-| Kiwi.com (sitio de consumidor) | sin probar | sin probar | sin evaluar | en prueba |
+| Kiwi.com (sitio de consumidor) | sin probar | parcial | 3/14 inútil | descartada |
 | eDreams | sin probar | sin probar | sin evaluar | en prueba |
 | Kupi | robots.txt | sin probar | no evaluable | solo manual |
 | CyberMonday Argentina (CACE) | sin probar | sin probar | sin evaluar | en prueba |

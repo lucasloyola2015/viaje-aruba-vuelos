@@ -19,8 +19,8 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-10T06:33:00-03:00",
-   "notes": "Fuente primaria. OJO (2026-11-10T06): el 'desde' de LATAM 10→19 y 13→22 (6.515/6.532) no corresponde a ninguna vuelta: al elegir la ida el total real es 6.855. OJO (2026-11-08T13): las pestañas 'Mejores' y 'Los más bajos' muestran 'desde' distintos para el MISMO vuelo (LATAM ROS 6→14: 8.054 vs 6.244) y ninguno era el total real (7.698): siempre confirmar eligiendo la ida. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
+   "last_checked": "2026-11-10T12:32:00-03:00",
+   "notes": "Fuente primaria. OJO (2026-11-10T12): en el navegador integrado del agente quedó en 'Cargando resultados' con errores net::ERR_BLOCKED_BY_CLIENT (3 cargas); con el Chrome del usuario (claude-in-chrome, sin iniciar sesión) cargó bien. Si se repite, usar Chrome directamente. OJO (2026-11-10T06): el 'desde' de LATAM 10→19 y 13→22 (6.515/6.532) no corresponde a ninguna vuelta: al elegir la ida el total real es 6.855. OJO (2026-11-08T13): las pestañas 'Mejores' y 'Los más bajos' muestran 'desde' distintos para el MISMO vuelo (LATAM ROS 6→14: 8.054 vs 6.244) y ninguno era el total real (7.698): siempre confirmar eligiendo la ida. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
   {
@@ -473,21 +473,21 @@
    "name": "Kiwi.com (sitio de consumidor)",
    "domain": "www.kiwi.com",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "discarded",
    "url": "https://www.kiwi.com/en/cheap-flights/buenos-aires-buenos-aires-argentina/aruba-aruba",
    "access": {
     "agent": "untested",
-    "chrome": "untested"
+    "chrome": "partial"
    },
    "usefulness": {
-    "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "score": 3,
+    "verdict": "inutil",
+    "evaluated_at": "2026-11-10T12:34:00-03:00",
+    "details": {"acceso": 2, "pasajeros": 0, "precio_total": 0, "escalas_duracion": 0, "fechas_flexibles": 0, "coherencia_google": 0, "estabilidad": 1, "kiwi_usd": null, "google_ref_usd": 6514, "google_ref_query": "ROS 10→19 (top 1 de esta corrida)", "comentarios": "robots.txt permite todo a ClaudeBot (Allow: /), aunque a User-agent * le prohíbe /search y /results. El enlace profundo /en/search/results/rosario-argentina/aruba/2027-01-10/2027-01-19?adults=2&children=2 redirige a la home (EUR, 1 pasajero, banner de cookies): sin precio ni itinerarios sin cargar el formulario a mano. Además Kiwi arma tickets separados (virtual interlining), que la regla descarta. Una sola carga de resultados posible (estabilidad 1). page_loads: 2 (robots + búsqueda). Probado con el Chrome del usuario porque el navegador integrado no cargaba Google Flights."}
    },
    "discovered_by": "2026-11-07T09",
-   "last_checked": null,
-   "notes": "Distinto de la API Tequila (descartada). Página de ruta BUE–AUA con 'desde'. Ojo: Kiwi arma tickets separados con conexión propia ('virtual interlining'): esos itinerarios se descartan. Revisar robots.txt antes de buscar."
+   "last_checked": "2026-11-10T12:34:00-03:00",
+   "notes": "DESCARTADA 2026-11-10T12 (inútil 3/14): el enlace profundo no funciona y arma tickets separados. Distinto de la API Tequila (descartada). Página de ruta BUE–AUA con 'desde'. Ojo: Kiwi arma tickets separados con conexión propia ('virtual interlining'): esos itinerarios se descartan. Revisar robots.txt antes de buscar."
   },
   {
    "id": "edreams",
@@ -761,8 +761,8 @@
     "details": {"acceso": 2, "pasajeros": 2, "precio_total": 2, "escalas_duracion": 2, "fechas_flexibles": 1, "coherencia_google": 1, "estabilidad": 2, "cheapflights_usd": 7272, "google_ref_usd": 9300, "google_ref_captured_at": "2026-11-10T06:33", "comentarios": "robots.txt (User-agent: *) prohíbe /cheapflights/, /find-flights/, /s/ y /api/ pero NO /flight-search/; sin reglas para ClaudeBot. Abre sin CAPTCHA ni login con el navegador del agente. URL admite edades de niños (children-5-3) y muestra precio por persona y total de 4 en USD (1.818 × 4 = 7.272). Escalas con ciudad y duración y duración por tramo (2). Sin calendario visible en el texto, solo 'Track prices' (1). Comparable: Copa ida 05:11 / vuelta 15:40 7.272 vs 'desde' Copa de Google 9.300 = −22 % (1; Google no mostró el total de esa vuelta exacta). Dos cargas iguales (2). page_loads: 3 (robots + 2 búsquedas)."}
    },
    "discovered_by": "2026-11-09T23",
-   "last_checked": "2026-11-10T06:34:00-03:00",
-   "notes": "ACTIVA desde 2026-11-10T06 (útil 12/14). Motor KAYAK. URL: /flight-search/{ORIG}-AUA/{IDA}/{VUELTA}/2adults/children-5-3?currency=USD. OJO: descartar filas 'Self-transfer hack' (tickets separados, p. ej. LATAM 4.924 con vuelta Avianca+AR de 37 h), anuncios ('Ad', FlightNetwork/FlightHub) y Arajet vía PUJ. Tarifas 'Economy Basic' probablemente sin valija. Esperar ~20 s a que termine 'Fetching prices'."
+   "last_checked": "2026-11-10T12:33:00-03:00",
+   "notes": "ACTIVA desde 2026-11-10T06 (útil 12/14). 2026-11-10T12 (Chrome): ROS 10→19 LATAM ida+vuelta 5.193 total (Basic) pero la ida figura 'self-transfer at Lima' (tickets separados) → no se registró; Arajet vía PUJ 5.195 descartado. Motor KAYAK. URL: /flight-search/{ORIG}-AUA/{IDA}/{VUELTA}/2adults/children-5-3?currency=USD. OJO: descartar filas 'Self-transfer hack' (tickets separados, p. ej. LATAM 4.924 con vuelta Avianca+AR de 37 h), anuncios ('Ad', FlightNetwork/FlightHub) y Arajet vía PUJ. Tarifas 'Economy Basic' probablemente sin valija. Esperar ~20 s a que termine 'Fetching prices'."
   },
   {
    "id": "airfarewatchdog",
