@@ -1,16 +1,16 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-09 12:30 · 14 corridas · 211 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-09 21:39 · 15 corridas · 231 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
 **Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -569 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
 | # | Origen | Salida → Vuelta | Noches | Aerolíneas | Escalas ida/vuelta | Costo real est. | Puntaje |
 |---|---|---|---|---|---|---|---|
 | 1 | ROS | vie 8 ene → vie 15 ene | 7 | LATAM | 1/1 | US$ 6.456 | US$ 6.869 |
-| 2 | ROS | mar 12 ene → mié 20 ene | 8 | Aerolíneas Argentinas | 2/? | US$ 6.226 | US$ 7.064 |
-| 3 | ROS | mar 12 ene → mar 19 ene | 7 | Aerolíneas Argentinas | 2/? | US$ 6.226 | US$ 7.104 |
-| 4 | ROS | vie 1 ene → sáb 9 ene | 8 | LATAM | 1/? | US$ 7.192 | US$ 7.432 |
-| 5 | EZE | lun 18 ene → mar 26 ene | 8 | American | 1/1 | US$ 6.683 | US$ 7.438 |
+| 2 | ROS | vie 1 ene → sáb 9 ene | 8 | LATAM | 1/? | US$ 7.192 | US$ 7.432 |
+| 3 | EZE | lun 18 ene → mar 26 ene | 8 | American | 1/1 | US$ 6.683 | US$ 7.438 |
+| 4 | ROS | jue 14 ene → jue 21 ene | 7 | Aerolíneas Argentinas | 1/? | US$ 7.195 | US$ 7.530 |
+| 5 | ROS | mar 12 ene → mié 20 ene | 8 | Copa | 1/1 | US$ 7.084 | US$ 7.534 |
 
 ## Fuentes
 
@@ -50,6 +50,6 @@ _Actualizado 2026-11-09 12:30 · 14 corridas · 211 precios · TC 1.589 ARS/USD 
 | Going (ex Scott's Cheap Flights) | sin probar | sin probar | sin evaluar | en prueba |
 | CheapOair | sin probar | sin probar | sin evaluar | en prueba |
 | ZborDirect | robots.txt | sin probar | no evaluable | solo manual |
-| FareCompare | sin probar | sin probar | sin evaluar | en prueba |
+| FareCompare | robots.txt | sin probar | no evaluable | solo manual |
 
 El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).

@@ -725,21 +725,22 @@
    "name": "FareCompare",
    "domain": "www.farecompare.com",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.farecompare.com/es/vuelos/Buenos_Aires-BUE/caribbean/cityzone.html",
    "access": {
-    "agent": "untested",
+    "agent": "robots_disallow",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-09T21:39:00-03:00",
+    "details": {"motivo": "robots.txt prohíbe /search/, /results/ y /12q/*/results.html para todos los agentes: no se pueden pedir resultados. La página de ruta Buenos Aires→Caribe redirige a la home (en inglés, 1 pasajero por defecto). page_loads: 2."}
    },
    "discovered_by": "2026-11-09T12",
-   "last_checked": null,
-   "notes": "Comparador de tarifas con páginas Buenos Aires→Caribe (WebSearch 'buscador vuelos baratos Argentina Caribe...'). Datos de ruta aparentemente de 2024; revisar robots.txt y si cotiza 2+2."
+   "last_checked": "2026-11-09T21:39:00-03:00",
+   "notes": "Comparador de tarifas (EE.UU.). Resultados prohibidos por robots.txt → manual_only. Probablemente poco útil para ROS/EZE→AUA: sin página de ruta vigente.",
+   "robots_disallow": true
   }
  ]
 }
