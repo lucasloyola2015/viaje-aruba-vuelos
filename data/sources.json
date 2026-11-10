@@ -178,21 +178,22 @@
    "name": "Aerolíneas Argentinas",
    "domain": "www.aerolineas.com.ar",
    "type": "aerolinea",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.aerolineas.com.ar/",
    "access": {
-    "agent": "untested",
+    "agent": "robots_disallow",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-09T23:30:00-03:00",
+    "details": {"motivo": "robots.txt (User-agent: *) prohíbe /booking, /flights-offers, /flex-dates-calendar y /scheduled-flights (también /*/...): no se pueden pedir resultados ni calendario. page_loads: 1 (robots.txt)."}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": null,
-   "notes": "Verificar existencia/horarios del directo EZE–AUA en enero y tarifa de niños."
+   "last_checked": "2026-11-09T23:30:00-03:00",
+   "notes": "Sitio oficial: la compra/verificación final del directo EZE–AUA y la tarifa de niños la hace el usuario a mano. El directo aparece en Google Flights (sale 00:50, 7h25).",
+   "robots_disallow": true
   },
   {
    "id": "latam",
@@ -741,6 +742,48 @@
    "last_checked": "2026-11-09T21:39:00-03:00",
    "notes": "Comparador de tarifas (EE.UU.). Resultados prohibidos por robots.txt → manual_only. Probablemente poco útil para ROS/EZE→AUA: sin página de ruta vigente.",
    "robots_disallow": true
+  },
+  {
+   "id": "cheapflights",
+   "name": "Cheapflights",
+   "domain": "www.cheapflights.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.cheapflights.com/flights/south-america",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-09T23",
+   "last_checked": null,
+   "notes": "Metabuscador del grupo Kayak/Booking (WebSearch 'flight deal finder South America Caribbean fares price tracker'). Probablemente mismo motor que Kayak (manual_only): evaluar robots.txt primero."
+  },
+  {
+   "id": "airfarewatchdog",
+   "name": "Airfarewatchdog",
+   "domain": "www.airfarewatchdog.com",
+   "type": "alertas_ofertas",
+   "status": "candidate",
+   "url": "https://www.airfarewatchdog.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-09T23",
+   "last_checked": null,
+   "notes": "Alertas de tarifas (EE.UU., grupo Tripadvisor). Orientado a salidas desde EE.UU.: probablemente poco útil para ROS/EZE; solo señal de ofertas."
   }
  ]
 }

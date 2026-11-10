@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-09T21:39:21-03:00",
+ "generated_at": "2026-11-09T23:32:14-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 231,
- "n_runs": 15,
+ "n_obs": 253,
+ "n_runs": 16,
  "top5": [
   {
-   "run_id": "2026-11-09T21",
-   "captured_at": "2026-11-09T21:33:00-03:00",
+   "run_id": "2026-11-09T23",
+   "captured_at": "2026-11-09T23:22:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "ROS",
@@ -20,7 +20,7 @@
    "bags_included_checked": null,
    "bags_extra_usd": null,
    "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-08%20through%202027-01-15%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "ESTABLE 6.176 (lista, 4 pasajeros; mismo precio que el total confirmado a las 12 h). Vuelta no re-leída: se repite la de la lectura 09/11 12 h (vie 15 15:00, 6h05 en LIM). Alternativas: AR 2 escalas 7.238, Copa 9.300.",
+   "notes": "ESTABLE 6.176 (lista, 4 pasajeros, 'precios altos'). Ojo: mientras cargaba la página mostró un intermedio 9.138 que se corrigió a 6.176 al terminar. Vuelta no re-leída: se repite la de la lectura 09/11 12 h (vie 15 15:00, 6h05 en LIM). Google: 'desde 5.184' en otras fechas.",
    "outbound": {
     "stops": 1,
     "duration_min": 685,
@@ -56,22 +56,22 @@
    "_others": []
   },
   {
-   "run_id": "2026-11-07T09",
-   "captured_at": "2026-11-07T09:01:00-03:00",
+   "run_id": "2026-11-09T23",
+   "captured_at": "2026-11-09T23:24:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "ROS",
-   "depart": "2027-01-01",
-   "return": "2027-01-09",
-   "price_total_usd": 6912,
-   "price_original": 6912,
+   "depart": "2027-01-10",
+   "return": "2027-01-19",
+   "price_total_usd": 6515,
+   "price_original": 6515,
    "currency_original": "USD",
    "airlines": "LATAM",
    "airport_change": false,
    "bags_included_checked": null,
    "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-01%20through%202027-01-09%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "LATAM Perú vía Lima. Subió de 6.791 a 6.912. Vuelta no consultada en esta corrida (ayer: sáb 9 19:15 vía LIM). Google sugiere 3–10 ene por US$ 4.654 (probablemente Arajet vía PUJ, no verificado).",
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-10%20through%202027-01-19%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Estable 'desde' 6.515 (9 noches). El 09/11 21 h el total con vuelta cómoda (mar 19 19:15, 1h50 LIM) fue 6.855; el 'desde' corresponde a otra vuelta, sin leer.",
    "outbound": {
     "stops": 1,
     "duration_min": 685,
@@ -82,26 +82,136 @@
    },
    "inbound": {},
    "_s": {
-    "score": 7432.0,
-    "cost_real_usd": 7192.0,
-    "nights": 8,
+    "score": 7075.0,
+    "cost_real_usd": 6795.0,
+    "nights": 9,
     "excluded": [],
     "notes": [
      "equipaje incluido s/d: se asume 0 valijas",
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 6912.0,
+     "Pasajes (4 personas, precio final)": 6515.0,
      "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 240.0
+     "Penalización escalas/duración/conexiones/horarios": 240.0,
+     "Desvío de noches (9 vs 8)": 40
     },
     "ground": null
    },
    "_others": []
   },
   {
-   "run_id": "2026-11-09T12",
-   "captured_at": "2026-11-09T12:27:00-03:00",
+   "run_id": "2026-11-09T23",
+   "captured_at": "2026-11-09T23:25:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "ROS",
+   "depart": "2027-01-13",
+   "return": "2027-01-22",
+   "price_total_usd": 6532,
+   "price_original": 6532,
+   "currency_original": "USD",
+   "airlines": "LATAM",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-13%20through%202027-01-22%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Primera consulta (9 noches mié–vie). 'Desde'. LATAM vía LIM 2h45. Copa 9.300. Vuelta no consultada.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
+   },
+   "inbound": {},
+   "_s": {
+    "score": 7092.0,
+    "cost_real_usd": 6812.0,
+    "nights": 9,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6532.0,
+     "Valijas faltantes (~4)": 280,
+     "Penalización escalas/duración/conexiones/horarios": 240.0,
+     "Desvío de noches (9 vs 8)": 40
+    },
+    "ground": null
+   },
+   "_others": []
+  },
+  {
+   "run_id": "2026-11-09T23",
+   "captured_at": "2026-11-09T23:27:00-03:00",
+   "source": "google_flights",
+   "live": true,
+   "origin": "EZE",
+   "depart": "2027-01-11",
+   "return": "2027-01-18",
+   "price_total_usd": 6246,
+   "price_original": 6246,
+   "currency_original": "USD",
+   "airlines": "Copa",
+   "airport_change": false,
+   "bags_included_checked": null,
+   "bags_extra_usd": null,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-11%20through%202027-01-18%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "Primera consulta (7 noches lun–lun). 'Desde'. Copa 04:25 vía PTY 2h. Sin directo AR el lunes 11. El clic para leer la vuelta dio error de Google; no se reintentó.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 674,
+    "shortest_layover_min": 120,
+    "longest_layover_min": 120,
+    "dep_time": "04:25",
+    "via": "PTY"
+   },
+   "inbound": {},
+   "_s": {
+    "score": 7217.608783188624,
+    "cost_real_usd": 6727.608783188624,
+    "nights": 7,
+    "excluded": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 6246.0,
+     "Valijas faltantes (~4)": 280,
+     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 201.6087831886246,
+     "Penalización comodidad (ruta con chicos)": 150,
+     "Penalización escalas/duración/conexiones/horarios": 300.0,
+     "Desvío de noches (7 vs 8)": 40
+    },
+    "ground": {
+     "key": "EZE_long_stay_E4",
+     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
+     "ars": 320437.0,
+     "usd": 201.6087831886246,
+     "parts_ars": {
+      "peajes": 18000,
+      "nafta": 125037.0,
+      "estacionamiento E4": 177400,
+      "traslados": 0
+     },
+     "unverified": [
+      "tolls_round_trip_ars",
+      "km_one_way",
+      "l_per_100km",
+      "parking_ars_per_extra_day"
+     ]
+    }
+   },
+   "_others": []
+  },
+  {
+   "run_id": "2026-11-09T23",
+   "captured_at": "2026-11-09T23:23:00-03:00",
    "source": "google_flights",
    "live": true,
    "origin": "EZE",
@@ -115,7 +225,7 @@
    "bags_included_checked": null,
    "bags_extra_usd": null,
    "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-18%20through%202027-01-26%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "ESTABLE 6.196, total confirmado al elegir la ida. VUELTA LEÍDA: mar 26 16:19 → mié 27 07:25 (14h06, 1h40 en MIA). Vía Miami: REQUIERE VISA DE EE.UU. para los 4. Directo AR lun 18 'desde' 9.398.",
+   "notes": "ESTABLE 6.196 (lista). Vuelta no re-leída: se repite la de 09/11 12 h (mar 26 16:19, 1h40 MIA). Vía Miami: REQUIERE VISA DE EE.UU. para los 4. Air Canada+Avianca 6.141 con 2 escalas (7 h GRU + 1h20) no se registra.",
    "outbound": {
     "stops": 1,
     "duration_min": 1070,
@@ -165,101 +275,6 @@
       "parking_ars_per_extra_day"
      ]
     }
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-09T09",
-   "captured_at": "2026-11-09T09:11:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "ROS",
-   "depart": "2027-01-14",
-   "return": "2027-01-21",
-   "price_total_usd": 6915,
-   "price_original": 6915,
-   "currency_original": "USD",
-   "airlines": "Aerolíneas Argentinas",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-14%20through%202027-01-21%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "Primera consulta (7 noches jue–jue). AR ROS→EZE→AUA sin cambio de aeropuerto (4h40 en EZE). Vuelta no consultada.",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 780,
-    "shortest_layover_min": 280,
-    "longest_layover_min": 280,
-    "dep_time": "19:15",
-    "via": "EZE"
-   },
-   "inbound": {},
-   "_s": {
-    "score": 7530.0,
-    "cost_real_usd": 7195.0,
-    "nights": 7,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas",
-     "vuelta: escalas s/d"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6915.0,
-     "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 295.0,
-     "Desvío de noches (7 vs 8)": 40
-    },
-    "ground": null
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-09T21",
-   "captured_at": "2026-11-09T21:33:00-03:00",
-   "source": "google_flights",
-   "live": true,
-   "origin": "ROS",
-   "depart": "2027-01-12",
-   "return": "2027-01-20",
-   "price_total_usd": 6804,
-   "price_original": 6804,
-   "currency_original": "USD",
-   "airlines": "Copa",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-12%20through%202027-01-20%202%20adults%202%20children&curr=USD&hl=es",
-   "notes": "ESTABLE 6.804 (lista, primera opción). Vuelta no re-leída: se repite la de la lectura 09/11 12 h (mié 20 15:40, 2h01 PTY).",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 628,
-    "shortest_layover_min": 92,
-    "longest_layover_min": 92,
-    "dep_time": "05:11",
-    "via": "PTY"
-   },
-   "inbound": {
-    "stops": 1,
-    "duration_min": 668,
-    "shortest_layover_min": 121,
-    "longest_layover_min": 121,
-    "dep_time": "15:40",
-    "via": "PTY"
-   },
-   "_s": {
-    "score": 7534.0,
-    "cost_real_usd": 7084.0,
-    "nights": 8,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6804.0,
-     "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 450.0
-    },
-    "ground": null
    },
    "_others": []
   }
