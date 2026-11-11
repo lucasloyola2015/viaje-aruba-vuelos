@@ -1,9 +1,86 @@
 {
- "generated_at": "2026-11-11T12:39:48-03:00",
+ "generated_at": "2026-11-11T18:34:18-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 228,
- "n_runs": 23,
+ "n_obs": 256,
+ "n_runs": 24,
  "top5": [
+  {
+   "run_id": "2026-11-11T18",
+   "captured_at": "2026-11-11T18:31:00-03:00",
+   "source": "cheapflights",
+   "origin": "EZE",
+   "depart": "2027-01-09",
+   "return": "2027-01-18",
+   "price_total_usd": 4564,
+   "price_original": 4564,
+   "airlines": "LATAM",
+   "bags_included_checked": 0,
+   "url": "https://www.cheapflights.com/flight-search/EZE-AUA/2027-01-09/2027-01-18/2adults/children-5-3?currency=USD",
+   "notes": "Mismo itinerario que Google (5.425 total). Opción de reserva 'Airline' (LATAM) US$ 1.141 por persona × 4 = 4.564, tarifa Light (1 carry-on, valija con cargo). SmartFares (OTA) 1.043 pp = 4.172; FlightHub 1.176 pp. Standard 1.234 pp (4.936). Página confirma 'Round-trip, 4 Travelers' (2 adultos + 2 niños). Verificar en latamairlines.com.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 710,
+    "shortest_layover_min": 155,
+    "longest_layover_min": 155,
+    "dep_time": "07:20",
+    "via": "LIM"
+   },
+   "inbound": {
+    "stops": 1,
+    "duration_min": 660,
+    "shortest_layover_min": 135,
+    "longest_layover_min": 135,
+    "dep_time": "15:00",
+    "via": "LIM"
+   },
+   "live": true,
+   "currency_original": "USD",
+   "airport_change": false,
+   "bags_extra_usd": null,
+   "_s": {
+    "score": 5486.178809613691,
+    "cost_real_usd": 5056.178809613691,
+    "nights": 9,
+    "excluded": [],
+    "notes": [],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 4564.0,
+     "Valijas faltantes (~4)": 280,
+     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 212.1788096136907,
+     "Penalización comodidad (ruta con chicos)": 150,
+     "Penalización escalas/duración/conexiones/horarios": 240.0,
+     "Desvío de noches (9 vs 8)": 40
+    },
+    "ground": {
+     "key": "EZE_long_stay_E4",
+     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
+     "ars": 337237.0,
+     "usd": 212.1788096136907,
+     "parts_ars": {
+      "peajes": 18000,
+      "nafta": 125037.0,
+      "estacionamiento E4": 194200,
+      "traslados": 0
+     },
+     "unverified": [
+      "tolls_round_trip_ars",
+      "km_one_way",
+      "l_per_100km",
+      "parking_ars_per_extra_day"
+     ]
+    }
+   },
+   "_others": [
+    [
+     "google_flights",
+     5425.0
+    ],
+    [
+     "google_flights",
+     7633.0
+    ]
+   ]
+  },
   {
    "run_id": "2026-11-11T12",
    "captured_at": "2026-11-11T13:01:00-03:00",
@@ -54,15 +131,15 @@
    "_others": [
     [
      "google_flights",
-     6847.0
+     6966.0
     ],
     [
      "google_flights",
-     9282.0
+     8239.0
     ],
     [
      "google_flights",
-     8216.0
+     9307.0
     ]
    ]
   },
@@ -134,15 +211,15 @@
    "_others": [
     [
      "google_flights",
-     6251.0
-    ],
-    [
-     "google_flights",
      6196.0
     ],
     [
      "google_flights",
-     5455.0
+     6268.0
+    ],
+    [
+     "google_flights",
+     8861.0
     ]
    ]
   },
@@ -262,70 +339,6 @@
       "peajes": 18000,
       "nafta": 125037.0,
       "estacionamiento E4": 194200,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-11T12",
-   "captured_at": "2026-11-11T12:25:00-03:00",
-   "source": "google_flights",
-   "origin": "EZE",
-   "depart": "2027-01-18",
-   "return": "2027-01-25",
-   "price_total_usd": 5587,
-   "airlines": "Air Canada + Copa",
-   "notes": "'Desde' (subió de 5.289). 2 escalas: 9h25 GRU + 2h02 PTY. Clic para leer vueltas → 'Vaya, se ha producido un error' (no reintentado).",
-   "outbound": {
-    "stops": 2,
-    "duration_min": 1374,
-    "shortest_layover_min": 122,
-    "longest_layover_min": 565,
-    "dep_time": "16:45",
-    "via": "GRU,PTY"
-   },
-   "live": true,
-   "currency_original": "USD",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "inbound": {},
-   "price_original": 5587,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-18%20through%202027-01-25%202%20adults%202%20children&curr=USD&hl=es",
-   "_s": {
-    "score": 7463.275449855291,
-    "cost_real_usd": 6068.608783188624,
-    "nights": 7,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas",
-     "vuelta: escalas s/d"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 5587.0,
-     "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 201.6087831886246,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 1204.6666666666665,
-     "Desvío de noches (7 vs 8)": 40
-    },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 320437.0,
-     "usd": 201.6087831886246,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 177400,
       "traslados": 0
      },
      "unverified": [
