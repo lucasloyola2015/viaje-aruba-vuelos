@@ -1,16 +1,16 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-11 08:14 · 22 corridas · 205 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-11 12:39 · 23 corridas · 228 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
-**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -125 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
+**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -686 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
 | # | Origen | Salida → Vuelta | Noches | Aerolíneas | Escalas ida/vuelta | Costo real est. | Puntaje |
 |---|---|---|---|---|---|---|---|
-| 1 | ROS | dom 10 ene → mar 19 ene | 9 | Aerolíneas Argentinas | 1/1 | US$ 5.724 | US$ 7.024 |
-| 2 | EZE | lun 18 ene → lun 25 ene | 7 | Air Canada + Copa | 2/? | US$ 5.771 | US$ 7.149 |
-| 3 | EZE | mié 20 ene → jue 28 ene | 8 | American | 1/? | US$ 6.683 | US$ 7.169 |
-| 4 | EZE | mié 20 ene → vie 29 ene | 9 | Copa | 1/? | US$ 6.755 | US$ 7.245 |
-| 5 | EZE | dom 17 ene → lun 25 ene | 8 | Copa | 1/1 | US$ 6.750 | US$ 7.496 |
+| 1 | ROS | dom 10 ene → mar 19 ene | 9 | LATAM | 1/1 | US$ 5.629 | US$ 6.059 |
+| 2 | EZE | mié 20 ene → jue 28 ene | 8 | Copa | 1/1 | US$ 5.974 | US$ 6.745 |
+| 3 | EZE | mié 20 ene → mié 27 ene | 7 | American | 1/? | US$ 6.678 | US$ 7.204 |
+| 4 | EZE | lun 18 ene → mié 27 ene | 9 | American | 1/? | US$ 6.688 | US$ 7.214 |
+| 5 | EZE | lun 18 ene → lun 25 ene | 7 | Air Canada + Copa | 2/? | US$ 6.069 | US$ 7.463 |
 
 ## Fuentes
 
@@ -48,14 +48,15 @@ _Actualizado 2026-11-11 08:14 · 22 corridas · 205 precios · TC 1.589 ARS/USD 
 | Opodo | sin probar | sin probar | sin evaluar | en prueba |
 | Travelocity | sin probar | sin probar | sin evaluar | en prueba |
 | Going (ex Scott's Cheap Flights) | sin probar | sin probar | sin evaluar | en prueba |
-| CheapOair | sin probar | sin probar | sin evaluar | en prueba |
+| CheapOair | robots.txt | sin probar | no evaluable | solo manual |
 | ZborDirect | robots.txt | sin probar | no evaluable | solo manual |
 | FareCompare | robots.txt | sin probar | no evaluable | solo manual |
 | Cheapflights | ok | sin probar | 12/14 útil | activa |
 | Airfarewatchdog | sin probar | sin probar | sin evaluar | en prueba |
 | FlightHub / JustFly | robots.txt | sin probar | no evaluable | solo manual |
 | FlightNetwork | sin probar | sin probar | sin evaluar | en prueba |
-| JustFly | sin probar | sin probar | sin evaluar | en prueba |
+| JustFly | robots.txt | sin probar | no evaluable | solo manual |
 | Aruba Tourism Authority — ofertas FIT (paquetes) | sin probar | sin probar | sin evaluar | en prueba |
+| AirHint | sin probar | sin probar | sin evaluar | en prueba |
 
 El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).

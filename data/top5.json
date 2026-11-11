@@ -1,54 +1,52 @@
 {
- "generated_at": "2026-11-11T08:14:48-03:00",
+ "generated_at": "2026-11-11T12:39:48-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 205,
- "n_runs": 22,
+ "n_obs": 228,
+ "n_runs": 23,
  "top5": [
   {
-   "run_id": "2026-11-11T08",
-   "captured_at": "2026-11-11T08:39:00-03:00",
+   "run_id": "2026-11-11T12",
+   "captured_at": "2026-11-11T13:01:00-03:00",
    "source": "cheapflights",
    "origin": "ROS",
    "depart": "2027-01-10",
    "return": "2027-01-19",
-   "price_total_usd": 5444,
-   "airlines": "Aerolíneas Argentinas",
+   "price_total_usd": 5349,
+   "airlines": "LATAM",
+   "bags_included_checked": 0,
    "url": "https://www.cheapflights.com/flight-search/ROS-AUA/2027-01-10/2027-01-19/2adults/children-5-3?currency=USD",
-   "notes": "Cruce del top en cheapflights: ESTABLE 1.361 × 4 = 5.444 total. Ida 21:25 con 2h30 en EZE (10h50, llega 07:15 +1), vuelta 08:45 con 13h30 en EZE. Google, el mismo día, muestra esa ida con 26h30 en EZE y llegada +2 (8.232); el dom 17 Google sí muestra la conexión de 2h30. Verificar en aerolineas.com.ar. Copa 1.818 × 4 = 7.272; LATAM 'self-transfer hack' descartado.",
+   "notes": "Tarifa LATAM 'Light' (sin valija despachada): 1.338 × 4 = 5.349 total, ida y vuelta LATAM con un solo ticket (no 'self-transfer'). Google muestra la misma combinación como 'desde' 6.847 / total 7.250 (tarifa con valija, probablemente). Verificar en latamairlines.com.",
    "outbound": {
     "stops": 1,
-    "duration_min": 650,
-    "shortest_layover_min": 150,
-    "longest_layover_min": 150,
-    "dep_time": "21:25",
-    "via": "EZE"
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
    },
    "inbound": {
     "stops": 1,
-    "duration_min": 1305,
-    "shortest_layover_min": 810,
-    "longest_layover_min": 810,
-    "dep_time": "08:45",
-    "via": "EZE"
+    "duration_min": 615,
+    "shortest_layover_min": 110,
+    "longest_layover_min": 110,
+    "dep_time": "19:15",
+    "via": "LIM"
    },
    "live": true,
    "currency_original": "USD",
    "airport_change": false,
-   "bags_included_checked": null,
    "bags_extra_usd": null,
-   "price_original": 5444,
+   "price_original": 5349,
    "_s": {
-    "score": 7024.0,
-    "cost_real_usd": 5724.0,
+    "score": 6059.0,
+    "cost_real_usd": 5629.0,
     "nights": 9,
     "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas"
-    ],
+    "notes": [],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 5444.0,
+     "Pasajes (4 personas, precio final)": 5349.0,
      "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 1260.0,
+     "Penalización escalas/duración/conexiones/horarios": 390.0,
      "Desvío de noches (9 vs 8)": 40
     },
     "ground": null
@@ -56,35 +54,116 @@
    "_others": [
     [
      "google_flights",
-     7250.0
+     6847.0
     ],
     [
      "google_flights",
-     8232.0
+     9282.0
     ],
     [
      "google_flights",
-     9300.0
+     8216.0
     ]
    ]
   },
   {
-   "run_id": "2026-11-11T08",
-   "captured_at": "2026-11-11T08:23:00-03:00",
+   "run_id": "2026-11-11T12",
+   "captured_at": "2026-11-11T13:04:00-03:00",
+   "source": "cheapflights",
+   "origin": "EZE",
+   "depart": "2027-01-20",
+   "return": "2027-01-28",
+   "price_total_usd": 5487,
+   "airlines": "Copa",
+   "bags_included_checked": 0,
+   "url": "https://www.cheapflights.com/flight-search/EZE-AUA/2027-01-20/2027-01-28/2adults/children-5-3?currency=USD",
+   "notes": "Copa 'Economy Basic' 1.372 × 4 = 5.487; ida 00:05 (3h53 PTY), vuelta 07:10 → 00:52+1 (7h11 PTY). Un Avianca 3.976 (10h15 + 12h50 en BOG) apareció en la primera lectura y desapareció en la siguiente: no registrado.",
+   "outbound": {
+    "stops": 1,
+    "duration_min": 787,
+    "shortest_layover_min": 233,
+    "longest_layover_min": 233,
+    "dep_time": "00:05",
+    "via": "PTY"
+   },
+   "inbound": {
+    "stops": 1,
+    "duration_min": 1002,
+    "shortest_layover_min": 431,
+    "longest_layover_min": 431,
+    "dep_time": "07:10",
+    "via": "PTY"
+   },
+   "live": true,
+   "currency_original": "USD",
+   "airport_change": false,
+   "bags_extra_usd": null,
+   "price_original": 5487,
+   "_s": {
+    "score": 6745.0604630678245,
+    "cost_real_usd": 5973.8937964011575,
+    "nights": 8,
+    "excluded": [],
+    "notes": [],
+    "breakdown": {
+     "Pasajes (4 personas, precio final)": 5487.0,
+     "Valijas faltantes (~4)": 280,
+     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
+     "Penalización comodidad (ruta con chicos)": 150,
+     "Penalización escalas/duración/conexiones/horarios": 621.1666666666667
+    },
+    "ground": {
+     "key": "EZE_long_stay_E4",
+     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
+     "ars": 328837.0,
+     "usd": 206.89379640115766,
+     "parts_ars": {
+      "peajes": 18000,
+      "nafta": 125037.0,
+      "estacionamiento E4": 185800,
+      "traslados": 0
+     },
+     "unverified": [
+      "tolls_round_trip_ars",
+      "km_one_way",
+      "l_per_100km",
+      "parking_ars_per_extra_day"
+     ]
+    }
+   },
+   "_others": [
+    [
+     "google_flights",
+     6251.0
+    ],
+    [
+     "google_flights",
+     6196.0
+    ],
+    [
+     "google_flights",
+     5455.0
+    ]
+   ]
+  },
+  {
+   "run_id": "2026-11-11T12",
+   "captured_at": "2026-11-11T12:45:00-03:00",
    "source": "google_flights",
    "origin": "EZE",
-   "depart": "2027-01-18",
-   "return": "2027-01-25",
-   "price_total_usd": 5289,
-   "airlines": "Air Canada + Copa",
-   "notes": "'Desde'. 2 escalas: 9h15 en GRU + 2h12 en PTY (22h54). Vuelta no consultada.",
+   "depart": "2027-01-20",
+   "return": "2027-01-27",
+   "price_total_usd": 6196,
+   "airlines": "American",
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%20January%2020%202027%20through%20January%2027%202027%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "'Desde'. Vía Miami: REQUIERE VISA DE EE.UU. para los 4. Primera consulta (Arajet vía PUJ 4.974 descartado; AR vía CUR 8.531 con 1h15).",
    "outbound": {
-    "stops": 2,
-    "duration_min": 1374,
-    "shortest_layover_min": 132,
-    "longest_layover_min": 555,
-    "dep_time": "16:45",
-    "via": "GRU,PTY"
+    "stops": 1,
+    "duration_min": 980,
+    "shortest_layover_min": 229,
+    "longest_layover_min": 229,
+    "dep_time": "23:59",
+    "via": "MIA"
    },
    "live": true,
    "currency_original": "USD",
@@ -92,11 +171,10 @@
    "bags_included_checked": null,
    "bags_extra_usd": null,
    "inbound": {},
-   "price_original": 5289,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-18%20through%202027-01-25%202%20adults%202%20children&curr=USD&hl=es",
+   "price_original": 6196,
    "_s": {
-    "score": 7148.608783188624,
-    "cost_real_usd": 5770.608783188624,
+    "score": 7203.775449855291,
+    "cost_real_usd": 6677.608783188624,
     "nights": 7,
     "excluded": [],
     "notes": [
@@ -104,11 +182,11 @@
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 5289.0,
+     "Pasajes (4 personas, precio final)": 6196.0,
      "Valijas faltantes (~4)": 280,
      "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 201.6087831886246,
      "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 1188.0,
+     "Penalización escalas/duración/conexiones/horarios": 336.16666666666663,
      "Desvío de noches (7 vs 8)": 40
     },
     "ground": {
@@ -133,15 +211,16 @@
    "_others": []
   },
   {
-   "run_id": "2026-11-11T08",
-   "captured_at": "2026-11-11T08:14:00-03:00",
+   "run_id": "2026-11-11T12",
+   "captured_at": "2026-11-11T12:50:00-03:00",
    "source": "google_flights",
    "origin": "EZE",
-   "depart": "2027-01-20",
-   "return": "2027-01-28",
+   "depart": "2027-01-18",
+   "return": "2027-01-27",
    "price_total_usd": 6196,
    "airlines": "American",
-   "notes": "ESTABLE 'desde'. Vía Miami: REQUIERE VISA DE EE.UU. para los 4. Vuelta no consultada.",
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%20January%2018%202027%20through%20January%2027%202027%202%20adults%202%20children&curr=USD&hl=es",
+   "notes": "'Desde'. Vía Miami: REQUIERE VISA DE EE.UU. Primera consulta.",
    "outbound": {
     "stops": 1,
     "duration_min": 980,
@@ -157,11 +236,10 @@
    "bags_extra_usd": null,
    "inbound": {},
    "price_original": 6196,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-20%20through%202027-01-28%202%20adults%202%20children&curr=USD&hl=es",
    "_s": {
-    "score": 7169.0604630678245,
-    "cost_real_usd": 6682.8937964011575,
-    "nights": 8,
+    "score": 7214.345476280358,
+    "cost_real_usd": 6688.178809613691,
+    "nights": 9,
     "excluded": [],
     "notes": [
      "equipaje incluido s/d: se asume 0 valijas",
@@ -170,72 +248,9 @@
     "breakdown": {
      "Pasajes (4 personas, precio final)": 6196.0,
      "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 336.16666666666663
-    },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 206.89379640115766,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 185800,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
-   },
-   "_others": []
-  },
-  {
-   "run_id": "2026-11-11T08",
-   "captured_at": "2026-11-11T08:34:00-03:00",
-   "source": "google_flights",
-   "origin": "EZE",
-   "depart": "2027-01-20",
-   "return": "2027-01-29",
-   "price_total_usd": 6263,
-   "airlines": "Copa",
-   "notes": "Primera consulta (9 noches). 'Desde' (misma ida 04:25 que 20→28, donde se confirmó 6.263 con vuelta 07:10 7h11 PTY). Vuelta no consultada.",
-   "outbound": {
-    "stops": 1,
-    "duration_min": 674,
-    "shortest_layover_min": 120,
-    "longest_layover_min": 120,
-    "dep_time": "04:25",
-    "via": "PTY"
-   },
-   "live": true,
-   "currency_original": "USD",
-   "airport_change": false,
-   "bags_included_checked": null,
-   "bags_extra_usd": null,
-   "inbound": {},
-   "price_original": 6263,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-20%20through%202027-01-29%202%20adults%202%20children&curr=USD&hl=es",
-   "_s": {
-    "score": 7245.178809613691,
-    "cost_real_usd": 6755.178809613691,
-    "nights": 9,
-    "excluded": [],
-    "notes": [
-     "equipaje incluido s/d: se asume 0 valijas",
-     "vuelta: escalas s/d"
-    ],
-    "breakdown": {
-     "Pasajes (4 personas, precio final)": 6263.0,
-     "Valijas faltantes (~4)": 280,
      "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 212.1788096136907,
      "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 300.0,
+     "Penalización escalas/duración/conexiones/horarios": 336.16666666666663,
      "Desvío de noches (9 vs 8)": 40
     },
     "ground": {
@@ -260,62 +275,57 @@
    "_others": []
   },
   {
-   "run_id": "2026-11-11T08",
-   "captured_at": "2026-11-11T08:17:00-03:00",
+   "run_id": "2026-11-11T12",
+   "captured_at": "2026-11-11T12:25:00-03:00",
    "source": "google_flights",
    "origin": "EZE",
-   "depart": "2027-01-17",
+   "depart": "2027-01-18",
    "return": "2027-01-25",
-   "price_total_usd": 6263,
-   "airlines": "Copa",
-   "notes": "ESTABLE 6.263 en la lista (ida 09:10, 4h33 PTY). Vuelta no re-leída hoy: se toma la confirmada el 10/11 23 h (lun 25 07:10, 7h11 PTY).",
+   "price_total_usd": 5587,
+   "airlines": "Air Canada + Copa",
+   "notes": "'Desde' (subió de 5.289). 2 escalas: 9h25 GRU + 2h02 PTY. Clic para leer vueltas → 'Vaya, se ha producido un error' (no reintentado).",
    "outbound": {
-    "stops": 1,
-    "duration_min": 833,
-    "shortest_layover_min": 273,
-    "longest_layover_min": 273,
-    "dep_time": "09:10",
-    "via": "PTY"
-   },
-   "inbound": {
-    "stops": 1,
-    "duration_min": 1002,
-    "shortest_layover_min": 431,
-    "longest_layover_min": 431,
-    "dep_time": "07:10",
-    "via": "PTY"
+    "stops": 2,
+    "duration_min": 1374,
+    "shortest_layover_min": 122,
+    "longest_layover_min": 565,
+    "dep_time": "16:45",
+    "via": "GRU,PTY"
    },
    "live": true,
    "currency_original": "USD",
    "airport_change": false,
    "bags_included_checked": null,
    "bags_extra_usd": null,
-   "price_original": 6263,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-17%20through%202027-01-25%202%20adults%202%20children&curr=USD&hl=es",
+   "inbound": {},
+   "price_original": 5587,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-18%20through%202027-01-25%202%20adults%202%20children&curr=USD&hl=es",
    "_s": {
-    "score": 7496.3937964011575,
-    "cost_real_usd": 6749.8937964011575,
-    "nights": 8,
+    "score": 7463.275449855291,
+    "cost_real_usd": 6068.608783188624,
+    "nights": 7,
     "excluded": [],
     "notes": [
-     "equipaje incluido s/d: se asume 0 valijas"
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 6263.0,
+     "Pasajes (4 personas, precio final)": 5587.0,
      "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
+     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 201.6087831886246,
      "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 596.5
+     "Penalización escalas/duración/conexiones/horarios": 1204.6666666666665,
+     "Desvío de noches (7 vs 8)": 40
     },
     "ground": {
      "key": "EZE_long_stay_E4",
      "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 206.89379640115766,
+     "ars": 320437.0,
+     "usd": 201.6087831886246,
      "parts_ars": {
       "peajes": 18000,
       "nafta": 125037.0,
-      "estacionamiento E4": 185800,
+      "estacionamiento E4": 177400,
       "traslados": 0
      },
      "unverified": [
