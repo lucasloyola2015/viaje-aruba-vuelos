@@ -790,21 +790,21 @@
    "name": "FlightHub / JustFly",
    "domain": "www.flighthub.com",
    "type": "OTA",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.flighthub.com/",
    "access": {
-    "agent": "untested",
+    "agent": "robots_disallow",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-11T08:40:00-03:00",
+    "details": {"motivo": "robots.txt (leído 11/11/2026) prohíbe /flight (incluye /flight/search, la ruta de resultados) y /self-transfer para User-agent *; solo permite /flights/ (landing) y /cheap-flights. Con respect_robots_txt no se abrió la búsqueda. 1 carga de página usada."}
    },
    "discovered_by": "2026-11-10T06",
-   "last_checked": null,
-   "notes": "OTA canadiense (misma empresa que JustFly); apareció como anuncio en cheapflights ROS→AUA (US$ 1.270 por persona, 2+ escalas). Reputación mixta (cargos de servicio); revisar robots.txt y si admite 2+2 con edades. Las 3 WebSearch de esta corrida no trajeron dominios nuevos."
+   "last_checked": "2026-11-11T08:40:00-03:00",
+   "notes": "2026-11-11T08: robots_disallow en la ruta de resultados → manual_only. JustFly (mismo grupo) probablemente igual, sin verificar. Antes: OTA canadiense (misma empresa que JustFly); apareció como anuncio en cheapflights ROS→AUA (US$ 1.270 por persona, 2+ escalas). Reputación mixta (cargos de servicio); revisar robots.txt y si admite 2+2 con edades. Las 3 WebSearch de esta corrida no trajeron dominios nuevos."
   },
   {
    "id": "flightnetwork",
@@ -847,6 +847,27 @@
    "discovered_by": "2026-11-10T23",
    "last_checked": null,
    "notes": "OTA del mismo grupo que FlightHub; apareció como anuncio pago ('paid placement from Justfly.com', US$ 1.270 por persona, 2+ escalas) en cheapflights ROS→AUA 10→19. Las 2 WebSearch de esta corrida (es/en) solo trajeron dominios ya registrados. Reputación mixta (cargos de servicio): revisar robots.txt, si admite 2+2 con edades y si arma tickets separados."
+  },
+  {
+   "id": "aruba_com_ofertas",
+   "name": "Aruba Tourism Authority — ofertas FIT (paquetes)",
+   "domain": "www.aruba.com",
+   "type": "alertas_ofertas",
+   "status": "candidate",
+   "url": "https://www.aruba.com/es/fit-ofertas",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-11T08",
+   "last_checked": null,
+   "notes": "Sitio oficial de turismo de Aruba; página de ofertas para viajeros argentinos (paquetes 7 noches con vuelo LATAM, traslados y desayuno desde USD 2.599 por persona, viaje feb 2027, según resultado de WebSearch). Son paquetes, no solo pasaje: útil como señal de ofertas/agencias, no para rankear. Hallado con WebSearch «buscador de pasajes Argentina Aruba enero 2027 familia precio calendario»."
   }
  ]
 }
