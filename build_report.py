@@ -204,6 +204,13 @@ def build():
         except Exception:
             print(f"[warn] observación inválida ignorada: {str(o)[:100]}", file=sys.stderr)
 
+    # si una combinación (origen, fechas, fuente) se volvió a consultar, solo cuentan los itinerarios
+    # de la corrida más reciente: uno que no se volvió a registrar ya no existe o dejó de estar entre los mejores
+    last_run = {}
+    for o in sorted(valid, key=lambda x: x.get("captured_at", "")):
+        last_run[(o["origin"], o["depart"], o["return"], o.get("source", ""))] = o.get("run_id")
+    valid = [o for o in valid if o.get("run_id") == last_run[(o["origin"], o["depart"], o["return"], o.get("source", ""))]]
+
     # última observación por itinerario
     latest = {}
     for o in sorted(valid, key=lambda x: x.get("captured_at", "")):
