@@ -19,7 +19,7 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-12T09:01:00-03:00",
+   "last_checked": "2026-11-12T12:50:00-03:00",
    "notes": "Fuente primaria. 2026-11-12T08: 14 consultas OK; 'from EZE to AUA on January 1 2027...' cayó 2 veces en la home y la reordenada 'Flights to AUA from EZE on ...' funcionó en todas (se usó para el resto).2026-11-11T18: 14 consultas OK con el formato de URL 'on January 9 2027 through January 18 2027' (ninguna cayó en la home). OJO (2026-11-10T12): en el navegador integrado del agente quedó en 'Cargando resultados' con errores net::ERR_BLOCKED_BY_CLIENT (3 cargas); con el Chrome del usuario (claude-in-chrome, sin iniciar sesión) cargó bien. Si se repite, usar Chrome directamente. OJO (2026-11-10T06): el 'desde' de LATAM 10→19 y 13→22 (6.515/6.532) no corresponde a ninguna vuelta: al elegir la ida el total real es 6.855. OJO (2026-11-08T13): las pestañas 'Mejores' y 'Los más bajos' muestran 'desde' distintos para el MISMO vuelo (LATAM ROS 6→14: 8.054 vs 6.244) y ninguno era el total real (7.698): siempre confirmar eligiendo la ida. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
@@ -761,7 +761,7 @@
     "details": {"acceso": 2, "pasajeros": 2, "precio_total": 2, "escalas_duracion": 2, "fechas_flexibles": 1, "coherencia_google": 1, "estabilidad": 2, "cheapflights_usd": 7272, "google_ref_usd": 9300, "google_ref_captured_at": "2026-11-10T06:33", "comentarios": "robots.txt (User-agent: *) prohíbe /cheapflights/, /find-flights/, /s/ y /api/ pero NO /flight-search/; sin reglas para ClaudeBot. Abre sin CAPTCHA ni login con el navegador del agente. URL admite edades de niños (children-5-3) y muestra precio por persona y total de 4 en USD (1.818 × 4 = 7.272). Escalas con ciudad y duración y duración por tramo (2). Sin calendario visible en el texto, solo 'Track prices' (1). Comparable: Copa ida 05:11 / vuelta 15:40 7.272 vs 'desde' Copa de Google 9.300 = −22 % (1; Google no mostró el total de esa vuelta exacta). Dos cargas iguales (2). page_loads: 3 (robots + 2 búsquedas)."}
    },
    "discovered_by": "2026-11-09T23",
-   "last_checked": "2026-11-12T09:05:00-03:00",
+   "last_checked": "2026-11-12T12:57:00-03:00",
    "notes": "2026-11-12T08 (navegador del agente, ok): EZE 9→18 la LATAM 07:20/15:00 ahora figura como 'Self-transfer hack' (1.094 pp, no registrada); un solo ticket LATAM 04:00/15:00 1.269 pp = 5.076. 2026-11-11T18 (navegador del agente, ok): EZE 9→18 LATAM Light: aerolínea 1.141 pp (4.564 total), SmartFares 1.043 pp, FlightHub 1.176, Standard 1.234; 'Round-trip, 4 Travelers'. El detalle ('Go to result details') muestra las opciones de reserva por tarifa. 2026-11-11T12 (navegador del agente, ok): ROS 10→19 AR 5.443 estable + LATAM Light 5.349 (vuelta 19:15 1h50 LIM); EZE 20→28 Copa Basic 6.381 (vuelta 4h40) y 5.487 (ida 00:05, vuelta 7h11). Un Avianca 3.976 apareció al 75 % de carga y desapareció en la relectura (no registrado). Hahn Air/WorldTicket vía PUJ = Arajet (descartado). ACTIVA desde 2026-11-10T06 (útil 12/14). 2026-11-10T23 (navegador del agente, ok): ROS 10→19 AR 5.444 total (ida 21:25 con 2h30 en EZE, que Google muestra con 26h30) y Copa 7.272; LATAM otra vez solo self-transfer. 2026-11-10T12 (Chrome): ROS 10→19 LATAM ida+vuelta 5.193 total (Basic) pero la ida figura 'self-transfer at Lima' (tickets separados) → no se registró; Arajet vía PUJ 5.195 descartado. Motor KAYAK. URL: /flight-search/{ORIG}-AUA/{IDA}/{VUELTA}/2adults/children-5-3?currency=USD. OJO: descartar filas 'Self-transfer hack' (tickets separados, p. ej. LATAM 4.924 con vuelta Avianca+AR de 37 h), anuncios ('Ad', FlightNetwork/FlightHub) y Arajet vía PUJ. Tarifas 'Economy Basic' probablemente sin valija. Esperar ~20 s a que termine 'Fetching prices'."
   },
   {
@@ -916,8 +916,30 @@
    "name": "Momondo España",
    "domain": "www.momondo.es",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.momondo.es/vuelos/argentina",
+   "access": {
+    "agent": "robots_disallow",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-12T12:59:00-03:00",
+    "details": {"motivo": "robots.txt (12/11/2026, User-agent: *) prohíbe /flight-search/ (la ruta de resultados; motor KAYAK) y /flightsearch/, /flights/ct/, /vuelos/buscar/. Solo permite la landing /vuelos/$ y /es/. No se abrió ninguna búsqueda 2+2. page_loads: 1 (robots.txt)."}
+   },
+   "discovered_by": "2026-11-12T08",
+   "last_checked": "2026-11-12T12:59:00-03:00",
+   "notes": "2026-11-12T12: robots_disallow en /flight-search/ → manual_only (igual que kayak.com; cheapflights, del mismo motor KAYAK, sí permite /flight-search/). Abrir a mano: la landing /vuelos/ está permitida pero sin precios 2+2. Distinto de Momondo AR (cerrado, redirige a Kayak). Hallado con WebSearch «buscador vuelos baratos desde Argentina calendario tarifas aerolíneas comparador nuevo» (también es.momondo.com).",
+   "robots_disallow": true
+  },
+  {
+   "id": "booking_flights",
+   "name": "Booking.com Flights",
+   "domain": "www.booking.com",
+   "type": "metabuscador",
+   "status": "candidate",
+   "url": "https://www.booking.com/flights/route/to-country/aw/ar.html",
    "access": {
     "agent": "untested",
     "chrome": "untested"
@@ -928,9 +950,9 @@
     "evaluated_at": null,
     "details": {}
    },
-   "discovered_by": "2026-11-12T08",
+   "discovered_by": "2026-11-12T12",
    "last_checked": null,
-   "notes": "Hallado con WebSearch «buscador vuelos baratos desde Argentina calendario tarifas aerolíneas comparador nuevo» (también es.momondo.com). Distinto de Momondo AR (cerrado, redirige a Kayak). Motor KAYAK como cheapflights: revisar robots.txt (probablemente prohíba /flight-search como kayak.com) y si admite edades de niños. Las otras 2 WebSearch (es/en) solo trajeron dominios ya registrados (promociones-aereas, almundo, copaair, kayak.com.ar, ratepunk, edreams, farecompare, despegar)."
+   "notes": "Sección Flights de Booking.com, con página de ruta Aruba↔Argentina (hallada con WebSearch «flight aggregator compare airfares Aruba from South America»). Motor de vuelos de Booking (opera con partners tipo Kiwi); los precios de la página de ruta cubren salidas dentro de los próximos 30 días. Revisar robots.txt y si admite 2 adultos + 2 niños con edades y fechas de enero 2027 antes de usar; ojo con tickets separados."
   }
  ]
 }
