@@ -1,6 +1,6 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-11 18:34 · 24 corridas · 256 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-12 08:32 · 25 corridas · 257 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
 **Recomendación:** Conviene ir en auto a Buenos Aires: ahorra ≈ US$ 573 de puntaje frente a salir de Rosario (ya incluye cochera, peajes, nafta, traslados y penalización por manejar).
 
@@ -25,7 +25,7 @@ _Actualizado 2026-11-11 18:34 · 24 corridas · 256 precios · TC 1.589 ARS/USD 
 | Amadeus Self-Service API | sin probar | sin probar | sin evaluar | descartada |
 | Copa Airlines (páginas de ruta) | parcial | sin probar | sin evaluar | solo contraste |
 | Aerolíneas Argentinas | robots.txt | sin probar | no evaluable | solo manual |
-| LATAM | bloqueada | parcial | no evaluable | solo con tu Chrome (3 AM) |
+| LATAM | bloqueada | ok | 7/14 parcial | solo contraste |
 | Avianca | sin probar | sin probar | sin evaluar | en prueba |
 | Turismocity | robots.txt | sin probar | no evaluable | solo manual |
 | Expedia | sin probar | sin probar | sin evaluar | en prueba |
@@ -57,7 +57,7 @@ _Actualizado 2026-11-11 18:34 · 24 corridas · 256 precios · TC 1.589 ARS/USD 
 | FlightNetwork | sin probar | sin probar | sin evaluar | en prueba |
 | JustFly | robots.txt | sin probar | no evaluable | solo manual |
 | Aruba Tourism Authority — ofertas FIT (paquetes) | sin probar | sin probar | sin evaluar | en prueba |
-| AirHint | CAPTCHA | sin probar | no evaluable | solo con tu Chrome (3 AM) |
+| AirHint | CAPTCHA | ok | 6/14 parcial | solo contraste |
 | SmartFares | sin probar | sin probar | sin evaluar | en prueba |
 
 El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).

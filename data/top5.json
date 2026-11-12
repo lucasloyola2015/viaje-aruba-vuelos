@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-11T18:34:18-03:00",
+ "generated_at": "2026-11-12T08:32:46-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 256,
- "n_runs": 24,
+ "n_obs": 257,
+ "n_runs": 25,
  "top5": [
   {
    "run_id": "2026-11-11T18",
