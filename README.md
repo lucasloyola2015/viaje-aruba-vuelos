@@ -1,13 +1,13 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-12 08:32 · 25 corridas · 257 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-12 08:38 · 26 corridas · 284 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
-**Recomendación:** Conviene ir en auto a Buenos Aires: ahorra ≈ US$ 573 de puntaje frente a salir de Rosario (ya incluye cochera, peajes, nafta, traslados y penalización por manejar).
+**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ 118 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
 | # | Origen | Salida → Vuelta | Noches | Aerolíneas | Escalas ida/vuelta | Costo real est. | Puntaje |
 |---|---|---|---|---|---|---|---|
-| 1 | EZE | sáb 9 ene → lun 18 ene | 9 | LATAM | 1/1 | US$ 5.056 | US$ 5.486 |
-| 2 | ROS | dom 10 ene → mar 19 ene | 9 | LATAM | 1/1 | US$ 5.629 | US$ 6.059 |
+| 1 | EZE | sáb 9 ene → lun 18 ene | 9 | LATAM | 1/1 | US$ 5.568 | US$ 6.208 |
+| 2 | ROS | dom 10 ene → mar 19 ene | 9 | LATAM | 1/1 | US$ 5.896 | US$ 6.326 |
 | 3 | EZE | mié 20 ene → jue 28 ene | 8 | Copa | 1/1 | US$ 5.974 | US$ 6.745 |
 | 4 | EZE | mié 20 ene → mié 27 ene | 7 | American | 1/? | US$ 6.678 | US$ 7.204 |
 | 5 | EZE | lun 18 ene → mié 27 ene | 9 | American | 1/? | US$ 6.688 | US$ 7.214 |
@@ -58,6 +58,7 @@ _Actualizado 2026-11-12 08:32 · 25 corridas · 257 precios · TC 1.589 ARS/USD 
 | JustFly | robots.txt | sin probar | no evaluable | solo manual |
 | Aruba Tourism Authority — ofertas FIT (paquetes) | sin probar | sin probar | sin evaluar | en prueba |
 | AirHint | CAPTCHA | ok | 6/14 parcial | solo contraste |
-| SmartFares | sin probar | sin probar | sin evaluar | en prueba |
+| SmartFares | solo JS | sin probar | no evaluable | solo manual |
+| Momondo España | sin probar | sin probar | sin evaluar | en prueba |
 
 El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).

@@ -1,28 +1,27 @@
 {
- "generated_at": "2026-11-12T08:32:46-03:00",
+ "generated_at": "2026-11-12T08:38:38-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 257,
- "n_runs": 25,
+ "n_obs": 284,
+ "n_runs": 26,
  "top5": [
   {
-   "run_id": "2026-11-11T18",
-   "captured_at": "2026-11-11T18:31:00-03:00",
+   "run_id": "2026-11-12T08",
+   "captured_at": "2026-11-12T09:05:00-03:00",
    "source": "cheapflights",
    "origin": "EZE",
    "depart": "2027-01-09",
    "return": "2027-01-18",
-   "price_total_usd": 4564,
-   "price_original": 4564,
+   "price_total_usd": 5076,
    "airlines": "LATAM",
    "bags_included_checked": 0,
    "url": "https://www.cheapflights.com/flight-search/EZE-AUA/2027-01-09/2027-01-18/2adults/children-5-3?currency=USD",
-   "notes": "Mismo itinerario que Google (5.425 total). Opción de reserva 'Airline' (LATAM) US$ 1.141 por persona × 4 = 4.564, tarifa Light (1 carry-on, valija con cargo). SmartFares (OTA) 1.043 pp = 4.172; FlightHub 1.176 pp. Standard 1.234 pp (4.936). Página confirma 'Round-trip, 4 Travelers' (2 adultos + 2 niños). Verificar en latamairlines.com.",
+   "notes": "US$ 1.269 por persona × 4 = 5.076 (qtravelers=4, edades 5,3). Ida 04:00 (10h55, LIM), vuelta 15:00 (11h00, LIM), un solo ticket. OJO: la combinación 07:20/15:00 que ayer era 1.141 pp con un solo ticket hoy figura como 'Self-transfer hack' a 1.094 pp (tickets separados → no registrada). Tarifa probablemente sin valija.",
    "outbound": {
     "stops": 1,
-    "duration_min": 710,
-    "shortest_layover_min": 155,
-    "longest_layover_min": 155,
-    "dep_time": "07:20",
+    "duration_min": 655,
+    "shortest_layover_min": 100,
+    "longest_layover_min": 100,
+    "dep_time": "04:00",
     "via": "LIM"
    },
    "inbound": {
@@ -37,18 +36,19 @@
    "currency_original": "USD",
    "airport_change": false,
    "bags_extra_usd": null,
+   "price_original": 5076,
    "_s": {
-    "score": 5486.178809613691,
-    "cost_real_usd": 5056.178809613691,
+    "score": 6208.178809613691,
+    "cost_real_usd": 5568.178809613691,
     "nights": 9,
     "excluded": [],
     "notes": [],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 4564.0,
+     "Pasajes (4 personas, precio final)": 5076.0,
      "Valijas faltantes (~4)": 280,
      "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 212.1788096136907,
      "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 240.0,
+     "Penalización escalas/duración/conexiones/horarios": 450.0,
      "Desvío de noches (9 vs 8)": 40
     },
     "ground": {
@@ -77,22 +77,22 @@
     ],
     [
      "google_flights",
-     7633.0
+     6015.0
     ]
    ]
   },
   {
-   "run_id": "2026-11-11T12",
-   "captured_at": "2026-11-11T13:01:00-03:00",
+   "run_id": "2026-11-12T08",
+   "captured_at": "2026-11-12T09:20:00-03:00",
    "source": "cheapflights",
    "origin": "ROS",
    "depart": "2027-01-10",
    "return": "2027-01-19",
-   "price_total_usd": 5349,
+   "price_total_usd": 5616,
    "airlines": "LATAM",
    "bags_included_checked": 0,
    "url": "https://www.cheapflights.com/flight-search/ROS-AUA/2027-01-10/2027-01-19/2adults/children-5-3?currency=USD",
-   "notes": "Tarifa LATAM 'Light' (sin valija despachada): 1.338 × 4 = 5.349 total, ida y vuelta LATAM con un solo ticket (no 'self-transfer'). Google muestra la misma combinación como 'desde' 6.847 / total 7.250 (tarifa con valija, probablemente). Verificar en latamairlines.com.",
+   "notes": "US$ 1.404 por persona × 4 = 5.616 (subió desde 1.338 pp / 5.349 del 11/11). Ida 07:45 (11h25, LIM), vuelta 19:15 (10h15, LIM), un solo ticket LATAM. Tarifa probablemente Light sin valija. Cheapflights dice 'Wait: esperamos baja de US$ 120 en 15 días'. Filas Arajet/Hahn Air/WorldTicket vía PUJ descartadas.",
    "outbound": {
     "stops": 1,
     "duration_min": 685,
@@ -113,15 +113,15 @@
    "currency_original": "USD",
    "airport_change": false,
    "bags_extra_usd": null,
-   "price_original": 5349,
+   "price_original": 5616,
    "_s": {
-    "score": 6059.0,
-    "cost_real_usd": 5629.0,
+    "score": 6326.0,
+    "cost_real_usd": 5896.0,
     "nights": 9,
     "excluded": [],
     "notes": [],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 5349.0,
+     "Pasajes (4 personas, precio final)": 5616.0,
      "Valijas faltantes (~4)": 280,
      "Penalización escalas/duración/conexiones/horarios": 390.0,
      "Desvío de noches (9 vs 8)": 40
@@ -135,11 +135,7 @@
     ],
     [
      "google_flights",
-     8239.0
-    ],
-    [
-     "google_flights",
-     9307.0
+     8781.0
     ]
    ]
   },
