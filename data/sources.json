@@ -939,21 +939,21 @@
    "name": "Booking.com Flights",
    "domain": "www.booking.com",
    "type": "metabuscador",
-   "status": "candidate",
+   "status": "manual_only",
    "url": "https://www.booking.com/flights/route/to-country/aw/ar.html",
    "access": {
-    "agent": "untested",
+    "agent": "robots_disallow",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-12T23:42:00-03:00",
+    "details": {"motivo": "flights.booking.com/robots.txt (User-agent *) prohibe /flights, la ruta de resultados de busqueda; www.booking.com solo tiene paginas de ruta estaticas. 2 cargas (los dos robots.txt). No se puntuo."}
    },
    "discovered_by": "2026-11-12T12",
-   "last_checked": null,
-   "notes": "Sección Flights de Booking.com, con página de ruta Aruba↔Argentina (hallada con WebSearch «flight aggregator compare airfares Aruba from South America»). Motor de vuelos de Booking (opera con partners tipo Kiwi); los precios de la página de ruta cubren salidas dentro de los próximos 30 días. Revisar robots.txt y si admite 2 adultos + 2 niños con edades y fechas de enero 2027 antes de usar; ojo con tickets separados."
+   "last_checked": "2026-11-12T23:42:00-03:00",
+   "notes": "2026-11-12T23: evaluada -> robots_disallow en flights.booking.com/flights -> manual_only (la puede abrir el usuario a mano).Sección Flights de Booking.com, con página de ruta Aruba↔Argentina (hallada con WebSearch «flight aggregator compare airfares Aruba from South America»). Motor de vuelos de Booking (opera con partners tipo Kiwi); los precios de la página de ruta cubren salidas dentro de los próximos 30 días. Revisar robots.txt y si admite 2 adultos + 2 niños con edades y fechas de enero 2027 antes de usar; ojo con tickets separados."
   },
   {
    "id": "sirchandler",
@@ -975,6 +975,27 @@
    "discovered_by": "2026-11-12T18",
    "last_checked": null,
    "notes": "Blog argentino de aviación/millas y ofertas (ya citado en config.json por la tarifa de taxi EZE). Hallado con WebSearch «foro viajeros Argentina Aruba vuelos recomendaciones blog ofertas»: tiene nota 'Aruba será el nuevo destino de Aerolíneas Argentinas' (sep-2025). Útil como señal de rutas nuevas y promos (no cotiza 2+2); evaluar si publica fechas/precios del directo AR EZE–AUA."
+  },
+  {
+   "id": "thepointsguy",
+   "name": "The Points Guy (deals)",
+   "domain": "thepointsguy.com",
+   "type": "alertas_ofertas",
+   "status": "candidate",
+   "url": "https://thepointsguy.com/deals/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-12T23",
+   "last_checked": null,
+   "notes": "Blog de millas y ofertas (EE.UU.) con seccion /deals; hallado con WebSearch 'Aruba airfare deals from South America January 2027 fare tracker' (nota 'flights-aruba-290'). Orientado a origenes de EE.UU.: probablemente poco util para ROS/EZE, pero puede avisar errores de tarifa o promos de Copa/LATAM. No cotiza 2+2."
   }
  ]
 }
