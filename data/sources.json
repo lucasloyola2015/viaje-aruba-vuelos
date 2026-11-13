@@ -19,8 +19,8 @@
     "details": {}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-13T06:30:00-03:00",
-   "notes": "Fuente primaria. 2026-11-13T06: 14 consultas OK con 'Flights to AUA from {ORIG} on YYYY-MM-DD through YYYY-MM-DD' (ninguna cayó en la home); los aria-label 'A partir de' traen aerolínea, hora, duración y escala.2026-11-12T08: 14 consultas OK; 'from EZE to AUA on January 1 2027...' cayó 2 veces en la home y la reordenada 'Flights to AUA from EZE on ...' funcionó en todas (se usó para el resto).2026-11-11T18: 14 consultas OK con el formato de URL 'on January 9 2027 through January 18 2027' (ninguna cayó en la home). OJO (2026-11-10T12): en el navegador integrado del agente quedó en 'Cargando resultados' con errores net::ERR_BLOCKED_BY_CLIENT (3 cargas); con el Chrome del usuario (claude-in-chrome, sin iniciar sesión) cargó bien. Si se repite, usar Chrome directamente. OJO (2026-11-10T06): el 'desde' de LATAM 10→19 y 13→22 (6.515/6.532) no corresponde a ninguna vuelta: al elegir la ida el total real es 6.855. OJO (2026-11-08T13): las pestañas 'Mejores' y 'Los más bajos' muestran 'desde' distintos para el MISMO vuelo (LATAM ROS 6→14: 8.054 vs 6.244) y ninguno era el total real (7.698): siempre confirmar eligiendo la ida. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
+   "last_checked": "2026-11-13T12:40:00-03:00",
+   "notes": "Fuente primaria. 2026-11-13T12: 14 consultas OK (mismo formato de URL, 4 pasajeros validados en todas).2026-11-13T06: 14 consultas OK con 'Flights to AUA from {ORIG} on YYYY-MM-DD through YYYY-MM-DD' (ninguna cayó en la home); los aria-label 'A partir de' traen aerolínea, hora, duración y escala.2026-11-12T08: 14 consultas OK; 'from EZE to AUA on January 1 2027...' cayó 2 veces en la home y la reordenada 'Flights to AUA from EZE on ...' funcionó en todas (se usó para el resto).2026-11-11T18: 14 consultas OK con el formato de URL 'on January 9 2027 through January 18 2027' (ninguna cayó en la home). OJO (2026-11-10T12): en el navegador integrado del agente quedó en 'Cargando resultados' con errores net::ERR_BLOCKED_BY_CLIENT (3 cargas); con el Chrome del usuario (claude-in-chrome, sin iniciar sesión) cargó bien. Si se repite, usar Chrome directamente. OJO (2026-11-10T06): el 'desde' de LATAM 10→19 y 13→22 (6.515/6.532) no corresponde a ninguna vuelta: al elegir la ida el total real es 6.855. OJO (2026-11-08T13): las pestañas 'Mejores' y 'Los más bajos' muestran 'desde' distintos para el MISMO vuelo (LATAM ROS 6→14: 8.054 vs 6.244) y ninguno era el total real (7.698): siempre confirmar eligiendo la ida. OJO (2026-11-07T09): el 'a partir de' de la lista de idas no siempre es el total final; al elegir la ida, la lista de vueltas muestra el total real ida y vuelta (LATAM ROS 6→14: 6.182 → 6.405; Copa ROS 6→13: 5.557 confirmado). Para extraer datos sirve leer los aria-label que empiezan con 'A partir de' (aerolínea, horarios, escalas). OJO (2026-11-06T13): durante la carga ('Obteniendo resultados') puede mostrar precios preliminares distintos de los finales (EZE 8→16: 6.844 → 7.929); esperar ~15 s y leer cuando desaparezca ese texto. Funciona con navegador real y URL ?q=; WebFetch no sirve (JS). A veces cae en la home (sobre todo EZE en fechas 19–22 ene): reintentar UNA vez con la consulta reordenada 'Flights to AUA from EZE on ...' (funcionó 2026-11-06T08). Las 'fechas más baratas' que sugiere suelen ser Arajet vía PUJ (no opera 1–23 ene): verificar antes de usarlas.",
    "reference": true
   },
   {
@@ -264,21 +264,21 @@
    "name": "Expedia",
    "domain": "www.expedia.com.ar",
    "type": "OTA",
-   "status": "candidate",
+   "status": "needs_chrome",
    "url": "https://www.expedia.com.ar/",
    "access": {
-    "agent": "untested",
+    "agent": "error",
     "chrome": "untested"
    },
    "usefulness": {
     "score": null,
-    "verdict": "sin_evaluar",
-    "evaluated_at": null,
-    "details": {}
+    "verdict": "no_evaluable",
+    "evaluated_at": "2026-11-13T12:46:00-03:00",
+    "details": {"motivo": "robots.txt (13/11/2026): User-agent * prohíbe /Flights-Search, pero el bloque 'Allow Agentic Search' permite / a Claude-User y Claude-SearchBot. La búsqueda de referencia (ROS→AUA 10→18 ene, 2 adultos + niños 5 y 3) abrió con el navegador del agente y devolvió 'Sorry, we're having a problem on our end. Please try your search again later', sin resultados. No se reintentó. Sin puntajes. page_loads: 2 (robots + búsqueda)."}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": null,
-   "notes": ""
+   "last_checked": "2026-11-13T12:46:00-03:00",
+   "notes": "2026-11-13T12: no_evaluable con el agente (error del sitio en la página de resultados, posible bloqueo blando) → needs_chrome para la corrida de las 3 AM. URL de prueba: https://www.expedia.com.ar/Flights-Search?trip=roundtrip&leg1=from:ROS,to:AUA,departure:10/01/2027TANYT&leg2=from:AUA,to:ROS,departure:18/01/2027TANYT&passengers=adults:2,children:2[5;3],infantinlap:N&options=cabinclass:economy&mode=search"
   },
   {
    "id": "tripcom",
@@ -762,8 +762,8 @@
     "details": {"acceso": 2, "pasajeros": 2, "precio_total": 2, "escalas_duracion": 2, "fechas_flexibles": 1, "coherencia_google": 1, "estabilidad": 2, "cheapflights_usd": 7272, "google_ref_usd": 9300, "google_ref_captured_at": "2026-11-10T06:33", "comentarios": "robots.txt (User-agent: *) prohíbe /cheapflights/, /find-flights/, /s/ y /api/ pero NO /flight-search/; sin reglas para ClaudeBot. Abre sin CAPTCHA ni login con el navegador del agente. URL admite edades de niños (children-5-3) y muestra precio por persona y total de 4 en USD (1.818 × 4 = 7.272). Escalas con ciudad y duración y duración por tramo (2). Sin calendario visible en el texto, solo 'Track prices' (1). Comparable: Copa ida 05:11 / vuelta 15:40 7.272 vs 'desde' Copa de Google 9.300 = −22 % (1; Google no mostró el total de esa vuelta exacta). Dos cargas iguales (2). page_loads: 3 (robots + 2 búsquedas)."}
    },
    "discovered_by": "2026-11-09T23",
-   "last_checked": "2026-11-13T06:31:00-03:00",
-   "notes": "2026-11-13T06 (navegador del agente, ok): ROS 10→19 Copa ticket único baja a 1.002 pp (4.008); EZE 9→18 LATAM ticket único 04:00/15:00 sube a 1.320 pp (5.280) y la 07:20 sigue como self-transfer. El rótulo '4 Travelers' no aparece en el texto de la lista (sí en el detalle). 2026-11-12T18 (navegador del agente, ok): EZE 9→18 LATAM 07:20/15:00 vuelve a figurar como ticket único 1.159 pp (4.636); ROS 10→19 Copa 1.037 pp (4.148, ida 05:11/vuelta 15:40 vía PTY) pasa a ser el mejor ticket único ROS. 2026-11-12T08 (navegador del agente, ok): EZE 9→18 la LATAM 07:20/15:00 ahora figura como 'Self-transfer hack' (1.094 pp, no registrada); un solo ticket LATAM 04:00/15:00 1.269 pp = 5.076. 2026-11-11T18 (navegador del agente, ok): EZE 9→18 LATAM Light: aerolínea 1.141 pp (4.564 total), SmartFares 1.043 pp, FlightHub 1.176, Standard 1.234; 'Round-trip, 4 Travelers'. El detalle ('Go to result details') muestra las opciones de reserva por tarifa. 2026-11-11T12 (navegador del agente, ok): ROS 10→19 AR 5.443 estable + LATAM Light 5.349 (vuelta 19:15 1h50 LIM); EZE 20→28 Copa Basic 6.381 (vuelta 4h40) y 5.487 (ida 00:05, vuelta 7h11). Un Avianca 3.976 apareció al 75 % de carga y desapareció en la relectura (no registrado). Hahn Air/WorldTicket vía PUJ = Arajet (descartado). ACTIVA desde 2026-11-10T06 (útil 12/14). 2026-11-10T23 (navegador del agente, ok): ROS 10→19 AR 5.444 total (ida 21:25 con 2h30 en EZE, que Google muestra con 26h30) y Copa 7.272; LATAM otra vez solo self-transfer. 2026-11-10T12 (Chrome): ROS 10→19 LATAM ida+vuelta 5.193 total (Basic) pero la ida figura 'self-transfer at Lima' (tickets separados) → no se registró; Arajet vía PUJ 5.195 descartado. Motor KAYAK. URL: /flight-search/{ORIG}-AUA/{IDA}/{VUELTA}/2adults/children-5-3?currency=USD. OJO: descartar filas 'Self-transfer hack' (tickets separados, p. ej. LATAM 4.924 con vuelta Avianca+AR de 37 h), anuncios ('Ad', FlightNetwork/FlightHub) y Arajet vía PUJ. Tarifas 'Economy Basic' probablemente sin valija. Esperar ~20 s a que termine 'Fetching prices'."
+   "last_checked": "2026-11-13T12:44:00-03:00",
+   "notes": "2026-11-13T12 (navegador del agente, ok): ROS 10→19 Copa vuelve a 1.037 pp (4.148) y aparece LATAM ticket único 07:45/19:15 a 1.185 pp (4.740); EZE 9→18 la LATAM 07:20/15:00 vuelve a ser ticket único 'Best' 1.161 pp (4.644), Avianca 1.187 pp. 2026-11-13T06 (navegador del agente, ok): ROS 10→19 Copa ticket único baja a 1.002 pp (4.008); EZE 9→18 LATAM ticket único 04:00/15:00 sube a 1.320 pp (5.280) y la 07:20 sigue como self-transfer. El rótulo '4 Travelers' no aparece en el texto de la lista (sí en el detalle). 2026-11-12T18 (navegador del agente, ok): EZE 9→18 LATAM 07:20/15:00 vuelve a figurar como ticket único 1.159 pp (4.636); ROS 10→19 Copa 1.037 pp (4.148, ida 05:11/vuelta 15:40 vía PTY) pasa a ser el mejor ticket único ROS. 2026-11-12T08 (navegador del agente, ok): EZE 9→18 la LATAM 07:20/15:00 ahora figura como 'Self-transfer hack' (1.094 pp, no registrada); un solo ticket LATAM 04:00/15:00 1.269 pp = 5.076. 2026-11-11T18 (navegador del agente, ok): EZE 9→18 LATAM Light: aerolínea 1.141 pp (4.564 total), SmartFares 1.043 pp, FlightHub 1.176, Standard 1.234; 'Round-trip, 4 Travelers'. El detalle ('Go to result details') muestra las opciones de reserva por tarifa. 2026-11-11T12 (navegador del agente, ok): ROS 10→19 AR 5.443 estable + LATAM Light 5.349 (vuelta 19:15 1h50 LIM); EZE 20→28 Copa Basic 6.381 (vuelta 4h40) y 5.487 (ida 00:05, vuelta 7h11). Un Avianca 3.976 apareció al 75 % de carga y desapareció en la relectura (no registrado). Hahn Air/WorldTicket vía PUJ = Arajet (descartado). ACTIVA desde 2026-11-10T06 (útil 12/14). 2026-11-10T23 (navegador del agente, ok): ROS 10→19 AR 5.444 total (ida 21:25 con 2h30 en EZE, que Google muestra con 26h30) y Copa 7.272; LATAM otra vez solo self-transfer. 2026-11-10T12 (Chrome): ROS 10→19 LATAM ida+vuelta 5.193 total (Basic) pero la ida figura 'self-transfer at Lima' (tickets separados) → no se registró; Arajet vía PUJ 5.195 descartado. Motor KAYAK. URL: /flight-search/{ORIG}-AUA/{IDA}/{VUELTA}/2adults/children-5-3?currency=USD. OJO: descartar filas 'Self-transfer hack' (tickets separados, p. ej. LATAM 4.924 con vuelta Avianca+AR de 37 h), anuncios ('Ad', FlightNetwork/FlightHub) y Arajet vía PUJ. Tarifas 'Economy Basic' probablemente sin valija. Esperar ~20 s a que termine 'Fetching prices'."
   },
   {
    "id": "airfarewatchdog",
@@ -1018,6 +1018,27 @@
    "discovered_by": "2026-11-13T06",
    "last_checked": null,
    "notes": "Blog argentino de viajes y aviación; hallado con WebSearch «estacionamiento Ezeiza larga estadía tarifa noviembre 2026 cocheras cerca aeropuerto». Publica notas sobre el estacionamiento de larga estadía de Ezeiza (útil para los costos terrestres) y promos de aerolíneas. No cotiza 2+2: solo señal."
+  },
+  {
+   "id": "dollarflightclub",
+   "name": "Dollar Flight Club",
+   "domain": "dollarflightclub.com",
+   "type": "alertas_ofertas",
+   "status": "candidate",
+   "url": "https://dollarflightclub.com/",
+   "access": {
+    "agent": "untested",
+    "chrome": "untested"
+   },
+   "usefulness": {
+    "score": null,
+    "verdict": "sin_evaluar",
+    "evaluated_at": null,
+    "details": {}
+   },
+   "discovered_by": "2026-11-13T12",
+   "last_checked": null,
+   "notes": "Servicio de alertas de ofertas de vuelos (EE.UU.); hallado con WebSearch en inglés «best flight search engines multi-city South America Caribbean fare calendar alternatives to Google Flights». Las alertas requieren cuenta (no registrarse) y está orientado a salidas desde EE.UU.: probablemente poco útil para ROS/EZE. No cotiza 2+2."
   }
  ]
 }
