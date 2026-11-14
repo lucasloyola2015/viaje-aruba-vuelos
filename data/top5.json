@@ -1,52 +1,50 @@
 {
- "generated_at": "2026-11-14T08:13:27-03:00",
+ "generated_at": "2026-11-14T08:24:46-03:00",
  "fx": "1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00",
- "n_obs": 267,
- "n_runs": 33,
+ "n_obs": 262,
+ "n_runs": 34,
  "top5": [
   {
-   "run_id": "2026-11-13T12",
-   "captured_at": "2026-11-13T12:42:00-03:00",
+   "run_id": "2026-11-14T08",
+   "captured_at": "2026-11-14T08:21:00-03:00",
    "source": "cheapflights",
    "origin": "ROS",
    "depart": "2027-01-10",
    "return": "2027-01-19",
-   "price_total_usd": 4148,
-   "airlines": "Copa",
+   "price_total_usd": 3571,
+   "airlines": "LATAM",
    "bags_included_checked": 0,
    "url": "https://www.cheapflights.com/flight-search/ROS-AUA/2027-01-10/2027-01-19/2adults/children-5-3?currency=USD",
-   "notes": "Top1 re-chequeado y SUBE: Copa un solo ticket 'Best' 1.037 pp x 4 = 4.148 (a la mañana 1.002 pp = 4.008), ida 05:11 (10h28) y vuelta 15:40 (11h08); escalas tomadas de lecturas previas del mismo itinerario (1h32 y 2h01 en PTY). Total = precio por persona x 4 según la URL (2 adultos + niños 5 y 3); el rótulo '4 Travelers' no se releyó. 'Cheapest' 1.004 pp es la misma ida con 32 h (noche en PTY), no registrada. Economy Basic probable sin valija. Descartados anuncios JustFly/Expedia, Hahn Air/WorldTicket y self-transfer.",
+   "notes": "NUEVO MÍNIMO: LATAM ticket único 'Best' 893 pp, rótulo '$3,571 total' leído en pantalla; tarifa 'Basic' (sin valija). URL y links con qtravelers=4, edades 5 y 3. Ida 07:45 vía LIM (11h25, 2h45 según Google), vuelta 19:15 → 06:30+1 vía LIM (10h15, escala no leída). Google para la misma ida LATAM 'desde' 4.488 (+26 %). 'Cheapest' 858 pp mezcla LATAM+Copa: no registrado. Copa 'Best' 1.037 pp sigue igual.",
    "outbound": {
     "stops": 1,
-    "duration_min": 628,
-    "shortest_layover_min": 92,
-    "longest_layover_min": 92,
-    "dep_time": "05:11",
-    "via": "PTY"
+    "duration_min": 685,
+    "shortest_layover_min": 165,
+    "longest_layover_min": 165,
+    "dep_time": "07:45",
+    "via": "LIM"
    },
    "inbound": {
     "stops": 1,
-    "duration_min": 668,
-    "shortest_layover_min": 121,
-    "longest_layover_min": 121,
-    "dep_time": "15:40",
-    "via": "PTY"
+    "duration_min": 615,
+    "dep_time": "19:15",
+    "via": "LIM"
    },
    "live": true,
    "currency_original": "USD",
    "airport_change": false,
    "bags_extra_usd": null,
-   "price_original": 4148,
+   "price_original": 3571,
    "_s": {
-    "score": 4918.0,
-    "cost_real_usd": 4428.0,
+    "score": 4131.0,
+    "cost_real_usd": 3851.0,
     "nights": 9,
     "excluded": [],
     "notes": [],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 4148.0,
+     "Pasajes (4 personas, precio final)": 3571.0,
      "Valijas faltantes (~4)": 280,
-     "Penalización escalas/duración/conexiones/horarios": 450.0,
+     "Penalización escalas/duración/conexiones/horarios": 240.0,
      "Desvío de noches (9 vs 8)": 40
     },
     "ground": null
@@ -54,26 +52,26 @@
    "_others": [
     [
      "google_flights",
-     5226.0
+     4488.0
     ],
     [
      "google_flights",
-     5666.0
+     5232.0
     ]
    ]
   },
   {
-   "run_id": "2026-11-13T12",
-   "captured_at": "2026-11-13T12:44:00-03:00",
+   "run_id": "2026-11-14T08",
+   "captured_at": "2026-11-14T08:22:00-03:00",
    "source": "cheapflights",
    "origin": "EZE",
    "depart": "2027-01-09",
    "return": "2027-01-18",
-   "price_total_usd": 4644,
+   "price_total_usd": 4948,
    "airlines": "LATAM",
    "bags_included_checked": 0,
    "url": "https://www.cheapflights.com/flight-search/EZE-AUA/2027-01-09/2027-01-18/2adults/children-5-3?currency=USD",
-   "notes": "BAJA: LATAM 07:20 (11h50, 2h35 en LIM según Google) + vuelta 15:00 (11h00) vuelve a figurar como ticket único 'Best' 1.161 pp x 4 = 4.644 (a la mañana era self-transfer y el mejor ticket único 04:00/15:00 costaba 1.320 pp = 5.280, que sigue igual). Escala de vuelta no leída. Total = pp x 4. Descartados: 'Cheapest' LATAM 2 escalas 23h35 830 pp, self-transfer JetSMART+LATAM 1.149 pp, 'Featured deal' Arajet+Avianca 1.293 pp, anuncios Avianca/JustFly/Expedia.",
+   "notes": "SUBE: LATAM 07:20/15:00 ticket único 1.237 pp x 4 = 4.948 (ayer 1.161 pp = 4.644). Escala de vuelta no leída. Descartados self-transfer JetSMART+LATAM 1.028 pp, anuncios Avianca/JustFly/Expedia.",
    "outbound": {
     "stops": 1,
     "duration_min": 710,
@@ -92,15 +90,15 @@
    "currency_original": "USD",
    "airport_change": false,
    "bags_extra_usd": null,
-   "price_original": 4644,
+   "price_original": 4948,
    "_s": {
-    "score": 5566.178809613691,
-    "cost_real_usd": 5136.178809613691,
+    "score": 5870.178809613691,
+    "cost_real_usd": 5440.178809613691,
     "nights": 9,
     "excluded": [],
     "notes": [],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 4644.0,
+     "Pasajes (4 personas, precio final)": 4948.0,
      "Valijas faltantes (~4)": 280,
      "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 212.1788096136907,
      "Penalización comodidad (ruta con chicos)": 150,
@@ -129,43 +127,42 @@
    "_others": [
     [
      "google_flights",
-     6027.0
+     6059.0
     ],
     [
      "google_flights",
-     6874.0
+     6485.0
     ]
    ]
   },
   {
-   "run_id": "2026-11-13T12",
-   "captured_at": "2026-11-13T12:27:00-03:00",
+   "run_id": "2026-11-14T08",
+   "captured_at": "2026-11-14T08:18:00-03:00",
    "source": "google_flights",
-   "origin": "EZE",
-   "depart": "2027-01-10",
-   "return": "2027-01-18",
-   "price_total_usd": 5763,
-   "airlines": "LATAM",
-   "notes": "'Desde' (vuelta s/d). LATAM 07:20 5.763 (a la mañana 5.773, estable). Copa 09:10 8.524; Copa 02:02 9.975.",
+   "origin": "ROS",
+   "depart": "2027-01-05",
+   "return": "2027-01-13",
+   "price_total_usd": 5074,
+   "airlines": "Aerolíneas Argentinas",
+   "airport_change": true,
+   "notes": "'Desde' (vuelta s/d). AR 19:15, 2 escalas: 5h15 en Bs As con cambio AEP→EZE + segunda escala (probable CUR, no leída). Copa 01:28 7.453.",
    "outbound": {
-    "stops": 1,
-    "duration_min": 710,
-    "shortest_layover_min": 155,
-    "longest_layover_min": 155,
-    "dep_time": "07:20",
-    "via": "LIM"
+    "stops": 2,
+    "duration_min": 925,
+    "longest_layover_min": 315,
+    "dep_time": "19:15",
+    "via": "AEP/EZE"
    },
    "live": true,
    "currency_original": "USD",
-   "airport_change": false,
    "bags_included_checked": null,
    "bags_extra_usd": null,
    "inbound": {},
-   "price_original": 5763,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-10%20through%202027-01-18%202%20adults%202%20children&curr=USD&hl=es",
+   "price_original": 5074,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-05%20through%202027-01-13%202%20adults%202%20children&curr=USD&hl=es",
    "_s": {
-    "score": 6639.8937964011575,
-    "cost_real_usd": 6249.8937964011575,
+    "score": 6244.833333333333,
+    "cost_real_usd": 5354.0,
     "nights": 8,
     "excluded": [],
     "notes": [
@@ -173,121 +170,76 @@
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 5763.0,
+     "Pasajes (4 personas, precio final)": 5074.0,
      "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 240.0
+     "Penalización escalas/duración/conexiones/horarios": 690.8333333333333,
+     "Cambio de aeropuerto": 200
     },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 206.89379640115766,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 185800,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
+    "ground": null
    },
    "_others": []
   },
   {
-   "run_id": "2026-11-11T12",
-   "captured_at": "2026-11-11T13:04:00-03:00",
-   "source": "cheapflights",
-   "origin": "EZE",
-   "depart": "2027-01-20",
-   "return": "2027-01-28",
-   "price_total_usd": 5487,
-   "airlines": "Copa",
-   "bags_included_checked": 0,
-   "url": "https://www.cheapflights.com/flight-search/EZE-AUA/2027-01-20/2027-01-28/2adults/children-5-3?currency=USD",
-   "notes": "Copa 'Economy Basic' 1.372 × 4 = 5.487; ida 00:05 (3h53 PTY), vuelta 07:10 → 00:52+1 (7h11 PTY). Un Avianca 3.976 (10h15 + 12h50 en BOG) apareció en la primera lectura y desapareció en la siguiente: no registrado.",
+   "run_id": "2026-11-14T08",
+   "captured_at": "2026-11-14T08:20:00-03:00",
+   "source": "google_flights",
+   "origin": "ROS",
+   "depart": "2027-01-05",
+   "return": "2027-01-12",
+   "price_total_usd": 5074,
+   "airlines": "Aerolíneas Argentinas",
+   "airport_change": true,
+   "notes": "'Desde' (vuelta s/d). AR 19:15, 2 escalas: 5h15 en Bs As con cambio AEP→EZE + segunda escala (no leída). Copa 01:28 8.257.",
    "outbound": {
-    "stops": 1,
-    "duration_min": 787,
-    "shortest_layover_min": 233,
-    "longest_layover_min": 233,
-    "dep_time": "00:05",
-    "via": "PTY"
-   },
-   "inbound": {
-    "stops": 1,
-    "duration_min": 1002,
-    "shortest_layover_min": 431,
-    "longest_layover_min": 431,
-    "dep_time": "07:10",
-    "via": "PTY"
+    "stops": 2,
+    "duration_min": 925,
+    "longest_layover_min": 315,
+    "dep_time": "19:15",
+    "via": "AEP/EZE"
    },
    "live": true,
    "currency_original": "USD",
-   "airport_change": false,
+   "bags_included_checked": null,
    "bags_extra_usd": null,
-   "price_original": 5487,
+   "inbound": {},
+   "price_original": 5074,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-05%20through%202027-01-12%202%20adults%202%20children&curr=USD&hl=es",
    "_s": {
-    "score": 6745.0604630678245,
-    "cost_real_usd": 5973.8937964011575,
-    "nights": 8,
+    "score": 6284.833333333333,
+    "cost_real_usd": 5354.0,
+    "nights": 7,
     "excluded": [],
-    "notes": [],
+    "notes": [
+     "equipaje incluido s/d: se asume 0 valijas",
+     "vuelta: escalas s/d"
+    ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 5487.0,
+     "Pasajes (4 personas, precio final)": 5074.0,
      "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 621.1666666666667
+     "Penalización escalas/duración/conexiones/horarios": 690.8333333333333,
+     "Desvío de noches (7 vs 8)": 40,
+     "Cambio de aeropuerto": 200
     },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 206.89379640115766,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 185800,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
+    "ground": null
    },
-   "_others": [
-    [
-     "google_flights",
-     6977.0
-    ]
-   ]
+   "_others": []
   },
   {
-   "run_id": "2026-11-13T06",
-   "captured_at": "2026-11-13T06:28:00-03:00",
+   "run_id": "2026-11-14T08",
+   "captured_at": "2026-11-14T08:19:00-03:00",
    "source": "google_flights",
-   "origin": "EZE",
-   "depart": "2027-01-01",
-   "return": "2027-01-09",
-   "price_total_usd": 5900,
+   "origin": "ROS",
+   "depart": "2027-01-07",
+   "return": "2027-01-14",
+   "price_total_usd": 5708,
    "airlines": "Copa",
-   "notes": "'Desde' (vuelta s/d). Copa 02:02 con escala larga 4h23 en PTY (13h37).",
+   "notes": "'Desde' (vuelta s/d). Copa 05:11 vía PTY 1h32. Copa 01:28 7.160; AR 2 escalas 36h 7.568.",
    "outbound": {
     "stops": 1,
-    "duration_min": 817,
-    "shortest_layover_min": 263,
-    "longest_layover_min": 263,
-    "dep_time": "02:02",
+    "duration_min": 628,
+    "shortest_layover_min": 92,
+    "longest_layover_min": 92,
+    "dep_time": "05:11",
     "via": "PTY"
    },
    "live": true,
@@ -296,42 +248,24 @@
    "bags_included_checked": null,
    "bags_extra_usd": null,
    "inbound": {},
-   "price_original": 5900,
-   "url": "https://www.google.com/travel/flights?q=Flights%20from%20EZE%20to%20AUA%20on%202027-01-01%20through%202027-01-09%202%20adults%202%20children&curr=USD&hl=es",
+   "price_original": 5708,
+   "url": "https://www.google.com/travel/flights?q=Flights%20from%20ROS%20to%20AUA%20on%202027-01-07%20through%202027-01-14%202%20adults%202%20children&curr=USD&hl=es",
    "_s": {
-    "score": 6895.727129734491,
-    "cost_real_usd": 6386.8937964011575,
-    "nights": 8,
+    "score": 6478.0,
+    "cost_real_usd": 5988.0,
+    "nights": 7,
     "excluded": [],
     "notes": [
      "equipaje incluido s/d: se asume 0 valijas",
      "vuelta: escalas s/d"
     ],
     "breakdown": {
-     "Pasajes (4 personas, precio final)": 5900.0,
+     "Pasajes (4 personas, precio final)": 5708.0,
      "Valijas faltantes (~4)": 280,
-     "Auto a Bs As: Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)": 206.89379640115766,
-     "Penalización comodidad (ruta con chicos)": 150,
-     "Penalización escalas/duración/conexiones/horarios": 358.83333333333337
+     "Penalización escalas/duración/conexiones/horarios": 450.0,
+     "Desvío de noches (7 vs 8)": 40
     },
-    "ground": {
-     "key": "EZE_long_stay_E4",
-     "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
-     "ars": 328837.0,
-     "usd": 206.89379640115766,
-     "parts_ars": {
-      "peajes": 18000,
-      "nafta": 125037.0,
-      "estacionamiento E4": 185800,
-      "traslados": 0
-     },
-     "unverified": [
-      "tolls_round_trip_ars",
-      "km_one_way",
-      "l_per_100km",
-      "parking_ars_per_extra_day"
-     ]
-    }
+    "ground": null
    },
    "_others": []
   }

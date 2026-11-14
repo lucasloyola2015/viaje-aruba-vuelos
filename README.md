@@ -1,16 +1,16 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-14 08:13 · 33 corridas · 267 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-14 08:24 · 34 corridas · 262 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
-**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -648 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
+**Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -1.739 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
 | # | Origen | Salida → Vuelta | Noches | Aerolíneas | Escalas ida/vuelta | Costo real est. | Puntaje |
 |---|---|---|---|---|---|---|---|
-| 1 | ROS | dom 10 ene → mar 19 ene | 9 | Copa | 1/1 | US$ 4.428 | US$ 4.918 |
-| 2 | EZE | sáb 9 ene → lun 18 ene | 9 | LATAM | 1/1 | US$ 5.136 | US$ 5.566 |
-| 3 | EZE | dom 10 ene → lun 18 ene | 8 | LATAM | 1/? | US$ 6.250 | US$ 6.640 |
-| 4 | EZE | mié 20 ene → jue 28 ene | 8 | Copa | 1/1 | US$ 5.974 | US$ 6.745 |
-| 5 | EZE | vie 1 ene → sáb 9 ene | 8 | Copa | 1/? | US$ 6.387 | US$ 6.896 |
+| 1 | ROS | dom 10 ene → mar 19 ene | 9 | LATAM | 1/1 | US$ 3.851 | US$ 4.131 |
+| 2 | EZE | sáb 9 ene → lun 18 ene | 9 | LATAM | 1/1 | US$ 5.440 | US$ 5.870 |
+| 3 | ROS | mar 5 ene → mié 13 ene | 8 | Aerolíneas Argentinas | 2/? | US$ 5.354 | US$ 6.245 |
+| 4 | ROS | mar 5 ene → mar 12 ene | 7 | Aerolíneas Argentinas | 2/? | US$ 5.354 | US$ 6.285 |
+| 5 | ROS | jue 7 ene → jue 14 ene | 7 | Copa | 1/? | US$ 5.988 | US$ 6.478 |
 
 ## Fuentes
 
@@ -29,7 +29,7 @@ _Actualizado 2026-11-14 08:13 · 33 corridas · 267 precios · TC 1.589 ARS/USD 
 | Avianca | robots.txt | sin probar | no evaluable | solo manual |
 | Turismocity | robots.txt | sin probar | no evaluable | solo manual |
 | Expedia | error | CAPTCHA | no evaluable | solo con tu Chrome (3 AM) |
-| Trip.com | sin probar | sin probar | sin evaluar | en prueba |
+| Trip.com | robots.txt | sin probar | no evaluable | solo manual |
 | Jetcost | sin probar | sin probar | sin evaluar | en prueba |
 | Skiplagged | sin probar | sin probar | sin evaluar | en prueba |
 | Promos Aéreas | sin probar | sin probar | sin evaluar | en prueba |
@@ -65,5 +65,7 @@ _Actualizado 2026-11-14 08:13 · 33 corridas · 267 precios · TC 1.589 ARS/USD 
 | The Points Guy (deals) | sin probar | sin probar | sin evaluar | en prueba |
 | InfoViajera (blog de viajes) | sin probar | sin probar | sin evaluar | en prueba |
 | Dollar Flight Club | sin probar | sin probar | sin evaluar | en prueba |
+| Secret Flying | sin probar | sin probar | sin evaluar | en prueba |
+| Orbitz | sin probar | sin probar | sin evaluar | en prueba |
 
 El detalle completo (desglose, gráfico, supuestos) está en `docs/index.html` (también publicado como página web).

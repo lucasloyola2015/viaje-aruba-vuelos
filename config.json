@@ -42,7 +42,7 @@
       "EZE_long_stay_E4": {
         "label": "Auto a Ezeiza + estacionamiento larga estadía E4 (shuttle gratis)",
         "tolls_round_trip_ars": { "value": 18000, "verified": false, "note": "General Lagos 1.850/sentido verificado (10/10/2026); resto estimado" },
-        "fuel_price_ars_per_l": { "value": 2105, "verified": true, "note": "Súper YPF Rosario, 3/8/2026 (Cadena 3). 6/11/2026: sin dato más nuevo publicado para Rosario (Jujuy 3/11: 2.279); probablemente desactualizado. 13/11/2026: WebSearch sigue sin dato más nuevo de Rosario" },
+        "fuel_price_ars_per_l": { "value": 2105, "verified": true, "note": "Súper YPF Rosario, 3/8/2026 (Cadena 3). 6/11/2026: sin dato más nuevo publicado para Rosario (Jujuy 3/11: 2.279); probablemente desactualizado. 13/11/2026: WebSearch sigue sin dato más nuevo de Rosario. 14/11/2026: tampoco; Unidiversidad (nota ~4/11/2026, fecha sin confirmar) menciona baja de 1,5 % de YPF en súper/premium, sin precio de Rosario → no se cambia el valor" },
         "km_one_way": { "value": 330, "verified": false },
         "l_per_100km": { "value": 9, "verified": false },
         "parking_ars_first_7_days": { "value": 169000, "verified": true, "note": "AA2000 E4 enero 2026; actualizar" },
