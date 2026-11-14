@@ -268,7 +268,7 @@
    "url": "https://www.expedia.com.ar/",
    "access": {
     "agent": "error",
-    "chrome": "untested"
+    "chrome": "captcha"
    },
    "usefulness": {
     "score": null,
@@ -277,8 +277,8 @@
     "details": {"motivo": "robots.txt (13/11/2026): User-agent * prohíbe /Flights-Search, pero el bloque 'Allow Agentic Search' permite / a Claude-User y Claude-SearchBot. La búsqueda de referencia (ROS→AUA 10→18 ene, 2 adultos + niños 5 y 3) abrió con el navegador del agente y devolvió 'Sorry, we're having a problem on our end. Please try your search again later', sin resultados. No se reintentó. Sin puntajes. page_loads: 2 (robots + búsqueda)."}
    },
    "discovered_by": "seed-2026-11-05",
-   "last_checked": "2026-11-13T12:46:00-03:00",
-   "notes": "2026-11-13T12: no_evaluable con el agente (error del sitio en la página de resultados, posible bloqueo blando) → needs_chrome para la corrida de las 3 AM. URL de prueba: https://www.expedia.com.ar/Flights-Search?trip=roundtrip&leg1=from:ROS,to:AUA,departure:10/01/2027TANYT&leg2=from:AUA,to:ROS,departure:18/01/2027TANYT&passengers=adults:2,children:2[5;3],infantinlap:N&options=cabinclass:economy&mode=search"
+   "last_checked": "2026-11-14T08:13:30-03:00",
+   "notes": "2026-11-14T08 (Chrome): robots.txt sin cambios (permite a Claude-User); la búsqueda de referencia con el Chrome del usuario muestra el desafío anti-bot '¿Eres un robot?' (no se tocó) → access.chrome = captcha (1ª noche). Sigue needs_chrome; si la próxima noche vuelve a dar captcha → manual_only. Abrir a mano con la URL de prueba de abajo. ANTES:2026-11-13T12: no_evaluable con el agente (error del sitio en la página de resultados, posible bloqueo blando) → needs_chrome para la corrida de las 3 AM. URL de prueba: https://www.expedia.com.ar/Flights-Search?trip=roundtrip&leg1=from:ROS,to:AUA,departure:10/01/2027TANYT&leg2=from:AUA,to:ROS,departure:18/01/2027TANYT&passengers=adults:2,children:2[5;3],infantinlap:N&options=cabinclass:economy&mode=search"
   },
   {
    "id": "tripcom",

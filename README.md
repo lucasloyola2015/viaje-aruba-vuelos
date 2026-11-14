@@ -1,6 +1,6 @@
 # Aruba enero 2027 — mejores vuelos
 
-_Actualizado 2026-11-13 12:33 · 32 corridas · 267 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
+_Actualizado 2026-11-14 08:13 · 33 corridas · 267 precios · TC 1.589 ARS/USD · Dólar MEP venta $1.589.40 (dolarhoy.com. 06/11/26 ~13:35; blue venta $1.555) · 2026-11-06T13:36:00-03:00_
 
 **Recomendación:** Conviene salir desde Rosario: la opción vía Ezeiza no supera el umbral de ahorro (diferencia US$ -648 a favor de Ezeiza; se recomienda el auto solo si ahorra más de US$ 300).
 
@@ -28,7 +28,7 @@ _Actualizado 2026-11-13 12:33 · 32 corridas · 267 precios · TC 1.589 ARS/USD 
 | LATAM | bloqueada | ok | 7/14 parcial | solo contraste |
 | Avianca | robots.txt | sin probar | no evaluable | solo manual |
 | Turismocity | robots.txt | sin probar | no evaluable | solo manual |
-| Expedia | error | sin probar | no evaluable | solo con tu Chrome (3 AM) |
+| Expedia | error | CAPTCHA | no evaluable | solo con tu Chrome (3 AM) |
 | Trip.com | sin probar | sin probar | sin evaluar | en prueba |
 | Jetcost | sin probar | sin probar | sin evaluar | en prueba |
 | Skiplagged | sin probar | sin probar | sin evaluar | en prueba |
